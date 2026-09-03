@@ -6,40 +6,103 @@ namespace GridSystem
 {
     public class GridCell
     {
-        public Bounds GridBounds {get; private set;}
-
-        public bool ContainsPoint(Vector2 point)
+        public GridCell(Vector3Int position, Vector3Int size)
         {
-           return GridBounds.Contains(point);
+            GridBounds = new(position,size);
         }
 
-        public void SetBounds(Bounds newBounds)
+        public BoundsInt GridBounds {get; private set;}
+
+        public bool ContainsPoint(Vector2Int point)
+        {
+           return GridBounds.Contains((Vector3Int)point);
+        }
+
+        public void SetBounds(BoundsInt newBounds)
         {
             GridBounds = newBounds;
+        }
+
+        public Vector2 Center()
+        {
+            return GridBounds.center;
         }
     }
 
     public class GridMap
     {
-        public List<List<GridCell>> GridList
+        private List<List<GridCell>> _gridList;
+        private Dictionary<GridCell, Vector2Int> _cellPositions;
+        public GridMap(Transform topLeft, Transform bottomRight, int cellSize)
         {
-            get => _gridList;
-            set
+            BuildMap(topLeft,bottomRight,cellSize);
+        }
+        public GridMap(BoundsInt mapBounds, int cellSize = 0)
+        {
+            BuildMap(mapBounds,cellSize);
+        }
+
+
+
+        public void BuildMap(Transform topLeft, Transform bottomRight, int cellSize)
+        {
+            Vector2 minWorld = new(topLeft.position.x, bottomRight.position.y);
+            Vector2 maxWorld = new(bottomRight.position.x, topLeft.position.y);
+
+            Vector2Int minCell = new(Mathf.FloorToInt(minWorld.x), Mathf.FloorToInt(minWorld.y));
+            Vector2Int maxCell = new(Mathf.CeilToInt(maxWorld.x), Mathf.CeilToInt(maxWorld.y));
+
+            Vector2Int size = maxCell - minCell;
+            BoundsInt mapBounds = new((Vector3Int)minCell, (Vector3Int)size);
+
+            BuildMap(mapBounds, cellSize);
+        }
+        public void BuildMap(BoundsInt mapBounds, int cellSize)
+        {
+            if(cellSize == 0) return;
+
+
+            int distanceBetween = mapBounds.max.x - mapBounds.min.x;
+            int cellAmountX = distanceBetween/cellSize;
+
+            distanceBetween = mapBounds.max.y - mapBounds.min.y;
+            int cellAmountY = distanceBetween/cellSize;
+
+
+            
+            Vector2Int size = new(cellSize,cellSize);
+            
+
+            _gridList = new();
+
+            for(int i = 0 ; i < cellAmountY ; i++)
             {
-                _gridList = value;
+                Vector2Int currentCellMin = new(mapBounds.min.x,mapBounds.max.y - cellSize * (i+1));
+                _gridList.Add(new());
+                for(int j = 0 ; j < cellAmountX ; j++)
+                {
+                    GridCell currentCell = new((Vector3Int)currentCellMin,(Vector3Int)size);
+                    _gridList[i].Add(currentCell);
+                    currentCellMin.x += cellSize;
+                }
+            }
+
+            if(_gridList.Count != 0)
+            {
                 BuildCellPositionLookup();
             }
         }
 
-        private List<List<GridCell>> _gridList;
-        private Dictionary<GridCell, Vector2Int> _cellPositions;
-
-        public void BuildMap()
+        public void AddTestObjects(GameObject testObject)
         {
-            
+            foreach(List<GridCell> grids in _gridList)
+            {
+                foreach(GridCell gridCell in grids)
+                {
+                    GameObject.Instantiate(testObject,gridCell.Center(), Quaternion.identity);
+                }
+            }
         }
-
-
 
         private void BuildCellPositionLookup()
         {
