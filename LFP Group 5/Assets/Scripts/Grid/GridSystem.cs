@@ -33,6 +33,8 @@ namespace GridSystem
     {
         private List<List<GridCell>> _gridList;
         private Dictionary<GridCell, Vector2Int> _cellPositions;
+
+        //Constructors
         public GridMap(Transform topLeft, Transform bottomRight, int cellSize)
         {
             BuildMap(topLeft,bottomRight,cellSize);
@@ -43,12 +45,20 @@ namespace GridSystem
         }
 
 
-
+        #region BuildMap
+        /// <summary>
+        /// Builds a GridMap to use for the level.
+        /// </summary>
+        /// <param name="topLeft">Top Left of the grid</param>
+        /// <param name="bottomRight">Bottom Right of the grid</param>
+        /// <param name="cellSize">Cell size per GridCell</param>
         public void BuildMap(Transform topLeft, Transform bottomRight, int cellSize)
         {
+            //Get min and max points for BoundsInt
             Vector2 minWorld = new(topLeft.position.x, bottomRight.position.y);
             Vector2 maxWorld = new(bottomRight.position.x, topLeft.position.y);
 
+            //Change min and max points to cell size
             Vector2Int minCell = new(Mathf.FloorToInt(minWorld.x), Mathf.FloorToInt(minWorld.y));
             Vector2Int maxCell = new(Mathf.CeilToInt(maxWorld.x), Mathf.CeilToInt(maxWorld.y));
 
@@ -57,11 +67,16 @@ namespace GridSystem
 
             BuildMap(mapBounds, cellSize);
         }
+        /// <summary>
+        /// Builds a GridMap to use for the level.
+        /// </summary>
+        /// <param name="mapBounds">Given bounds for grid to be in</param>
+        /// <param name="cellSize">Cell size per GridCells</param>
         public void BuildMap(BoundsInt mapBounds, int cellSize)
         {
             if(cellSize == 0) return;
 
-
+            
             int distanceBetween = mapBounds.max.x - mapBounds.min.x;
             int cellAmountX = distanceBetween/cellSize;
 
@@ -73,6 +88,7 @@ namespace GridSystem
             Vector2Int size = new(cellSize,cellSize);
             
 
+            //Populate grid list. [column][row]
             _gridList = new();
 
             for(int i = 0 ; i < cellAmountY ; i++)
@@ -92,18 +108,9 @@ namespace GridSystem
                 BuildCellPositionLookup();
             }
         }
-
-        public void AddTestObjects(GameObject testObject)
-        {
-            foreach(List<GridCell> grids in _gridList)
-            {
-                foreach(GridCell gridCell in grids)
-                {
-                    GameObject.Instantiate(testObject,gridCell.Center(), Quaternion.identity);
-                }
-            }
-        }
-
+        /// <summary>
+        /// Populate lookup dictionary to easily get specific cells.
+        /// </summary>
         private void BuildCellPositionLookup()
         {
             _cellPositions = new Dictionary<GridCell, Vector2Int>();
@@ -116,7 +123,47 @@ namespace GridSystem
                 }
             }
         }
-        
+        #endregion
+        public void AddTestObjects(GameObject testObject)
+        {
+            foreach(List<GridCell> grids in _gridList)
+            {
+                foreach(GridCell gridCell in grids)
+                {
+                    GameObject.Instantiate(testObject,gridCell.Center(), Quaternion.identity);
+                }
+            }
+        }
+
+
+        #region GetGridCell
+        /// <summary>
+        /// Gets grid cell
+        /// </summary>
+        /// <param name="column">Column of cell</param>
+        /// <param name="row">Row of cell</param>
+        /// <returns></returns>
+        public GridCell GetGridCell(int column, int row)
+        {
+            Vector2Int targetValue = new(column,row);
+            GridCell targetCell = null;
+            foreach(var pair in _cellPositions)
+            {
+                if(pair.Value == targetValue)
+                {
+                    targetCell = pair.Key;
+                    break;
+                }
+            }
+
+            return targetCell;
+        }
+        /// <summary>
+        /// Gets grid cell
+        /// </summary>
+        /// <param name="referenceCell">Cell to start at</param>
+        /// <param name="direction">Direction of new cell compared to reference</param>
+        /// <returns></returns>
         public GridCell GetGridCell(GridCell referenceCell, Direction direction)
         {
             Vector2Int offset = direction switch
@@ -130,7 +177,12 @@ namespace GridSystem
 
             return GetGridCell(referenceCell, offset);
         }
-
+        /// <summary>
+        /// Gets grid cell
+        /// </summary>
+        /// <param name="referenceCell">Cell to start at</param>
+        /// <param name="offset">Direction of new cell compared to reference</param>
+        /// <returns></returns>
         public GridCell GetGridCell(GridCell referenceCell, Vector2Int offset)
         {
             if(!_cellPositions.TryGetValue(referenceCell, out Vector2Int position))
@@ -153,6 +205,7 @@ namespace GridSystem
 
             return _gridList[targetY][targetX];
         }
+        #endregion
     }
 
     public enum Direction
