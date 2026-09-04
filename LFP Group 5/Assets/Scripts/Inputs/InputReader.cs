@@ -94,10 +94,12 @@ public class InputReader : ScriptableObject
     private void InitializePlayerEvents()
     {
         //Move
-        _moveUpPerformed = ctx => { _upValue = 1; RaiseMoveEvent(); };
-        _moveUpCanceled = ctx => { _upValue = 0; RaiseMoveEvent(); };
+        //Up is -1 due to (0,0) being the top left of the grid and
+        //(x,y) being the bottom right of the grid.
+        _moveUpPerformed = ctx => { _upValue = -1; RaiseMoveEvent(); };
+        _moveUpCanceled = ctx => { _upValue = 0;  RaiseMoveEvent();};
 
-        _moveDownPerformed = ctx => { _downValue = -1; RaiseMoveEvent(); };
+        _moveDownPerformed = ctx => { _downValue = 1; RaiseMoveEvent(); };
         _moveDownCanceled = ctx => { _downValue = 0; RaiseMoveEvent(); };
 
         _moveLeftPerformed = ctx => { _leftValue = -1; RaiseMoveEvent(); };
