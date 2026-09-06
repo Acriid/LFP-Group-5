@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] private InputReader _inputReader;
     [SerializeField] private Vector2Int _startPosition = Vector2Int.zero;
     [SerializeField] private float _timeBetweenMoves = 0.4f;
+    [SerializeField] private InteractMechanic _interactMechanic = null;
 
     private GridCell _currentCell = null;
     private GridCell _nextCell = null;
@@ -79,14 +80,25 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void Interact()
+    {
+        _interactMechanic.Interact(gameObject);
+    }
+
     private void EnableInput()
     {
         _inputReader.OnMove += ReadInput;
-        _inputReader.EnableMoveActions();        
+        _inputReader.EnableMoveActions();      
+
+        _inputReader.OnInteract += Interact;
+        _inputReader.EnableInteractAction();
     }
     private void DisableInput()
     {
         _inputReader.OnMove -= ReadInput;
-        _inputReader.DisableMoveActions();       
+        _inputReader.DisableMoveActions(); 
+
+        _inputReader.OnInteract -= Interact;
+        _inputReader.DisableInteractAction();      
     }
 }
