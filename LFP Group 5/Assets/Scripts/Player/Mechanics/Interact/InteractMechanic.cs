@@ -67,7 +67,10 @@ public class InteractMechanic : MonoBehaviour
     {
         return _targetInteraction;
     }
-
+    public GameObject GetTargetInteractionGameObject()
+    {
+        return _targetInteraction.gameObject;
+    }
 
     public bool HasInteraction()
     {

@@ -8,6 +8,10 @@ public class Player : MonoBehaviour
     [SerializeField] private Vector2Int _startPosition = Vector2Int.zero;
     [SerializeField] private float _timeBetweenMoves = 0.4f;
     [SerializeField] private InteractMechanic _interactMechanic = null;
+    [SerializeField] private Inventory _inventory = null;
+
+    [SerializeField] private ModeSwitchMechanic _modeSwitchMechanic = null;
+    private GameMode _currentMode = GameMode.NormalMode;
 
     private GridCell _currentCell = null;
     private GridCell _nextCell = null;
@@ -82,7 +86,19 @@ public class Player : MonoBehaviour
 
     private void Interact()
     {
+        GameObject interactionObject = _interactMechanic.GetTargetInteractionGameObject();
         _interactMechanic.Interact(gameObject);
+        _inventory.AddToInventoryItem(interactionObject);
+    }
+
+    private void SwitchMode()
+    {
+        if(_currentMode == GameMode.NormalMode)
+        _currentMode = GameMode.SafeMode;
+        else 
+        _currentMode = GameMode.NormalMode;
+
+        _modeSwitchMechanic.SwitchMode(_currentMode);
     }
 
     private void EnableInput()
@@ -92,6 +108,9 @@ public class Player : MonoBehaviour
 
         _inputReader.OnInteract += Interact;
         _inputReader.EnableInteractAction();
+
+        _inputReader.OnModeSwitch += SwitchMode;
+        _inputReader.EnableModeSwitchAction();
     }
     private void DisableInput()
     {
@@ -99,6 +118,9 @@ public class Player : MonoBehaviour
         _inputReader.DisableMoveActions(); 
 
         _inputReader.OnInteract -= Interact;
-        _inputReader.DisableInteractAction();      
+        _inputReader.DisableInteractAction();    
+
+        _inputReader.OnModeSwitch -= SwitchMode;  
+        _inputReader.DisableModeSwitchAction();
     }
 }
