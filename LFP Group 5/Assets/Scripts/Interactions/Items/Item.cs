@@ -1,7 +1,9 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Item : Interaction
 {
+    [SerializeField] private ItemSO _itemSO = null;
     public override void Interact(GameObject interactingObject)
     {
         if(!_canInteract) return;
@@ -11,5 +13,13 @@ public class Item : Interaction
     private void PickUpItem(GameObject interactingObject)
     {
         //TODO - Take object from game world and add it to ui
+    }
+    public bool GetIsActive()
+    {
+        return _itemSO.IsActive;
+    }
+    public bool GetIsCorrupt()
+    {
+        return _itemSO.IsCorrupt;
     }
 }
