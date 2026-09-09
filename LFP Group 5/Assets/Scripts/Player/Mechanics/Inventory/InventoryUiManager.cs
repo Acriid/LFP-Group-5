@@ -29,15 +29,18 @@ public class InventoryUiManager : MonoBehaviour
         foreach(InventorySlot inventorySlot in _inventorySlots)
         {
             GameObject heldObject = inventorySlot.GetHeldObject();
-            if(heldObject == null)
+            if (heldObject == null)
             {
                 heldObject = Instantiate(_uiItemPrefab);
                 inventorySlot.SetHeldObject(_uiItemPrefab,inventorySlot.transform);
 
             }
 
-            if(!heldObject.TryGetComponent<UiItem>(out var uiItem)) return;
-            uiItem.SetItem(itemToInitialize);
+            if(!heldObject.TryGetComponent(out UiItem uiItem)) return;
+            if(uiItem != null && !uiItem.GetHasItem())
+            {
+                uiItem.SetItem(itemToInitialize);
+            }
 
         }
     }
