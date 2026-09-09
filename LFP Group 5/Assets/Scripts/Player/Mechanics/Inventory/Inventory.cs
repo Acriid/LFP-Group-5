@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class Inventory : MonoBehaviour
     //When max items gets smaller items drop from back of the list.
     [SerializeField] private int _maxItems = 4;
     private int _currentItems = 0;
+    public event Action<Item> OnItemPickup;
+    public event Action<Item> OnItemRemove;
     //Should inventory keep track of the current item?
 
     void OnEnable()
@@ -29,6 +32,7 @@ public class Inventory : MonoBehaviour
 
         _itemList.Add(itemComponent);
         _currentItems++;
+        OnItemPickup?.Invoke(itemComponent);
     }
     public void RemoveItemFromInventory(GameObject itemToRemove)
     {
@@ -37,6 +41,7 @@ public class Inventory : MonoBehaviour
 
         _itemList.Remove(itemComponent);
         _currentItems--;
+        OnItemRemove?.Invoke(itemComponent);
     }
     public void ChangeItemSlot(GameObject itemToChange, int newSlot)
     {

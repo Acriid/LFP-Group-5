@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ItemSO : ScriptableObject
@@ -6,4 +7,7 @@ public class ItemSO : ScriptableObject
     public bool IsActive = true;
     //To see if the virus has corrupted to item
     public bool IsCorrupt = false;
+    public Sprite UISprite = null;
+    public string ItemName = "";
+    public string ItemDescription = "";
 }

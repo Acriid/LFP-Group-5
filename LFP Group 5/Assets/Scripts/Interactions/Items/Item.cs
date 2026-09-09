@@ -22,4 +22,17 @@ public class Item : Interaction
     {
         return _itemSO.IsCorrupt;
     }
+
+    public string GetItemName()
+    {
+        return _itemSO.ItemName;
+    }
+    public string GetItemDescription()
+    {
+        return _itemSO.ItemDescription;
+    }
+    public Sprite GetItemSprite()
+    {
+        return _itemSO.UISprite;
+    }
 }

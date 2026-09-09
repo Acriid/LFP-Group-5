@@ -20,7 +20,6 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = eventData.position;
-
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -35,10 +34,10 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         if(dropSlot == null)
         {
-            GameObject item = eventData.pointerEnter;
-            if(item != null)
+            GameObject dropItem = eventData.pointerEnter;
+            if(dropItem != null)
             {
-                dropSlot = item.GetComponent<InventorySlot>();
+                dropSlot = dropItem.GetComponent<InventorySlot>();
             }
         }
 
