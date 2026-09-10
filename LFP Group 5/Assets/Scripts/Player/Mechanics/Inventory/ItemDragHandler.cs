@@ -1,10 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private Transform _originalParent = null;
-    private CanvasGroup _canvasGroup = null;
+    [SerializeField] private CanvasGroup _canvasGroup = null;
     void Start()
     {
         _canvasGroup = GetComponent<CanvasGroup>();

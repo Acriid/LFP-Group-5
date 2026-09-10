@@ -1,14 +1,14 @@
 using System;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 
 public class UiItem : MonoBehaviour
 {
     //The GameObject requires :
-    //Secret image(0 Alpha) over the SpriteRenderer to use the hover code
     //Panel as a child to use the hover code.
     //Text on the child panel for the name and description.
-    [SerializeField] private SpriteRenderer _spriteRenderer = null;
+    [SerializeField] private Image _image = null;
     [SerializeField] private TMP_Text _itemNameText = null;
     [SerializeField] private TMP_Text _itemDescriptionText = null;
     private Sprite _uiSprite = null;
@@ -41,7 +41,7 @@ public class UiItem : MonoBehaviour
             _uiSprite = _currentItem.GetItemSprite();
             _hasItem = true;
         }
-        _spriteRenderer.sprite = _uiSprite;
+        _image.sprite = _uiSprite;
         _itemDescriptionText.text = _itemDescription;
         _itemNameText.text = _itemName;
     }

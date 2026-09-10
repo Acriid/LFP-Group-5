@@ -10,6 +10,7 @@ public class InventoryUiManager : MonoBehaviour
 
     void Awake()
     {
+        if(_inventory == null) return;
         if(_inventorySlots.Count != _inventory.GetInventorySize())
         {
             Debug.LogWarning("Inventory size not equal to slot count");
@@ -20,6 +21,7 @@ public class InventoryUiManager : MonoBehaviour
     }
     void OnDisable()
     {
+        if(_inventory == null) return;
         _inventory.OnItemPickup -= AddItem;
         _inventory.OnItemRemove -= RemoveItem;
     }

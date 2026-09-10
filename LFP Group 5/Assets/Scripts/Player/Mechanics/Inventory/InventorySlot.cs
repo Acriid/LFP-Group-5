@@ -21,6 +21,7 @@ public class InventorySlot : MonoBehaviour
     public void SetHeldObject(GameObject newObject)
     {
         _heldObject = newObject;
+        if(_heldObject == null) return;
         //Snap to center
         _heldObject.GetComponent<RectTransform>().anchoredPosition = _centerPosition;
     }
