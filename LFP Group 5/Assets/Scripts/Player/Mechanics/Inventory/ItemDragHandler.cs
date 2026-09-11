@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private Transform _originalParent = null;
+    [SerializeField] private ItemSO _itemSO = null;
     [SerializeField] private CanvasGroup _canvasGroup = null;
     void Start()
     {
@@ -12,6 +13,9 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if(_itemSO == null) return;
+        if(!_itemSO.IsActive) return;
+
         _originalParent = transform.parent;
         transform.SetParent(transform.root);
         _canvasGroup.blocksRaycasts = false;
@@ -20,11 +24,17 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnDrag(PointerEventData eventData)
     {
+        if(_itemSO == null) return;
+        if(!_itemSO.IsActive) return;
+
         transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if(_itemSO == null) return;
+        if(!_itemSO.IsActive) return;
+
         _canvasGroup.blocksRaycasts = true;
         _canvasGroup.alpha = 1f;
 
@@ -57,9 +67,15 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
         else
         {
-            transform.SetParent(_originalParent);
+            transform.SetParent(_originalParent,false);
+            GetComponent<RectTransform>().anchoredPosition = originalSlot.GetCenterPosition();
         }
 
-        GetComponent<RectTransform>().anchoredPosition = originalSlot.GetCenterPosition();
+        
+    }
+
+    public void SetItemSO(ItemSO newItemSO)
+    {
+        _itemSO = newItemSO;
     }
 }

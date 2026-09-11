@@ -1,9 +1,11 @@
-using System;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using System;
 
-public class UiItem : MonoBehaviour
+[RequireComponent(typeof(ItemDragHandler))]
+public class UiItem : MonoBehaviour, IPointerClickHandler
 {
     //The GameObject requires :
     //Panel as a child to use the hover code.
@@ -16,6 +18,7 @@ public class UiItem : MonoBehaviour
     private string _itemDescription = "";
     private bool _hasItem = false;
     private Item _currentItem = null;
+    public event Action<UiItem> OnItemClicked;
     public bool GetHasItem()
     {
         return _hasItem;
@@ -49,5 +52,14 @@ public class UiItem : MonoBehaviour
     public Item GetItem()
     {
         return _currentItem;
+    }
+    public ItemDragHandler GetItemDragHandler()
+    {
+        return GetComponent<ItemDragHandler>();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        OnItemClicked?.Invoke(this);
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Item", menuName = "Item/DefaultItem")]
 public class ItemSO : ScriptableObject
 {
     //To see if the player can use it in safe mode

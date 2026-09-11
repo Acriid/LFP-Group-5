@@ -26,17 +26,19 @@ public class Inventory : MonoBehaviour
 
     public void AddToInventoryItem(GameObject itemToAdd)
     {
+        Debug.Log("Clicked");
         if(_currentItems == _maxItems) return;
-        if(CheckIfItem(itemToAdd,out Item itemComponent,false,true))return;
+        if(!CheckIfItem(itemToAdd,out Item itemComponent,false,true))return;
         if(_itemList.Contains(itemComponent)) return;
 
+        Debug.Log("Added");
         _itemList.Add(itemComponent);
         _currentItems++;
         OnItemPickup?.Invoke(itemComponent);
     }
     public void RemoveItemFromInventory(GameObject itemToRemove)
     {
-        if(CheckIfItem(itemToRemove,out Item itemComponent,true))return;
+        if(!CheckIfItem(itemToRemove,out Item itemComponent,true))return;
         if(_itemList.Contains(itemComponent)) return;
 
         _itemList.Remove(itemComponent);
@@ -71,6 +73,7 @@ public class Inventory : MonoBehaviour
             if(itemComponent.GetIsCorrupt()) return false;
         }
 
+        Debug.Log("item");
         return true;
     }
 

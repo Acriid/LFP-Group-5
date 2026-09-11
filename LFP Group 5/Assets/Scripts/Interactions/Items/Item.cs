@@ -14,6 +14,12 @@ public class Item : Interaction
     {
         //TODO - Take object from game world and add it to ui
     }
+
+    public ItemSO GetItemSO()
+    {
+        return _itemSO;
+    }
+
     public bool GetIsActive()
     {
         return _itemSO.IsActive;

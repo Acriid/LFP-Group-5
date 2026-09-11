@@ -1,13 +1,13 @@
-using Unity.VisualScripting;
+using System;
 using UnityEngine;
 
 public class InventorySlot : MonoBehaviour
 {
     [SerializeField] private GameObject _heldObject = null;
-    [SerializeField] private Vector2 _centerPosition = Vector2.zero;
+    private Vector2 _centerPosition = Vector2.zero;
     void Awake()
     {
-        _centerPosition = transform.position;
+        _centerPosition = ((RectTransform)transform).anchoredPosition;
     }
     public Vector2 GetCenterPosition()
     {
@@ -16,7 +16,8 @@ public class InventorySlot : MonoBehaviour
     public void SetHeldObject(GameObject newObject, Transform newParent)
     {
         SetHeldObject(newObject);
-        newObject.transform.SetParent(newParent);
+
+        _heldObject.transform.SetParent(newParent,false);
     }
     public void SetHeldObject(GameObject newObject)
     {
