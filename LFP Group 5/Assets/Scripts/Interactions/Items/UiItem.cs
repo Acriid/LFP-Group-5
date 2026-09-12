@@ -60,6 +60,7 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("Clicked Item");
         OnItemClicked?.Invoke(this);
     }
 }

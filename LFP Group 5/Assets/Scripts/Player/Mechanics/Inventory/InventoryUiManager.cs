@@ -30,7 +30,7 @@ public class InventoryUiManager : MonoBehaviour
     private void InitializeItemPool()
     {
         if(_inventory == null) return;
-        _uiItemPool = PoolManager.Instance.GetPool<UiItem>(_uiItemPrefab,_inventorySlots.Count);
+        _uiItemPool = PoolManager.Instance.GetUIPool<UiItem>(_uiItemPrefab,_inventorySlots.Count);
         if(_uiItemPool == null)
         {
             Debug.LogError("Failed to load bullet pool.");
@@ -38,13 +38,17 @@ public class InventoryUiManager : MonoBehaviour
 
         foreach(UiItem uiItem in _uiItemPool)
         {
-            uiItem.OnItemClicked += ChangeSelectedItem;
+            uiItem.OnItemClicked += SetSelectedItem;
         }
     }
 
-    private void ChangeSelectedItem(UiItem newItem)
+    private void SetSelectedItem(UiItem newItem)
     {
         _currentSelectedItem = newItem;
+    }
+    public UiItem GetCurrentSelectedItem()
+    {
+        return _currentSelectedItem;
     }
 
     void OnDisable()
@@ -56,7 +60,7 @@ public class InventoryUiManager : MonoBehaviour
     {
         foreach(UiItem uiItem in _uiItemPool)
         {
-            uiItem.OnItemClicked -= ChangeSelectedItem;
+            uiItem.OnItemClicked -= SetSelectedItem;
         }
 
         if(_inventory == null) return;
@@ -100,7 +104,10 @@ public class InventoryUiManager : MonoBehaviour
                 {
                     uiItem.SetItem(null);
                     uiItem.GetItemDragHandler().SetItemSO(null);
+                    inventorySlot.SetHeldObject(null);
                     _uiItemPool.Return(uiItem);
+
+                    SetSelectedItem(null);
                 }
             }
         }       

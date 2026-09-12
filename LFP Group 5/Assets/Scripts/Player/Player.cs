@@ -86,6 +86,7 @@ public class Player : MonoBehaviour
 
     private void Interact()
     {
+        if(_interactMechanic == null) return;
         GameObject interactionObject = _interactMechanic.GetTargetInteractionGameObject();
         _interactMechanic.Interact(gameObject);
         _inventory.AddToInventoryItem(interactionObject);

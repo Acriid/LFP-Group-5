@@ -26,12 +26,10 @@ public class Inventory : MonoBehaviour
 
     public void AddToInventoryItem(GameObject itemToAdd)
     {
-        Debug.Log("Clicked");
         if(_currentItems == _maxItems) return;
         if(!CheckIfItem(itemToAdd,out Item itemComponent,false,true))return;
         if(_itemList.Contains(itemComponent)) return;
 
-        Debug.Log("Added");
         _itemList.Add(itemComponent);
         _currentItems++;
         OnItemPickup?.Invoke(itemComponent);
@@ -39,8 +37,10 @@ public class Inventory : MonoBehaviour
     public void RemoveItemFromInventory(GameObject itemToRemove)
     {
         if(!CheckIfItem(itemToRemove,out Item itemComponent,true))return;
-        if(_itemList.Contains(itemComponent)) return;
+        Debug.Log("Item");
+        if(!_itemList.Contains(itemComponent)) return;
 
+        Debug.Log("Removed");
         _itemList.Remove(itemComponent);
         _currentItems--;
         OnItemRemove?.Invoke(itemComponent);
@@ -58,8 +58,17 @@ public class Inventory : MonoBehaviour
 
     private bool CheckIfItem(GameObject objectToCheck, out Item itemComponent, bool checkActive = false, bool checkCorrupt = false)
     {
-        //If there is no item returns false
-        if(!objectToCheck.TryGetComponent(out itemComponent)) return false;
+
+        if(objectToCheck.TryGetComponent(out UiItem uiItemComponent))
+        {
+            itemComponent = uiItemComponent.GetItem();
+            if(itemComponent == null) return false;
+        }
+        else
+        {
+            //If there is no item returns false
+            if(!objectToCheck.TryGetComponent(out itemComponent)) return false;  
+        }
 
         //If not active returns false
         if(checkActive)
@@ -73,7 +82,6 @@ public class Inventory : MonoBehaviour
             if(itemComponent.GetIsCorrupt()) return false;
         }
 
-        Debug.Log("item");
         return true;
     }
 

@@ -6,6 +6,7 @@ public class PoolManager : MonoBehaviour
 {
     public static PoolManager Instance {get; private set;}
     [SerializeField] private Transform _poolRoot;
+    [SerializeField] private Transform _uiPoolRoot;
     [SerializeField] private bool _dontDestroyOnLoad = true;
     private Dictionary<Type, object> _pools = new();
 
@@ -51,6 +52,40 @@ public class PoolManager : MonoBehaviour
         {
             Transform poolParent = new GameObject($"{type.Name}_Pool").transform;
             poolParent.SetParent(_poolRoot);
+
+            var pool = new GenericPool<T>(prefab,poolParent,initialSize);
+            _pools[type] = pool;
+            
+            return pool;
+        }
+        return (GenericPool<T>)poolObj;
+    }
+    public GenericPool<T> GetUIPool<T>(GameObject prefab, int initialSize = 5) where T : Component
+    {
+        Type type = typeof(T);
+
+        if(!_pools.TryGetValue(type, out object poolObj))
+        {
+            Transform poolParent = new GameObject($"{type.Name}_Pool").transform;
+            poolParent.SetParent(_uiPoolRoot);
+
+            var pool = new GenericPool<T>(prefab,poolParent,initialSize);
+            _pools[type] = pool;
+            
+            return pool;
+        }
+
+        return (GenericPool<T>)poolObj;
+    }
+
+    public GenericPool<T> GetUIPool<T>(GameObject prefab, bool newPool, int initialSize = 5) where T : Component
+    {
+        Type type = typeof(T);
+        _pools.TryGetValue(type, out object poolObj);
+        if(newPool)
+        {
+            Transform poolParent = new GameObject($"{type.Name}_Pool").transform;
+            poolParent.SetParent(_uiPoolRoot);
 
             var pool = new GenericPool<T>(prefab,poolParent,initialSize);
             _pools[type] = pool;
