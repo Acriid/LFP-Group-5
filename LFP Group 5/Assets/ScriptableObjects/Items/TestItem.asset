@@ -15,5 +15,5 @@ MonoBehaviour:
   IsActive: 1
   IsCorrupt: 0
   UISprite: {fileID: 0}
-  ItemName: 
-  ItemDescription: 
+  ItemName: Test Item
+  ItemDescription: Used to test the inventory

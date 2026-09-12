@@ -91,7 +91,13 @@ public class Player : MonoBehaviour
         _interactMechanic.Interact(gameObject);
         _inventory.AddToInventoryItem(interactionObject);
     }
+    private void DropSelectedItem()
+    {
+        _inventory.RemoveItemFromInventory();
 
+        //TODO - Put item back into world space
+        //TODO - Put item on an item slot
+    }
     private void SwitchMode()
     {
         if(_currentMode == GameMode.NormalMode)

@@ -12,7 +12,12 @@ namespace GridSystem
         }
 
         public BoundsInt GridBounds {get; private set;}
+        public bool IsBlocked { get; private set; }
 
+        public void SetIsBlocked(bool blocked)
+        {
+            IsBlocked = blocked;
+        }
         public bool ContainsPoint(Vector2Int point)
         {
            return GridBounds.Contains((Vector3Int)point);
@@ -42,6 +47,19 @@ namespace GridSystem
         public GridMap(BoundsInt mapBounds, int cellSize = 0)
         {
             BuildMap(mapBounds,cellSize);
+        }
+
+        public void SetCellBlocked(Vector2Int position, bool blocked)
+        {
+            GridCell cell = GetGridCell(position);
+
+            if (cell == null)
+            {
+                Debug.LogWarning($"No grid cell exists at position {position}.");
+                return;
+            }
+
+            cell.SetIsBlocked(blocked);
         }
 
 
@@ -137,6 +155,25 @@ namespace GridSystem
 
 
         #region GetGridCell
+        /// <summary>
+        /// Gets grid cell
+        /// </summary>
+        /// <param name="position">Position of grid cell</param>
+        /// <returns></returns>
+        public GridCell GetGridCell(Vector2Int position)
+        {
+            GridCell targetCell = null;
+            foreach(var pair in _cellPositions)
+            {
+                if(pair.Value == position)
+                {
+                    targetCell = pair.Key;
+                    break;
+                }
+            }
+
+            return targetCell;
+        }
         /// <summary>
         /// Gets grid cell
         /// </summary>

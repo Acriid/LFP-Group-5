@@ -44,7 +44,12 @@ public class InventoryUiManager : MonoBehaviour
 
     private void SetSelectedItem(UiItem newItem)
     {
+        foreach(UiItem uiItem in _uiItemPool)
+        {
+            uiItem.DeSelectItem();
+        }
         _currentSelectedItem = newItem;
+        _currentSelectedItem.SelectItem();
     }
     public UiItem GetCurrentSelectedItem()
     {

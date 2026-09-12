@@ -34,6 +34,17 @@ public class Inventory : MonoBehaviour
         _currentItems++;
         OnItemPickup?.Invoke(itemComponent);
     }
+    public void RemoveItemFromInventory()
+    {
+        foreach(Item item in _itemList)
+        {
+            if(item.GetItemSO().IsSelected)
+            {
+                RemoveItemFromInventory(item.gameObject);
+                break;
+            }
+        }
+    }
     public void RemoveItemFromInventory(GameObject itemToRemove)
     {
         if(!CheckIfItem(itemToRemove,out Item itemComponent,true))return;

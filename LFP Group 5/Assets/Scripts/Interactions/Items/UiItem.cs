@@ -57,10 +57,21 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
     {
         return GetComponent<ItemDragHandler>();
     }
-
+    public void DeSelectItem()
+    {
+        _currentItem.GetItemSO().IsSelected = false;
+    }
+    public void SelectItem()
+    {
+        _currentItem.GetItemSO().IsSelected = true;
+    }
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Clicked Item");
+        if(_currentItem != null)
+        _currentItem.GetItemSO().IsSelected = true;
+
         OnItemClicked?.Invoke(this);
     }
+
+
 }
