@@ -12,7 +12,7 @@ public class Item : Interaction
     }
     private void PickUpItem(GameObject interactingObject)
     {
-        //TODO - Take object from game world and add it to ui
+        gameObject.SetActive(false);
     }
 
     public ItemSO GetItemSO()
@@ -40,5 +40,10 @@ public class Item : Interaction
     public Sprite GetItemSprite()
     {
         return _itemSO.UISprite;
+    }
+
+    public void SetIsCorrupt(bool newValue)
+    {
+        _itemSO.IsCorrupt = newValue;
     }
 }

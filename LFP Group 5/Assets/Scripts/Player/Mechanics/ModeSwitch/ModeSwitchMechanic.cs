@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
 
-public class ModeSwitchMechanic : MonoBehaviour
+[CreateAssetMenu(fileName = "ModeSwitch", menuName = "Mechanics/ModeSwitch")]
+public class ModeSwitchMechanic : ScriptableObject
 {
     public event Action<GameMode> OnModeSwitch;
     public void SwitchMode(GameMode newMode)

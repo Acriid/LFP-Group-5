@@ -46,4 +46,8 @@ public class GridManager : MonoBehaviour
     {
         return _gridMap;
     }
+    public void SetGridMap(GridMap newMap)
+    {
+        _gridMap = newMap;
+    }
 }

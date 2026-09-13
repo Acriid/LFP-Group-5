@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &42735012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,7 +551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   _inputReader: {fileID: 11400000, guid: 073e7d718b0f7ee4c8caa590dd5771ba, type: 2}
   _startPosition: {x: 0, y: 0}
-  _timeBetweenMoves: 0.3
+  _timeBetweenMoves: 0.5
   _interactMechanic: {fileID: 779419553}
   _inventory: {fileID: 0}
   _modeSwitchMechanic: {fileID: 0}

@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private InputReader _inputReader;
     [SerializeField] private Vector2Int _startPosition = Vector2Int.zero;
-    [SerializeField] private float _timeBetweenMoves = 0.4f;
+    [SerializeField] private float _timeBetweenMoves = 0.5f;
     [SerializeField] private InteractMechanic _interactMechanic = null;
     [SerializeField] private Inventory _inventory = null;
 
@@ -18,13 +18,14 @@ public class Player : MonoBehaviour
 
     private float _moveCoolDown = 0f;
     private Vector2Int _moveInput;
+    private bool _forceImmediateMove;
 
     void OnEnable()
     {
         //Gets first grid cell
         MovePlayer(_startPosition);
 
-        _moveCoolDown = _timeBetweenMoves;
+        StartCoroutine(CooldownClock());
 
         EnableInput();
     }
@@ -39,8 +40,13 @@ public class Player : MonoBehaviour
     }
     private void ReadInput(Vector2Int moveInput)
     {
+        if(moveInput != Vector2Int.zero && moveInput != _moveInput)
+        {
+            _forceImmediateMove = true;
+        }
         _moveInput = moveInput;
     }
+
     private void MovePlayer(Vector2Int moveInput)
     {
         if(GridManager.Instance == null)
@@ -49,7 +55,7 @@ public class Player : MonoBehaviour
             return;
         }
 
-        if(_moveCoolDown < _timeBetweenMoves) return;
+        if(_moveCoolDown < _timeBetweenMoves && !_forceImmediateMove) return;
 
         //Get next cells
         if(_currentCell == null)
@@ -64,6 +70,8 @@ public class Player : MonoBehaviour
 
         //Position to move to does not exist
         if(_nextCell == null) return;
+
+        _forceImmediateMove = false;
 
         transform.position = _nextCell.Center();
         _currentCell = _nextCell;

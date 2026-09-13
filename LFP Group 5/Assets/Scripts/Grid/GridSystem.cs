@@ -10,6 +10,11 @@ namespace GridSystem
         {
             GridBounds = new(position,size);
         }
+        public GridCell(GridCell cellToCopy)
+        {
+            GridBounds = cellToCopy.GridBounds;
+            IsBlocked = cellToCopy.IsBlocked;
+        }
 
         public BoundsInt GridBounds {get; private set;}
         public bool IsBlocked { get; private set; }
@@ -34,12 +39,39 @@ namespace GridSystem
         }
     }
 
-    public class GridMap
+    public class GridMap: IEnumerable<GridCell>
     {
         private List<List<GridCell>> _gridList;
         private Dictionary<GridCell, Vector2Int> _cellPositions;
 
-        //Constructors
+        #region Constructors
+        /// <summary>
+        /// Copies the given GridMap by making a new instance of that GridMap
+        /// </summary>
+        /// <param name="mapToCopy">The original GridMap that is being copied</param>
+        public GridMap(GridMap mapToCopy)
+        {
+            _gridList = new List<List<GridCell>>(mapToCopy._gridList.Count);
+            Dictionary<GridCell, GridCell> cellMap = new();
+
+            foreach(List<GridCell> row in mapToCopy._gridList)
+            {
+                List<GridCell> newRow = new(row.Count);
+                foreach(GridCell oldCell in row)
+                {
+                    GridCell newCell = new(oldCell);
+                    cellMap[oldCell] = newCell;
+                    newRow.Add(newCell);
+                }
+                _gridList.Add(newRow);
+            }
+
+            _cellPositions = new Dictionary<GridCell, Vector2Int>();
+            foreach(var pair in mapToCopy._cellPositions)
+            {
+                _cellPositions[cellMap[pair.Key]] = pair.Value;
+            }
+        }
         public GridMap(Transform topLeft, Transform bottomRight, int cellSize)
         {
             BuildMap(topLeft,bottomRight,cellSize);
@@ -48,7 +80,7 @@ namespace GridSystem
         {
             BuildMap(mapBounds,cellSize);
         }
-
+        #endregion
         public void SetCellBlocked(Vector2Int position, bool blocked)
         {
             GridCell cell = GetGridCell(position);
@@ -243,6 +275,22 @@ namespace GridSystem
             return _gridList[targetY][targetX];
         }
         #endregion
+
+        public IEnumerator<GridCell> GetEnumerator()
+        {
+            foreach(List<GridCell> row in _gridList)
+            {
+                foreach(GridCell cell in row)
+                {
+                    yield return cell;
+                }
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 
     public enum Direction
