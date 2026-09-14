@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -250,6 +251,15 @@ public class InputReader : ScriptableObject
     {
         _modeSwitchAction.Disable();
     }
+    public void EnableAction(InputAction actionToEnable)
+    {
+        actionToEnable.Enable();
+    }
+
+    public void DisableAction(InputAction actionToDisable)
+    {
+        actionToDisable.Disable();
+    }
     #endregion
     #region Raise Combined Event
     private void RaiseMoveEvent()
@@ -258,6 +268,27 @@ public class InputReader : ScriptableObject
         int vertical = _upValue + _downValue;
 
         OnMove?.Invoke(new Vector2Int(horizontal, vertical));
+    }
+    #endregion
+    #region Get is {Action} Enabled
+    public bool GetInventoryEnabled => _inventoryAction.enabled;
+    public bool GetModeSwitchEnabled => _modeSwitchAction.enabled;
+    public bool GetInteractEnabled => _interactAction.enabled;
+    public bool GetMoveLeftEnabled => _moveLeftAction.enabled;
+    public bool GetMoveUpEnabled => _moveUpAction.enabled;
+    public bool GetMoveDownEnabled => _moveDownAction.enabled;
+    public bool GetMoveRightEnabled => _moveRightAction.enabled;
+    public List<InputAction> GetDisabledActions()
+    {
+        List<InputAction> disabledActions = new();
+        foreach(InputAction action in _playerInputs)
+        {
+            if(!action.enabled && action.actionMap == _playerInputs.Player.Get()  )
+            {
+                disabledActions.Add(action);
+            }
+        }
+        return disabledActions;
     }
     #endregion
 

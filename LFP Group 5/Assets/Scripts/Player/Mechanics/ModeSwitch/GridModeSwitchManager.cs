@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using GridSystem;
 using UnityEngine;
 
@@ -29,18 +30,22 @@ public class GridModeSwitchManager : MonoBehaviour
     private void SafeModeLogic()
     {
         //Open up all the grid cells
-        _originalMap = GridManager.Instance.GetGridMap();
+        _originalMap = new(GridManager.Instance.GetGridMap());
 
+        //Initial creation of map
+        //All cells should not be blocked
         if(_safeModeMap == null)
         {
-            _safeModeMap = _originalMap;
+            _safeModeMap = new(_originalMap);
             foreach(GridCell gridCell in _safeModeMap)
             {
                 if(gridCell.IsBlocked)
                 {
-                    
+                    gridCell.SetIsBlocked(false);
                 }
             }
         }
+
+        GridManager.Instance.SetGridMap(_safeModeMap);
     }
 }
