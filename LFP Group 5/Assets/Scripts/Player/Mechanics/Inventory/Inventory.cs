@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour
     //When max items gets smaller items drop from back of the list.
     [SerializeField] private int _maxItems = 4;
     private int _currentItems = 0;
+    private int _lockedIndex = 0;
     public event Action<Item> OnItemPickup;
     public event Action<Item> OnItemRemove;
     //Should inventory keep track of the current item?
@@ -17,11 +18,27 @@ public class Inventory : MonoBehaviour
         _itemList = new(_maxItems);
     }
 
-    public void ChangeMaxItems(int newValue)
+    public void SetMaxSize(int newValue)
     {
         _maxItems = newValue;
 
-        //TODO- Change inventory to lock items
+        if(_maxItems > _currentItems)
+        {
+
+            for(int i = _currentItems -1; i > _maxItems - 1 ; i--)
+            {
+                _itemList[i].SetIsActive(false);
+                
+            }
+            _lockedIndex = _maxItems;
+        }
+        else if(_maxItems >= _currentItems)
+        {
+            for(int i = _lockedIndex; i > _currentItems ; i++)
+            {
+                _itemList[i].SetIsActive(false);
+            }        
+        }
     }
 
     public void AddToInventoryItem(GameObject itemToAdd)

@@ -1,15 +1,11 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class InputModeSwitchManager : MonoBehaviour
+public class ItemModeSwitchManager : MonoBehaviour
 {
     [SerializeField] private ModeSwitchMechanic _modeSwitchMechanic = null;
-    [SerializeField] private InputReader _inputReader = null;
-
-    private List<InputAction> _actionsToRevert = new();
-
+    [SerializeField] private List<Item> _itemList = new();
+    private List<Item> _revertItemList = new();
     void OnEnable()
     {
         _modeSwitchMechanic.OnModeSwitch += ManageInputMode;
@@ -28,20 +24,24 @@ public class InputModeSwitchManager : MonoBehaviour
 
     private void SafeModeLogic()
     {
-        _actionsToRevert.Clear();
-        foreach(InputAction action in _inputReader.GetDisabledActions())
+        _revertItemList.Clear();
+
+        foreach(Item item in _itemList)
         {
-            _inputReader.EnableAction(action);
-            _actionsToRevert.Add(action);
+            if(item.GetIsCorrupt())
+            {
+                item.SetIsCorrupt(false);
+                _revertItemList.Add(item);
+            }
         }
     }
-
     private void NormalModeLogic()
     {
-        foreach(InputAction action in _actionsToRevert)
+        foreach(Item item in _revertItemList)
         {
-            _inputReader.DisableAction(action);
+            item.SetIsCorrupt(true);
         }
-        _actionsToRevert.Clear();
+
+        _revertItemList.Clear();
     }
 }

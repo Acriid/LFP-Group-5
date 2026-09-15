@@ -46,4 +46,8 @@ public class Item : Interaction
     {
         _itemSO.IsCorrupt = newValue;
     }
+    public void SetIsActive(bool newValue)
+    {
+        _itemSO.IsActive = newValue;
+    }
 }
