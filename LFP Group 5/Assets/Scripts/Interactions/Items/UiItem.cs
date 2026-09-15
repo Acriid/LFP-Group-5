@@ -59,10 +59,12 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
     }
     public void DeSelectItem()
     {
+        if(_currentItem == null) return;
         _currentItem.GetItemSO().IsSelected = false;
     }
     public void SelectItem()
     {
+        if(_currentItem == null) return;
         _currentItem.GetItemSO().IsSelected = true;
     }
     public void OnPointerClick(PointerEventData eventData)
