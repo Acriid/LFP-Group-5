@@ -113,6 +113,7 @@ public class InventoryUiManager : MonoBehaviour
                 if(!heldObject.TryGetComponent(out UiItem uiItem)) return;
                 if(uiItem.GetItem() == itemToRemove)
                 {
+                    uiItem.DeSelectItem();
                     uiItem.SetItem(null);
                     uiItem.GetItemDragHandler().SetItemSO(null);
                     inventorySlot.SetHeldObject(null);

@@ -61,11 +61,13 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
     {
         if(_currentItem == null) return;
         _currentItem.GetItemSO().IsSelected = false;
+        _image.color = Color.white;
     }
     public void SelectItem()
     {
         if(_currentItem == null) return;
         _currentItem.GetItemSO().IsSelected = true;
+        _image.color = Color.red;
     }
     public void OnPointerClick(PointerEventData eventData)
     {
