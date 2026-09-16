@@ -13,6 +13,10 @@ public class Player : MonoBehaviour
     [SerializeField] private Inventory _inventory = null;
 
     [SerializeField] private ModeSwitchMechanic _modeSwitchMechanic = null;
+
+    // REMOVE LATER
+    public GameObject ModeSwitchPanel;
+    // REMOVE LATER
     private GameMode _currentMode = GameMode.NormalMode;
 
     private GridCell _currentCell = null;
@@ -115,9 +119,17 @@ public class Player : MonoBehaviour
     private void SwitchMode()
     {
         if(_currentMode == GameMode.NormalMode)
-        _currentMode = GameMode.SafeMode;
-        else 
-        _currentMode = GameMode.NormalMode;
+        {
+            _currentMode = GameMode.SafeMode;
+            //REMOVE LATER
+            ModeSwitchPanel.SetActive(true);
+        }
+        else
+        {
+            _currentMode = GameMode.NormalMode;
+            //REMOVE LATER
+            ModeSwitchPanel.SetActive(false);
+        }
 
         _modeSwitchMechanic.SwitchMode(_currentMode);
     }

@@ -69,6 +69,7 @@ public class InteractMechanic : MonoBehaviour
     }
     public GameObject GetTargetInteractionGameObject()
     {
+        if(_targetInteraction == null) return null;
         return _targetInteraction.gameObject;
     }
 
@@ -88,7 +89,6 @@ public class InteractMechanic : MonoBehaviour
         if (interaction != null && !_interactionsInRange.Contains(interaction))
             _interactionsInRange.Add(interaction);
 
-        Debug.Log(interaction.name);
     }
     //Remove from interaction list
     void OnTriggerExit2D(Collider2D collision)
@@ -99,7 +99,6 @@ public class InteractMechanic : MonoBehaviour
             if (_targetInteraction == interaction)
                 _targetInteraction = null;
 
-            Debug.Log(interaction.name);
         }
     }
 }
