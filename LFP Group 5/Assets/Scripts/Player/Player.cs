@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private InputReader _inputReader;
     [SerializeField] private Vector2Int _startPosition = Vector2Int.zero;
     [SerializeField] private float _timeBetweenMoves = 0.5f;
+    [SerializeField] private LayerMask _obstacleMask;
+    [Header("Inventory")]
     [SerializeField] private Transform _itemParentTransform = null;
     [Header("Other Scripts")]
     [SerializeField] private InteractMechanic _interactMechanic = null;
     [SerializeField] private Inventory _inventory = null;
-
     [SerializeField] private ModeSwitchMechanic _modeSwitchMechanic = null;
-
     // REMOVE LATER
+    [Header("REMOVE LATER")]
     public GameObject ModeSwitchPanel;
     // REMOVE LATER
+
+
     private GameMode _currentMode = GameMode.NormalMode;
 
     private GridCell _currentCell = null;
@@ -77,6 +81,7 @@ public class Player : MonoBehaviour
         //Position to move to does not exist
         if(_nextCell == null) return;
         if(_nextCell.IsBlocked) return;
+        if(CheckIfBlocked(_nextCell)) return;
 
         _forceImmediateMove = false;
 
@@ -99,6 +104,13 @@ public class Player : MonoBehaviour
         }
     }
 
+    private bool CheckIfBlocked(GridCell cellToCheck)
+    {
+        Vector2 direction = cellToCheck.Center() - (Vector2)transform.position; 
+        if(Physics2D.Raycast(transform.position,direction,cellToCheck.GridBounds.size.x,_obstacleMask)) return true;
+        return false;
+    }
+
     private void Interact()
     {
         if(_interactMechanic == null) return;
@@ -110,7 +122,7 @@ public class Player : MonoBehaviour
     private void DropSelectedItem()
     {
         GameObject item = _inventory.RemoveItemFromInventory();
-
+        if(item == null) return;
         item.SetActive(true);
         item.transform.SetParent(_itemParentTransform);
         //For now item is set beneath the player.
