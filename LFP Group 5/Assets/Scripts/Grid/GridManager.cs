@@ -50,4 +50,27 @@ public class GridManager : MonoBehaviour
     {
         _gridMap = newMap;
     }
+
+    private void OnDrawGizmos()
+    {
+        if (_gridMap == null)
+            return;
+
+        foreach (GridCell cell in _gridMap)
+        {
+            // Draw cell boundary
+            Gizmos.color = Color.white;
+            Gizmos.DrawWireCube(
+                cell.GridBounds.center,
+                cell.GridBounds.size
+            );
+
+            // Draw cell centre
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(
+                cell.Center(),
+                0.1f
+            );
+        }
+    }
 }
