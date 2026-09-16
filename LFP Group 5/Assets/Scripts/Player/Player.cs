@@ -130,6 +130,9 @@ public class Player : MonoBehaviour
         _inputReader.OnInteract += Interact;
         _inputReader.EnableInteractAction();
 
+        _inputReader.OnDropItem += DropSelectedItem;
+        _inputReader.EnableDropItemAction();
+
         _inputReader.OnModeSwitch += SwitchMode;
         _inputReader.EnableModeSwitchAction();
     }
@@ -139,7 +142,10 @@ public class Player : MonoBehaviour
         _inputReader.DisableMoveActions(); 
 
         _inputReader.OnInteract -= Interact;
-        _inputReader.DisableInteractAction();    
+        _inputReader.DisableInteractAction();
+
+        _inputReader.OnDropItem -= DropSelectedItem;
+        _inputReader.DisableDropItemAction();    
 
         _inputReader.OnModeSwitch -= SwitchMode;  
         _inputReader.DisableModeSwitchAction();
