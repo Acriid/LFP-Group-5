@@ -21,7 +21,7 @@ public class InventoryUiManager : MonoBehaviour
         if(_inventorySlots.Count != _inventory.GetInventorySize())
         {
             Debug.LogWarning("Inventory size not equal to slot count");
-            _inventory.ChangeMaxItems(_inventorySlots.Count);
+            _inventory.SetMaxSize(_inventorySlots.Count);
         }
 
         _inventory.OnItemPickup += AddItem;
