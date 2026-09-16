@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
     private int _lockedIndex = 0;
     public event Action<Item> OnItemPickup;
     public event Action<Item> OnItemRemove;
+    public event Action<int> OnMaxSizeChange;
     //Should inventory keep track of the current item?
 
     void OnEnable()
@@ -22,9 +23,8 @@ public class Inventory : MonoBehaviour
     {
         _maxItems = newValue;
 
-        if(_maxItems > _currentItems)
+        if(_maxItems < _currentItems)
         {
-
             for(int i = _currentItems -1; i > _maxItems - 1 ; i--)
             {
                 _itemList[i].SetIsActive(false);
@@ -34,17 +34,18 @@ public class Inventory : MonoBehaviour
         }
         else if(_maxItems >= _currentItems)
         {
-            for(int i = _lockedIndex; i > _currentItems ; i++)
+            for(int i = _lockedIndex; i < _currentItems ; i++)
             {
-                _itemList[i].SetIsActive(false);
+                _itemList[i].SetIsActive(true);
             }        
         }
+        OnMaxSizeChange?.Invoke(_maxItems);
     }
 
     public void AddToInventoryItem(GameObject itemToAdd)
     {
         if(itemToAdd == null) return;
-        if(_currentItems == _maxItems) return;
+        if(_currentItems >= _maxItems) return;
         if(!CheckIfItem(itemToAdd,out Item itemComponent,false,true))return;
         if(_itemList.Contains(itemComponent)) return;
 
@@ -113,6 +114,7 @@ public class Inventory : MonoBehaviour
         if(checkCorrupt)
         {
             if(itemComponent.GetIsCorrupt()) return false;
+            Debug.Log("Corrupt");
         }
 
         return true;

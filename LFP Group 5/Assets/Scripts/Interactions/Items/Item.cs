@@ -12,7 +12,7 @@ public class Item : Interaction
     }
     private void PickUpItem(GameObject interactingObject)
     {
-        gameObject.SetActive(false);
+        
     }
 
     public ItemSO GetItemSO()

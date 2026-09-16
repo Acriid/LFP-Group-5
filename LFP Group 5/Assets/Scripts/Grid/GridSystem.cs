@@ -27,6 +27,19 @@ namespace GridSystem
         {
            return GridBounds.Contains((Vector3Int)point);
         }
+        public bool ContainsPoint(Vector2 point)
+        {
+            float num1 = point.x;
+            float num2 = point.y;
+
+            bool result = num1 >= GridBounds.xMin 
+            && num2 >= GridBounds.yMin 
+            && num1 < GridBounds.xMax 
+            && num2 < GridBounds.yMax;
+
+            
+            return result;
+        }
 
         public void SetBounds(BoundsInt newBounds)
         {
@@ -56,21 +69,11 @@ namespace GridSystem
 
             foreach(List<GridCell> row in mapToCopy._gridList)
             {
-                List<GridCell> newRow = new(row.Count);
-                foreach(GridCell oldCell in row)
-                {
-                    GridCell newCell = new(oldCell);
-                    cellMap[oldCell] = newCell;
-                    newRow.Add(newCell);
-                }
+                List<GridCell> newRow = new(row);
                 _gridList.Add(newRow);
             }
 
-            _cellPositions = new Dictionary<GridCell, Vector2Int>();
-            foreach(var pair in mapToCopy._cellPositions)
-            {
-                _cellPositions[cellMap[pair.Key]] = pair.Value;
-            }
+            BuildCellPositionLookup();
         }
         public GridMap(Transform topLeft, Transform bottomRight, int cellSize)
         {
@@ -256,6 +259,7 @@ namespace GridSystem
         {
             if(!_cellPositions.TryGetValue(referenceCell, out Vector2Int position))
             {
+                Debug.Log("No cell found");
                 return null;
             }
 

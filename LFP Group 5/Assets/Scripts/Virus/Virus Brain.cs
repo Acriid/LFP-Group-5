@@ -36,9 +36,7 @@ public class VirusBrain : ScriptableObject
         {
             foreach(Transform blockTransform in cellBlockTransforms)
             {
-                Vector2Int floorPosition = new(Mathf.FloorToInt(blockTransform.position.x), Mathf.FloorToInt(blockTransform.position.y));
-                Vector2Int ceilPosition = new(Mathf.CeilToInt(blockTransform.position.x), Mathf.CeilToInt(blockTransform.position.y));
-                if(gridCell.ContainsPoint(floorPosition) || gridCell.ContainsPoint(ceilPosition))
+                if(gridCell.ContainsPoint(blockTransform.position))
                 {
                     BlockCell(gridCell);
                 }

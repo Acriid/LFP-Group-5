@@ -10,6 +10,9 @@ public class InventoryUiManager : MonoBehaviour
     [SerializeField] private Transform _dragParent = null;
     private GenericPool<UiItem> _uiItemPool;
     private UiItem _currentSelectedItem = null;
+
+    private int _lockedIndex;
+
     void Awake()
     {
         InitializeInventory();
@@ -25,7 +28,8 @@ public class InventoryUiManager : MonoBehaviour
         }
 
         _inventory.OnItemPickup += AddItem;
-        _inventory.OnItemRemove += RemoveItem;       
+        _inventory.OnItemRemove += RemoveItem;  
+        _inventory.OnMaxSizeChange += LockSlots;     
     }
     private void InitializeItemPool()
     {
@@ -76,8 +80,32 @@ public class InventoryUiManager : MonoBehaviour
 
         if(_inventory == null) return;
         _inventory.OnItemPickup -= AddItem;
-        _inventory.OnItemRemove -= RemoveItem;      
+        _inventory.OnItemRemove -= RemoveItem;   
+        _inventory.OnMaxSizeChange -= LockSlots;     
     }
+
+    private void LockSlots(int maxSlots)
+    {
+        int slotCount = _inventorySlots.Count;
+
+        if(maxSlots < slotCount)
+        {
+            for(int i = slotCount -1; i > maxSlots - 1 ; i--)
+            {
+                _inventorySlots[i].SetIsActive(false);
+                
+            }
+            _lockedIndex = maxSlots;
+        }
+        else if(maxSlots >= slotCount)
+        {
+            for(int i = _lockedIndex; i < slotCount ; i++)
+            {
+                _inventorySlots[i].SetIsActive(true);
+            }        
+        }     
+    }
+
     private void AddItem(Item itemToInitialize)
     {
         if(itemToInitialize == null) return;

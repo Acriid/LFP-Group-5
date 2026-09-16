@@ -5,6 +5,8 @@ public class InventorySlot : MonoBehaviour
 {
     [SerializeField] private GameObject _heldObject = null;
     private Vector2 _centerPosition = Vector2.zero;
+
+    private bool _isActive = true;
     void Awake()
     {
         _centerPosition = ((RectTransform)transform).anchoredPosition;
@@ -29,6 +31,15 @@ public class InventorySlot : MonoBehaviour
     public GameObject GetHeldObject()
     {
         return _heldObject;
+    }
+
+    public void SetIsActive(bool newValue)
+    {
+        _isActive = newValue;
+    }
+    public bool GetIsActive()
+    {
+        return _isActive;
     }
 
 }

@@ -52,11 +52,11 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             GameObject dropItem = eventData.pointerEnter;
             if(dropItem != null)
             {
-                dropSlot = dropItem.GetComponent<InventorySlot>();
+                dropSlot = dropItem.GetComponentInParent<InventorySlot>();
             }
         }
 
-        if(dropSlot != null)
+        if(dropSlot != null && dropSlot.GetIsActive())
         {
             if(dropSlot.GetHeldObject() != null)
             {

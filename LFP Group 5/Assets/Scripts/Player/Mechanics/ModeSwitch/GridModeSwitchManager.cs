@@ -36,6 +36,7 @@ public class GridModeSwitchManager : MonoBehaviour
         //All cells should not be blocked
         if(_safeModeMap == null)
         {
+            Debug.Log("Set SafeMap");
             _safeModeMap = new(_originalMap);
             foreach(GridCell gridCell in _safeModeMap)
             {
