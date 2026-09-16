@@ -87,6 +87,8 @@ public class InteractMechanic : MonoBehaviour
 
         if (interaction != null && !_interactionsInRange.Contains(interaction))
             _interactionsInRange.Add(interaction);
+
+        Debug.Log(interaction.name);
     }
     //Remove from interaction list
     void OnTriggerExit2D(Collider2D collision)
@@ -96,6 +98,8 @@ public class InteractMechanic : MonoBehaviour
             _interactionsInRange.Remove(interaction);
             if (_targetInteraction == interaction)
                 _targetInteraction = null;
+
+            Debug.Log(interaction.name);
         }
     }
 }

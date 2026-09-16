@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     [SerializeField] private InputReader _inputReader;
     [SerializeField] private Vector2Int _startPosition = Vector2Int.zero;
     [SerializeField] private float _timeBetweenMoves = 0.5f;
+    [SerializeField] private Transform _itemParentTransform = null;
+    [Header("Other Scripts")]
     [SerializeField] private InteractMechanic _interactMechanic = null;
     [SerializeField] private Inventory _inventory = null;
 
@@ -70,6 +72,7 @@ public class Player : MonoBehaviour
 
         //Position to move to does not exist
         if(_nextCell == null) return;
+        if(_nextCell.IsBlocked) return;
 
         _forceImmediateMove = false;
 
@@ -97,14 +100,17 @@ public class Player : MonoBehaviour
         if(_interactMechanic == null) return;
         GameObject interactionObject = _interactMechanic.GetTargetInteractionGameObject();
         _interactMechanic.Interact(gameObject);
+        if(_inventory == null) return;
         _inventory.AddToInventoryItem(interactionObject);
     }
     private void DropSelectedItem()
     {
-        _inventory.RemoveItemFromInventory();
+        GameObject item = _inventory.RemoveItemFromInventory();
 
-        //TODO - Put item back into world space
-        //TODO - Put item on an item slot
+        item.SetActive(true);
+        item.transform.SetParent(_itemParentTransform);
+        //For now item is set beneath the player.
+        item.transform.position = transform.position;
     }
     private void SwitchMode()
     {
@@ -124,6 +130,9 @@ public class Player : MonoBehaviour
         _inputReader.OnInteract += Interact;
         _inputReader.EnableInteractAction();
 
+        _inputReader.OnDropItem += DropSelectedItem;
+        _inputReader.EnableDropItemAction();
+
         _inputReader.OnModeSwitch += SwitchMode;
         _inputReader.EnableModeSwitchAction();
     }
@@ -133,7 +142,10 @@ public class Player : MonoBehaviour
         _inputReader.DisableMoveActions(); 
 
         _inputReader.OnInteract -= Interact;
-        _inputReader.DisableInteractAction();    
+        _inputReader.DisableInteractAction();
+
+        _inputReader.OnDropItem -= DropSelectedItem;
+        _inputReader.DisableDropItemAction();    
 
         _inputReader.OnModeSwitch -= SwitchMode;  
         _inputReader.DisableModeSwitchAction();

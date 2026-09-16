@@ -384,12 +384,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410007315}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.9, y: 4.78, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.94542, y: 5.2804303, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 438682383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &438682381
 GameObject:
@@ -435,7 +435,9 @@ Transform:
   m_LocalPosition: {x: 6.04542, y: -0.50043, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1139729336}
+  - {fileID: 410007316}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &504903436
@@ -552,6 +554,7 @@ MonoBehaviour:
   _inputReader: {fileID: 11400000, guid: 073e7d718b0f7ee4c8caa590dd5771ba, type: 2}
   _startPosition: {x: 0, y: 0}
   _timeBetweenMoves: 0.5
+  _itemParentTransform: {fileID: 0}
   _interactMechanic: {fileID: 779419553}
   _inventory: {fileID: 0}
   _modeSwitchMechanic: {fileID: 0}
@@ -706,12 +709,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139729335}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.786, y: -4.951, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.7405796, y: -4.45057, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 438682383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1567813312
 GameObject:
@@ -1069,8 +1072,6 @@ SceneRoots:
   - {fileID: 254778779}
   - {fileID: 1772377611}
   - {fileID: 1588790829}
-  - {fileID: 410007316}
-  - {fileID: 1139729336}
   - {fileID: 438682383}
   - {fileID: 779419552}
   - {fileID: 42735015}

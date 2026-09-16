@@ -16,6 +16,8 @@ public class InputReader : ScriptableObject
 
     private InputAction _interactAction;
 
+    private InputAction _dropItemAction;
+
     private InputAction _inventoryAction;
 
     private InputAction _modeSwitchAction;
@@ -25,6 +27,8 @@ public class InputReader : ScriptableObject
     public event Action<Vector2Int> OnMove;
 
     public event Action OnInteract;
+
+    public event Action OnDropItem;
 
     public event Action OnInventory;
 
@@ -53,6 +57,7 @@ public class InputReader : ScriptableObject
     private Action<InputAction.CallbackContext> _moveRightCanceled;
     #endregion
     private Action<InputAction.CallbackContext> _interactPerformed;
+    private Action<InputAction.CallbackContext> _dropItemPerformed;
     private Action<InputAction.CallbackContext> _inventoryPerformed;
     private Action<InputAction.CallbackContext> _modeSwitchPerformed;
     #endregion
@@ -85,6 +90,8 @@ public class InputReader : ScriptableObject
         //Other
         _interactAction = _playerInputs.Player.Interact;
 
+        _dropItemAction = _playerInputs.Player.DropItem;
+
         _inventoryAction = _playerInputs.Player.Inventory;
 
         _modeSwitchAction = _playerInputs.Player.ModeSwitch;
@@ -112,6 +119,8 @@ public class InputReader : ScriptableObject
 
         //Other
         _interactPerformed = ctx => OnInteract?.Invoke();
+
+        _dropItemPerformed = ctx => OnDropItem?.Invoke();
 
         _inventoryPerformed = ctx => OnInventory?.Invoke();
 
@@ -141,6 +150,8 @@ public class InputReader : ScriptableObject
         //Other
         _interactAction.performed += _interactPerformed;
 
+        _dropItemAction.performed += _dropItemPerformed;
+
         _inventoryAction.performed += _inventoryPerformed;
 
         _modeSwitchAction.performed += _modeSwitchPerformed;
@@ -163,6 +174,8 @@ public class InputReader : ScriptableObject
 
         //Other
         _interactAction.performed -= _interactPerformed;
+
+        _dropItemAction.performed -= _dropItemPerformed;
 
         _inventoryAction.performed -= _inventoryPerformed;
 
@@ -234,6 +247,14 @@ public class InputReader : ScriptableObject
     public void DisableInteractAction()
     {
         _interactAction.Disable();
+    }
+    public void EnableDropItemAction()
+    {
+        _dropItemAction.Enable();
+    }
+    public void DisableDropItemAction()
+    {
+        _dropItemAction.Disable();
     }
     public void EnableInventoryAction()
     {

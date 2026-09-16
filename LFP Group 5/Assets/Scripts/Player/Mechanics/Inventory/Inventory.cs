@@ -43,35 +43,40 @@ public class Inventory : MonoBehaviour
 
     public void AddToInventoryItem(GameObject itemToAdd)
     {
+        if(itemToAdd == null) return;
         if(_currentItems == _maxItems) return;
         if(!CheckIfItem(itemToAdd,out Item itemComponent,false,true))return;
         if(_itemList.Contains(itemComponent)) return;
 
+        itemToAdd.SetActive(false);
         _itemList.Add(itemComponent);
         _currentItems++;
         OnItemPickup?.Invoke(itemComponent);
     }
-    public void RemoveItemFromInventory()
+    public GameObject RemoveItemFromInventory()
     {
+        GameObject itemRemoved = null;
         foreach(Item item in _itemList)
         {
             if(item.GetItemSO().IsSelected)
             {
+                itemRemoved = item.gameObject;
                 RemoveItemFromInventory(item.gameObject);
                 break;
             }
         }
+        return itemRemoved;
     }
-    public void RemoveItemFromInventory(GameObject itemToRemove)
+    public GameObject RemoveItemFromInventory(GameObject itemToRemove)
     {
-        if(!CheckIfItem(itemToRemove,out Item itemComponent,true))return;
-        Debug.Log("Item");
-        if(!_itemList.Contains(itemComponent)) return;
+        if(itemToRemove == null) return null;
+        if(!CheckIfItem(itemToRemove,out Item itemComponent,true))return null;
+        if(!_itemList.Contains(itemComponent)) return null;
 
-        Debug.Log("Removed");
         _itemList.Remove(itemComponent);
         _currentItems--;
         OnItemRemove?.Invoke(itemComponent);
+        return itemComponent.gameObject;
     }
     public void ChangeItemSlot(GameObject itemToChange, int newSlot)
     {

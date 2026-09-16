@@ -7,7 +7,7 @@ public class InventoryUiManager : MonoBehaviour
     [SerializeField] private Inventory _inventory = null;
     [SerializeField] private List<InventorySlot> _inventorySlots = new();
     [SerializeField] private GameObject _uiItemPrefab = null;
-
+    [SerializeField] private Transform _dragParent = null;
     private GenericPool<UiItem> _uiItemPool;
     private UiItem _currentSelectedItem = null;
     void Awake()
@@ -39,6 +39,10 @@ public class InventoryUiManager : MonoBehaviour
         foreach(UiItem uiItem in _uiItemPool)
         {
             uiItem.OnItemClicked += SetSelectedItem;
+            if(uiItem.TryGetComponent(out ItemDragHandler dragHandlerComponent))
+            {
+                dragHandlerComponent.SetDragParent(_dragParent);
+            }
         }
     }
 
