@@ -79,6 +79,7 @@ public class Inventory : MonoBehaviour
         OnItemRemove?.Invoke(itemComponent);
         return itemComponent.gameObject;
     }
+    //TODO - Change Item Slots in UIInventory.
     public void ChangeItemSlot(GameObject itemToChange, int newSlot)
     {
         if (newSlot < 0 || newSlot >= _maxItems) return;
