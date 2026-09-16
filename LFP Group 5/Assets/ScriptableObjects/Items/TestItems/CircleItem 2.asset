@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CircleItem 2
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   IsActive: 1
-  IsCorrupt: 0
+  IsCorrupt: 1
   IsSelected: 0
   UISprite: {fileID: 0}
-  ItemName: Circle
-  ItemDescription: Its a Circle
+  ItemName: Corrupted Circle
+  ItemDescription: Its a Corrupted Circle

@@ -24,8 +24,15 @@ public class InventoryUiManager : MonoBehaviour
         if(_inventorySlots.Count != _inventory.GetInventorySize())
         {
             Debug.LogWarning("Inventory size not equal to slot count");
-            _inventory.SetMaxSize(_inventorySlots.Count);
+            _inventory.SetAllowedSize(_inventorySlots.Count);
         }
+
+
+        foreach(InventorySlot inventorySlot in _inventorySlots)
+        {
+            inventorySlot.OnHeldObjectChange += ChangeItemSlots;
+        }
+
 
         _inventory.OnItemPickup += AddItem;
         _inventory.OnItemRemove += RemoveItem;  
@@ -69,6 +76,11 @@ public class InventoryUiManager : MonoBehaviour
     void OnDisable()
     {
         UnsubscribeEvents();
+
+        foreach(InventorySlot inventorySlot in _inventorySlots)
+        {
+            inventorySlot.OnHeldObjectChange -= ChangeItemSlots;
+        }
     }
 
     private void UnsubscribeEvents()
@@ -83,21 +95,24 @@ public class InventoryUiManager : MonoBehaviour
         _inventory.OnItemRemove -= RemoveItem;   
         _inventory.OnMaxSizeChange -= LockSlots;     
     }
-
-    private void LockSlots(int maxSlots)
+    private void ChangeItemSlots(InventorySlot inventorySlot)
+    {
+        _inventory.ChangeItemSlot(inventorySlot.GetHeldObject(),_inventorySlots.IndexOf(inventorySlot));
+    }
+    private void LockSlots(int allowedSlots)
     {
         int slotCount = _inventorySlots.Count;
 
-        if(maxSlots < slotCount)
+        if(allowedSlots < slotCount)
         {
-            for(int i = slotCount -1; i > maxSlots - 1 ; i--)
+            for(int i = slotCount -1; i > allowedSlots - 1 ; i--)
             {
                 _inventorySlots[i].SetIsActive(false);
                 
             }
-            _lockedIndex = maxSlots;
+            _lockedIndex = allowedSlots;
         }
-        else if(maxSlots >= slotCount)
+        else if(allowedSlots >= slotCount)
         {
             for(int i = _lockedIndex; i < slotCount ; i++)
             {

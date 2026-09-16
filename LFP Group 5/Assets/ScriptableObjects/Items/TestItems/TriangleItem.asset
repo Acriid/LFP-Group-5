@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   IsActive: 1
   IsCorrupt: 0
-  IsSelected: 1
+  IsSelected: 0
   UISprite: {fileID: 0}
   ItemName: Triangle
   ItemDescription: Its a Triangle

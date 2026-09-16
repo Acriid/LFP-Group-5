@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private List<Item> _itemList;
     //When max items gets smaller items drop from back of the list.
     [SerializeField] private int _maxItems = 4;
+    private int _allowedSize = 0;
     private int _currentItems = 0;
     private int _lockedIndex = 0;
     public event Action<Item> OnItemPickup;
@@ -16,30 +17,42 @@ public class Inventory : MonoBehaviour
 
     void OnEnable()
     {
-        _itemList = new(_maxItems);
+        InitializeList();
+        _allowedSize = _maxItems;
     }
 
-    public void SetMaxSize(int newValue)
+    private void InitializeList()
     {
-        _maxItems = newValue;
-
-        if(_maxItems < _currentItems)
+        _itemList = new(_maxItems);
+        for(int i = 0; i < _maxItems; i++)
         {
-            for(int i = _currentItems -1; i > _maxItems - 1 ; i--)
+            _itemList.Add(null);
+        }
+        _allowedSize = _maxItems;
+    }
+    public void SetAllowedSize(int newValue)
+    {
+        _allowedSize = newValue;
+
+        if(_allowedSize < _currentItems)
+        {
+            for(int i = _itemList.Count - 1; i > _allowedSize - 1 ; i--)
             {
+                if(_itemList[i] == null) continue;
                 _itemList[i].SetIsActive(false);
                 
             }
-            _lockedIndex = _maxItems;
+            _lockedIndex = _allowedSize;
         }
-        else if(_maxItems >= _currentItems)
+        else if(_allowedSize >= _currentItems)
         {
-            for(int i = _lockedIndex; i < _currentItems ; i++)
+            for(int i = _lockedIndex; i < _itemList.Count ; i++)
             {
+                if(_itemList[i] == null) continue;
                 _itemList[i].SetIsActive(true);
             }        
         }
-        OnMaxSizeChange?.Invoke(_maxItems);
+        OnMaxSizeChange?.Invoke(_allowedSize);
     }
 
     public void AddToInventoryItem(GameObject itemToAdd)
@@ -49,8 +62,19 @@ public class Inventory : MonoBehaviour
         if(!CheckIfItem(itemToAdd,out Item itemComponent,false,true))return;
         if(_itemList.Contains(itemComponent)) return;
 
+        int openSlot = -1;
+        for(int i = 0; i < _allowedSize; i++)
+        {
+            if(_itemList[i] == null)
+            {
+                openSlot = i;
+                break;
+            }
+        }
+        if(openSlot < 0) return;
+
         itemToAdd.SetActive(false);
-        _itemList.Add(itemComponent);
+        _itemList[openSlot] = itemComponent;
         _currentItems++;
         OnItemPickup?.Invoke(itemComponent);
     }
@@ -59,6 +83,7 @@ public class Inventory : MonoBehaviour
         GameObject itemRemoved = null;
         foreach(Item item in _itemList)
         {
+            if(item == null) continue;
             if(item.GetItemSO().IsSelected)
             {
                 itemRemoved = item.gameObject;
@@ -72,9 +97,11 @@ public class Inventory : MonoBehaviour
     {
         if(itemToRemove == null) return null;
         if(!CheckIfItem(itemToRemove,out Item itemComponent,true))return null;
-        if(!_itemList.Contains(itemComponent)) return null;
 
-        _itemList.Remove(itemComponent);
+        int index = _itemList.IndexOf(itemComponent);
+        if(index < 0) return null;
+
+        _itemList[index] = null;
         _currentItems--;
         OnItemRemove?.Invoke(itemComponent);
         return itemComponent.gameObject;
@@ -83,17 +110,24 @@ public class Inventory : MonoBehaviour
     public void ChangeItemSlot(GameObject itemToChange, int newSlot)
     {
         if (newSlot < 0 || newSlot >= _maxItems) return;
-        if(CheckIfItem(itemToChange,out Item itemComponent,true))return;
-
+        if(!CheckIfItem(itemToChange,out Item itemComponent,true)) return;
+        
         int originalSlot = _itemList.IndexOf(itemComponent);
+        if(originalSlot == newSlot) return;
         if (originalSlot < 0) return;
 
+        Debug.Log("Change");
         (_itemList[originalSlot], _itemList[newSlot]) = (_itemList[newSlot], _itemList[originalSlot]);
     }
 
     private bool CheckIfItem(GameObject objectToCheck, out Item itemComponent, bool checkActive = false, bool checkCorrupt = false)
     {
-
+        if(objectToCheck == null)
+        {
+            itemComponent = null;
+            return false;
+        }
+        
         if(objectToCheck.TryGetComponent(out UiItem uiItemComponent))
         {
             itemComponent = uiItemComponent.GetItem();
@@ -108,6 +142,7 @@ public class Inventory : MonoBehaviour
         //If not active returns false
         if(checkActive)
         {
+            Debug.Log(!itemComponent.GetIsActive());
             if(!itemComponent.GetIsActive()) return false;
         }
 

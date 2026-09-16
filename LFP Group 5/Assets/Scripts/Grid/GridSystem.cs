@@ -65,11 +65,14 @@ namespace GridSystem
         public GridMap(GridMap mapToCopy)
         {
             _gridList = new List<List<GridCell>>(mapToCopy._gridList.Count);
-            Dictionary<GridCell, GridCell> cellMap = new();
 
             foreach(List<GridCell> row in mapToCopy._gridList)
             {
-                List<GridCell> newRow = new(row);
+                List<GridCell> newRow = new(row.Count);
+                for(int i = 0 ; i < row.Count; i++)
+                {
+                    newRow.Add(new(row[i]));
+                }
                 _gridList.Add(newRow);
             }
 

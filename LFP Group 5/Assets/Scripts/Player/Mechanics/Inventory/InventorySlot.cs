@@ -7,7 +7,7 @@ public class InventorySlot : MonoBehaviour
     private Vector2 _centerPosition = Vector2.zero;
 
     private bool _isActive = true;
-    public Action<GameObject> OnHeldObjectChange;
+    public Action<InventorySlot> OnHeldObjectChange;
     void Awake()
     {
         _centerPosition = ((RectTransform)transform).anchoredPosition;
@@ -26,9 +26,14 @@ public class InventorySlot : MonoBehaviour
     public void SetHeldObject(GameObject newObject)
     {
         _heldObject = newObject;
-        if(_heldObject == null) return;
-        //Snap to center
-        _heldObject.GetComponent<RectTransform>().anchoredPosition = _centerPosition;
+        if(_heldObject != null)
+        {
+            //Snap to center
+            _heldObject.GetComponent<RectTransform>().anchoredPosition = _centerPosition;
+        }
+
+        
+        OnHeldObjectChange?.Invoke(this);
     }
     public GameObject GetHeldObject()
     {
