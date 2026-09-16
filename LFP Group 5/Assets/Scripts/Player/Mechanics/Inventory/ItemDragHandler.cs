@@ -7,6 +7,7 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private Transform _originalParent = null;
     [SerializeField] private ItemSO _itemSO = null;
     [SerializeField] private CanvasGroup _canvasGroup = null;
+    private Transform _dragParent = null;
     void Start()
     {
         _canvasGroup = GetComponent<CanvasGroup>();
@@ -17,6 +18,9 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if(!_itemSO.IsActive) return;
 
         _originalParent = transform.parent;
+        if(_dragParent != null)
+        transform.SetParent(_dragParent);
+        else
         transform.SetParent(transform.root);
         _canvasGroup.blocksRaycasts = false;
         _canvasGroup.alpha = 0.6f;
@@ -77,5 +81,9 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public void SetItemSO(ItemSO newItemSO)
     {
         _itemSO = newItemSO;
+    }
+    public void SetDragParent(Transform newParent)
+    {
+        _dragParent = newParent;
     }
 }
