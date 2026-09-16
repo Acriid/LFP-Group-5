@@ -53,10 +53,21 @@ public class GridManager : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (_gridMap == null)
+        if (_topLeft == null || _bottomRight == null || _cellSize <= 0)
             return;
 
-        foreach (GridCell cell in _gridMap)
+        GridMap gridToDraw = _gridMap;
+
+        // If the game isn't running, create a temporary grid for the Gizmos
+        if (!Application.isPlaying)
+        {
+            gridToDraw = new GridMap(_topLeft, _bottomRight, _cellSize);
+        }
+
+        if (gridToDraw == null)
+            return;
+
+        foreach (GridCell cell in gridToDraw)
         {
             // Draw cell boundary
             Gizmos.color = Color.white;
