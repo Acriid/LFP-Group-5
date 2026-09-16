@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 124653358}
   - component: {fileID: 124653359}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Battery (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,8 @@ GameObject:
   - component: {fileID: 450033900}
   - component: {fileID: 450033902}
   - component: {fileID: 450033901}
-  m_Layer: 0
+  - component: {fileID: 450033903}
+  m_Layer: 6
   m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +695,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.9547169, g: 0.8562934, b: 0, a: 1}
@@ -753,7 +754,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.626758, y: -0.06602156}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -763,8 +764,22 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.019366, y: 1.6338079}
   m_EdgeRadius: 0
+--- !u!114 &450033903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450033898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d264cfaba29f26f4bb5c3a7d725d55f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  _canInteract: 1
+  _itemSO: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
 --- !u!1 &490024230
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,7 +790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490024231}
   - component: {fileID: 490024232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,7 +859,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.89433956, g: 0.78478754, b: 0.34254885, a: 1}
@@ -869,7 +884,8 @@ GameObject:
   - component: {fileID: 528122014}
   - component: {fileID: 528122016}
   - component: {fileID: 528122015}
-  m_Layer: 0
+  - component: {fileID: 528122017}
+  m_Layer: 6
   m_Name: Battery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -999,7 +1015,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.15472406}
+  m_Offset: {x: 0.00000166893, y: 0.1376369}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1009,8 +1025,22 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1.3094481}
+  m_Size: {x: 1.7641394, y: 1.5828435}
   m_EdgeRadius: 0
+--- !u!114 &528122017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528122012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d264cfaba29f26f4bb5c3a7d725d55f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  _canInteract: 1
+  _itemSO: {fileID: 11400000, guid: b7e251c8257f53d4cac78b607c4953ed, type: 2}
 --- !u!1 &640687583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1698,6 +1728,9 @@ GameObject:
   - component: {fileID: 779419552}
   - component: {fileID: 779419551}
   - component: {fileID: 779419550}
+  - component: {fileID: 779419555}
+  - component: {fileID: 779419554}
+  - component: {fileID: 779419553}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Untagged
@@ -1720,6 +1753,9 @@ MonoBehaviour:
   _inputReader: {fileID: 11400000, guid: 073e7d718b0f7ee4c8caa590dd5771ba, type: 2}
   _startPosition: {x: 0, y: 0}
   _timeBetweenMoves: 0.3
+  _interactMechanic: {fileID: 779419554}
+  _inventory: {fileID: 0}
+  _modeSwitchMechanic: {fileID: 0}
 --- !u!212 &779419551
 SpriteRenderer:
   serializedVersion: 3
@@ -1795,6 +1831,85 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &779419553
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779419549}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &779419554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779419549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e0e579dfbc0d84db3d512621e89d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractMechanic
+  _detectionRadius: 3
+  _interactionLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!58 &779419555
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779419549}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &1017885669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,7 +2109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1106434120}
   - component: {fileID: 1106434121}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Battery (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2547,7 +2662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540370585}
   - component: {fileID: 1540370586}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2616,7 +2731,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.89433956, g: 0.78478754, b: 0.34254885, a: 1}
@@ -3472,7 +3587,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2064074997}
   - component: {fileID: 2064074998}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3541,7 +3656,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0.85233945, b: 0.13396227, a: 1}
