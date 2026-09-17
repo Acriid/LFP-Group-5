@@ -40,6 +40,10 @@ public class GridManager : MonoBehaviour
     {
         return _gridMap.GetGridCell(cellPosition.y,cellPosition.x);
     }
+    public GridCell GetGridCellAtPosition(Vector2 worldPosition)
+    {
+        return _gridMap.GetGridCell(worldPosition);
+    }
     #endregion
 
     public GridMap GetGridMap()

@@ -70,7 +70,9 @@ public class Player : MonoBehaviour
         //Get next cells
         if(_currentCell == null)
         {
+
             _nextCell = GridManager.Instance.GetGridCellAtPosition(moveInput);
+
         }
         else
         {
@@ -99,8 +101,6 @@ public class Player : MonoBehaviour
 
         StartCoroutine(CooldownClock());
     }
-
-
     private IEnumerator CooldownClock()
     {
         //Start move Cooldown
@@ -153,7 +153,6 @@ public class Player : MonoBehaviour
 
         _modeSwitchMechanic.SwitchMode(_currentMode);
     }
-
     private void EnableInput()
     {
         _inputReader.OnMove += ReadInput;
