@@ -10,6 +10,9 @@ public class InventoryUiManager : MonoBehaviour
     [SerializeField] private Transform _dragParent = null;
     private GenericPool<UiItem> _uiItemPool;
     private UiItem _currentSelectedItem = null;
+
+    private int _lockedIndex;
+
     void Awake()
     {
         InitializeInventory();
@@ -21,11 +24,19 @@ public class InventoryUiManager : MonoBehaviour
         if(_inventorySlots.Count != _inventory.GetInventorySize())
         {
             Debug.LogWarning("Inventory size not equal to slot count");
-            _inventory.SetMaxSize(_inventorySlots.Count);
+            _inventory.SetAllowedSize(_inventorySlots.Count);
         }
 
+
+        foreach(InventorySlot inventorySlot in _inventorySlots)
+        {
+            inventorySlot.OnHeldObjectChange += ChangeItemSlots;
+        }
+
+
         _inventory.OnItemPickup += AddItem;
-        _inventory.OnItemRemove += RemoveItem;       
+        _inventory.OnItemRemove += RemoveItem;  
+        _inventory.OnMaxSizeChange += LockSlots;     
     }
     private void InitializeItemPool()
     {
@@ -65,6 +76,11 @@ public class InventoryUiManager : MonoBehaviour
     void OnDisable()
     {
         UnsubscribeEvents();
+
+        foreach(InventorySlot inventorySlot in _inventorySlots)
+        {
+            inventorySlot.OnHeldObjectChange -= ChangeItemSlots;
+        }
     }
 
     private void UnsubscribeEvents()
@@ -76,8 +92,35 @@ public class InventoryUiManager : MonoBehaviour
 
         if(_inventory == null) return;
         _inventory.OnItemPickup -= AddItem;
-        _inventory.OnItemRemove -= RemoveItem;      
+        _inventory.OnItemRemove -= RemoveItem;   
+        _inventory.OnMaxSizeChange -= LockSlots;     
     }
+    private void ChangeItemSlots(InventorySlot inventorySlot)
+    {
+        _inventory.ChangeItemSlot(inventorySlot.GetHeldObject(),_inventorySlots.IndexOf(inventorySlot));
+    }
+    private void LockSlots(int allowedSlots)
+    {
+        int slotCount = _inventorySlots.Count;
+
+        if(allowedSlots < slotCount)
+        {
+            for(int i = slotCount -1; i > allowedSlots - 1 ; i--)
+            {
+                _inventorySlots[i].SetIsActive(false);
+                
+            }
+            _lockedIndex = allowedSlots;
+        }
+        else if(allowedSlots >= slotCount)
+        {
+            for(int i = _lockedIndex; i < slotCount ; i++)
+            {
+                _inventorySlots[i].SetIsActive(true);
+            }        
+        }     
+    }
+
     private void AddItem(Item itemToInitialize)
     {
         if(itemToInitialize == null) return;

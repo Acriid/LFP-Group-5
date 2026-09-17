@@ -71,7 +71,8 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(_currentItem != null)
+        if(_currentItem == null) return;
+        if(!_currentItem.GetIsActive()) return;
         _currentItem.GetItemSO().IsSelected = true;
 
         OnItemClicked?.Invoke(this);

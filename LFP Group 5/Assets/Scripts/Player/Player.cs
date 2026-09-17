@@ -79,8 +79,16 @@ public class Player : MonoBehaviour
         
 
         //Position to move to does not exist
-        if(_nextCell == null) return;
-        if(_nextCell.IsBlocked) return;
+        if(_nextCell == null)
+        {
+            Debug.Log("No next cell");
+            return;
+        }
+        if(_nextCell.IsBlocked)
+        {
+            Debug.Log("Blocked");
+            return;
+        }
         if(CheckIfBlocked(_nextCell)) return;
 
         _forceImmediateMove = false;

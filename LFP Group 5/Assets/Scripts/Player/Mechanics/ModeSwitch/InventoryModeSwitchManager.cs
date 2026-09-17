@@ -27,10 +27,10 @@ public class InventoryModeSwitchManager : MonoBehaviour
     {
         _originalMax = _playerInventory.GetInventorySize();
 
-        _playerInventory.SetMaxSize(_safeModeMaxSize);
+        _playerInventory.SetAllowedSize(_safeModeMaxSize);
     }
     private void NormalModeLogic()
     {
-        _playerInventory.SetMaxSize(_originalMax);
+        _playerInventory.SetAllowedSize(_originalMax);
     }
 }
