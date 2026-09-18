@@ -50,12 +50,24 @@ namespace GridSystem
         {
             return GridBounds.center;
         }
+        public override bool Equals(object obj)
+        {
+            return obj is GridCell other 
+            && GridBounds.position == other.GridBounds.position;
+        }
+
+        public override int GetHashCode()
+        {
+            return GridBounds.position.GetHashCode();
+        }
     }
 
     public class GridMap: IEnumerable<GridCell>
     {
         private List<List<GridCell>> _gridList;
         private Dictionary<GridCell, Vector2Int> _cellPositions;
+        private int _cellSize = 0;
+        private BoundsInt _mapBounds;
 
         #region Constructors
         /// <summary>
@@ -64,19 +76,27 @@ namespace GridSystem
         /// <param name="mapToCopy">The original GridMap that is being copied</param>
         public GridMap(GridMap mapToCopy)
         {
-            _gridList = new List<List<GridCell>>(mapToCopy._gridList.Count);
+            _cellSize = mapToCopy._cellSize;
+            _mapBounds = mapToCopy._mapBounds;
 
-            foreach(List<GridCell> row in mapToCopy._gridList)
+            _gridList = new();
+
+            foreach (List<GridCell> row in mapToCopy._gridList)
             {
-                List<GridCell> newRow = new(row.Count);
-                for(int i = 0 ; i < row.Count; i++)
+                List<GridCell> newRow = new();
+
+                foreach (GridCell cell in row)
                 {
-                    newRow.Add(new(row[i]));
+                    newRow.Add(new GridCell(cell));
                 }
+
                 _gridList.Add(newRow);
             }
 
-            BuildCellPositionLookup();
+            if (_gridList.Count != 0)
+            {
+                BuildCellPositionLookup();
+            }
         }
         public GridMap(Transform topLeft, Transform bottomRight, int cellSize)
         {
@@ -132,6 +152,8 @@ namespace GridSystem
         {
             if(cellSize == 0) return;
 
+            _cellSize = cellSize;
+            _mapBounds = mapBounds;
             
             int distanceBetween = mapBounds.max.x - mapBounds.min.x;
             int cellAmountX = distanceBetween/cellSize;
@@ -280,6 +302,19 @@ namespace GridSystem
             }
 
             return _gridList[targetY][targetX];
+        }
+
+        public GridCell GetGridCell(Vector2 worldPosition)
+        {
+            if (!_mapBounds.Contains((Vector3Int)Vector2Int.FloorToInt(worldPosition)))
+            {
+                return null;
+            }
+
+            int column = Mathf.FloorToInt((worldPosition.x - _mapBounds.min.x) / _cellSize);
+            int row = Mathf.FloorToInt((_mapBounds.max.y - worldPosition.y) / _cellSize);
+
+            return GetGridCell(column, row);
         }
         #endregion
 
