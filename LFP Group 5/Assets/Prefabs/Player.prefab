@@ -36,6 +36,7 @@ Transform:
   m_Children:
   - {fileID: 8609578648024803767}
   - {fileID: 3672047489944703631}
+  - {fileID: 565324996813966944}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1443522419986308174
@@ -365,6 +366,98 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &8174706159603920185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565324996813966944}
+  - component: {fileID: 230066506538693502}
+  - component: {fileID: 605930095411114133}
+  - component: {fileID: 1650600444825346619}
+  - component: {fileID: 3917646182320602676}
+  m_Layer: 0
+  m_Name: ModeSwitch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565324996813966944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174706159603920185}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6737170003366781094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &230066506538693502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174706159603920185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1e0c412cece354793ae4ab73c9eaea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridModeSwitchManager
+  _modeSwitchMechanic: {fileID: 11400000, guid: a2596f9b4addd7b4b974cd244a036f78, type: 2}
+--- !u!114 &605930095411114133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174706159603920185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff521eba57ab7c488abae988c05b556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputModeSwitchManager
+  _modeSwitchMechanic: {fileID: 11400000, guid: a2596f9b4addd7b4b974cd244a036f78, type: 2}
+  _inputReader: {fileID: 11400000, guid: 073e7d718b0f7ee4c8caa590dd5771ba, type: 2}
+--- !u!114 &1650600444825346619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174706159603920185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23399fcf4245715458015d7dfcaa930f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryModeSwitchManager
+  _modeSwitchMechanic: {fileID: 11400000, guid: a2596f9b4addd7b4b974cd244a036f78, type: 2}
+  _playerInventory: {fileID: 6104217305466799480}
+  _safeModeMaxSize: 1
+--- !u!114 &3917646182320602676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174706159603920185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a432a410ef757a64ab8281300a0f236d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemModeSwitchManager
+  _modeSwitchMechanic: {fileID: 11400000, guid: a2596f9b4addd7b4b974cd244a036f78, type: 2}
+  _itemList:
+  - {fileID: 0}
 --- !u!1001 &7651345265891190402
 PrefabInstance:
   m_ObjectHideFlags: 0

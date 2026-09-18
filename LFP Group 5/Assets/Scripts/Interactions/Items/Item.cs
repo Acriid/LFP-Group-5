@@ -28,6 +28,10 @@ public class Item : Interaction
     {
         return _itemSO.IsCorrupt;
     }
+    public bool GetIsSelected()
+    {
+        return _itemSO.IsSelected;
+    }
 
     public string GetItemName()
     {
@@ -49,5 +53,9 @@ public class Item : Interaction
     public void SetIsActive(bool newValue)
     {
         _itemSO.IsActive = newValue;
+    }
+    public void SetIsSelected(bool newValue)
+    {
+        _itemSO.IsSelected = newValue;
     }
 }
