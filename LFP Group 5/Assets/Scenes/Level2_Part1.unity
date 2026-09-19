@@ -1753,9 +1753,14 @@ MonoBehaviour:
   _inputReader: {fileID: 11400000, guid: 073e7d718b0f7ee4c8caa590dd5771ba, type: 2}
   _startPosition: {x: 0, y: 0}
   _timeBetweenMoves: 0.3
+  _obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _itemParentTransform: {fileID: 0}
   _interactMechanic: {fileID: 779419554}
   _inventory: {fileID: 0}
   _modeSwitchMechanic: {fileID: 0}
+  ModeSwitchPanel: {fileID: 0}
 --- !u!212 &779419551
 SpriteRenderer:
   serializedVersion: 3
@@ -1925,7 +1930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1017885670
 Transform:
   m_ObjectHideFlags: 0
@@ -2235,12 +2240,12 @@ GameObject:
   - component: {fileID: 1147934415}
   - component: {fileID: 1147934414}
   m_Layer: 0
-  m_Name: RoomBackdrop
+  m_Name: Remove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1147934412
 SpriteRenderer:
   serializedVersion: 3
@@ -2392,7 +2397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1221512440
 Transform:
   m_ObjectHideFlags: 0
@@ -2762,7 +2767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1544150310
 Transform:
   m_ObjectHideFlags: 0
@@ -3253,7 +3258,7 @@ GameObject:
   - component: {fileID: 1949570811}
   - component: {fileID: 1949570810}
   m_Layer: 0
-  m_Name: MainBackdrop
+  m_Name: Remove
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23d5edace08274d43b4b46db19b5b813, type: 3}
-  m_Name: TestKey
+  m_Name: Paper
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   IsActive: 1
   IsCorrupt: 0
   IsSelected: 0
   UISprite: {fileID: 0}
-  ItemName: Key
-  ItemDescription: A Golden Door Key
+  ItemName: Paper
+  ItemDescription: 'Writing reveals the code: "2574'

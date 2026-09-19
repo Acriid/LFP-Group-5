@@ -62,6 +62,15 @@ public class InteractMechanic : MonoBehaviour
         return true;
     }
 
+    //Phemelo added the below function
+    public bool Interact(GameObject player, Item selectedItem)
+    {
+        if (_targetInteraction == null) return false;
+
+        _targetInteraction.Interact(player, selectedItem);
+        return true;
+    }
+
 
     public Interaction GetTargetInteraction()
     {

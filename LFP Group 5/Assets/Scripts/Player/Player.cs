@@ -119,14 +119,29 @@ public class Player : MonoBehaviour
         return false;
     }
 
-    private void Interact()
+    /*private void Interact()
     {
         if(_interactMechanic == null) return;
         GameObject interactionObject = _interactMechanic.GetTargetInteractionGameObject();
         _interactMechanic.Interact(gameObject);
         if(_inventory == null) return;
         _inventory.AddToInventoryItem(interactionObject);
+    }*/
+
+    //This method accounts for selected interactions
+    private void Interact()
+    {
+        if (_interactMechanic == null) return;
+        GameObject interactionObject = _interactMechanic.GetTargetInteractionGameObject();
+        _interactMechanic.Interact(gameObject);
+        if(_inventory == null) return;
+        _inventory.AddToInventoryItem(interactionObject);
+
+        Item selectedItem = _inventory.GetSelectedItem();
+
+        _interactMechanic.Interact(gameObject, selectedItem);
     }
+
     private void DropSelectedItem()
     {
         GameObject item = _inventory.RemoveItemFromInventory();
@@ -180,5 +195,11 @@ public class Player : MonoBehaviour
 
         _inputReader.OnModeSwitch -= SwitchMode;  
         _inputReader.DisableModeSwitchAction();
+    }
+
+   //allows interactions to acces the inventory
+    public Inventory GetInventory()
+    {
+        return _inventory;
     }
 }

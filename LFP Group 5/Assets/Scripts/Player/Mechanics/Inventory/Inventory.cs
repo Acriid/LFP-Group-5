@@ -160,4 +160,20 @@ public class Inventory : MonoBehaviour
     {
         return _maxItems;
     }
+
+    //method to get a selected item
+    public Item GetSelectedItem()
+    {
+        foreach (Item item in _itemList)
+        {
+            if (item == null) continue;
+
+            if (item.GetItemSO().IsSelected)
+            {
+                return item;
+            }
+        }
+
+        return null;
+    }
 }
