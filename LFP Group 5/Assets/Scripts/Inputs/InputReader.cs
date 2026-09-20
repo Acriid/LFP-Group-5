@@ -21,6 +21,10 @@ public class InputReader : ScriptableObject
     private InputAction _inventoryAction;
 
     private InputAction _modeSwitchAction;
+
+    //UI
+    private InputAction _escapeAction;
+
     #endregion
 
     #region public Event Action Variables
@@ -33,6 +37,9 @@ public class InputReader : ScriptableObject
     public event Action OnInventory;
 
     public event Action OnModeSwitch;
+
+    //UI
+    public event Action OnEscape;
     #endregion
 
     #region Current Direction Values
@@ -60,6 +67,9 @@ public class InputReader : ScriptableObject
     private Action<InputAction.CallbackContext> _dropItemPerformed;
     private Action<InputAction.CallbackContext> _inventoryPerformed;
     private Action<InputAction.CallbackContext> _modeSwitchPerformed;
+
+    //UI
+    private Action<InputAction.CallbackContext> _escapePerformed;
     #endregion
     #region Enable/Disable
     void OnEnable()
@@ -69,12 +79,18 @@ public class InputReader : ScriptableObject
         InitializePlayerActions();
         InitializePlayerEvents();
 
-        SubscribeActions();
+        SubscribePlayerActions();
+
+        InitializeUIActions();
+        InitializeUIEvents();
+
+        SubscribeUIActions();
 
     }
     void OnDisable()
     {
-        UnSubscribeActions();
+        UnSubscribePlayerActions();
+        UnSubscribeUIActions();
     }
     #endregion
 
@@ -95,6 +111,10 @@ public class InputReader : ScriptableObject
         _inventoryAction = _playerInputs.Player.Inventory;
 
         _modeSwitchAction = _playerInputs.Player.ModeSwitch;
+    }
+    private void InitializeUIActions()
+    {
+        _escapeAction = _playerInputs.UI.Cancel;
     }
     #endregion
 
@@ -127,11 +147,16 @@ public class InputReader : ScriptableObject
         _modeSwitchPerformed = ctx => OnModeSwitch?.Invoke();
 
     }
+    private void InitializeUIEvents()
+    {
+        _escapePerformed = ctx => OnEscape?.Invoke();
+    }
     #endregion
 
 
     #region Subscribe/Unsubscribe actions
-    public void SubscribeActions()
+    #region Player
+    public void SubscribePlayerActions()
     {
         //Move start
         _moveUpAction.performed += _moveUpPerformed;
@@ -156,7 +181,7 @@ public class InputReader : ScriptableObject
 
         _modeSwitchAction.performed += _modeSwitchPerformed;
     }
-    public void UnSubscribeActions()
+    public void UnSubscribePlayerActions()
     {
         //Move start
         _moveUpAction.performed -= _moveUpPerformed;
@@ -181,6 +206,17 @@ public class InputReader : ScriptableObject
 
         _modeSwitchAction.performed -= _modeSwitchPerformed;
     }
+    #endregion
+    #region UI
+    private void SubscribeUIActions()
+    {
+        _escapeAction.performed += _escapePerformed; 
+    }
+    private void UnSubscribeUIActions()
+    {
+        _escapeAction.performed -= _escapePerformed; 
+    }
+    #endregion
     #endregion
 
     #region Enable/DisableActions
