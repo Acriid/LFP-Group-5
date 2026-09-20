@@ -155,22 +155,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8609578648024803767, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
   m_PrefabInstance: {fileID: 3210518278867285762}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &458651704 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6104217305466799480, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
-  m_PrefabInstance: {fileID: 3210518278867285762}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f1e66c6f3dcc024d9be57cd2ff274da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Inventory
---- !u!4 &458651707 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6737170003366781094, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
-  m_PrefabInstance: {fileID: 3210518278867285762}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &466442910
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,98 +670,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!1 &640431596
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 640431597}
-  - component: {fileID: 640431601}
-  - component: {fileID: 640431600}
-  - component: {fileID: 640431599}
-  - component: {fileID: 640431598}
-  m_Layer: 0
-  m_Name: ModeSwitch
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &640431597
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640431596}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 458651707}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &640431598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640431596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a432a410ef757a64ab8281300a0f236d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemModeSwitchManager
-  _modeSwitchMechanic: {fileID: 11400000, guid: a2596f9b4addd7b4b974cd244a036f78, type: 2}
-  _itemList:
-  - {fileID: 466442914}
---- !u!114 &640431599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640431596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23399fcf4245715458015d7dfcaa930f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryModeSwitchManager
-  _modeSwitchMechanic: {fileID: 11400000, guid: a2596f9b4addd7b4b974cd244a036f78, type: 2}
-  _playerInventory: {fileID: 458651704}
-  _safeModeMaxSize: 1
---- !u!114 &640431600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640431596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dff521eba57ab7c488abae988c05b556, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InputModeSwitchManager
-  _modeSwitchMechanic: {fileID: 11400000, guid: a2596f9b4addd7b4b974cd244a036f78, type: 2}
-  _inputReader: {fileID: 11400000, guid: 073e7d718b0f7ee4c8caa590dd5771ba, type: 2}
---- !u!114 &640431601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640431596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b1e0c412cece354793ae4ab73c9eaea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GridModeSwitchManager
-  _modeSwitchMechanic: {fileID: 11400000, guid: a2596f9b4addd7b4b974cd244a036f78, type: 2}
 --- !u!1 &651598943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,10 +1630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6737170003366781094, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 640431597}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
 --- !u!1001 &7895238091734529605
