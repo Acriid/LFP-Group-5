@@ -37,9 +37,8 @@ public class Player : MonoBehaviour
     void OnEnable()
     {
         //Gets first grid cell
-        MovePlayer(_startPosition);
-
         _moveCoolDown = _timeBetweenMoves;
+        MovePlayer(_startPosition,true);
 
         EnableInput();
     }
@@ -77,10 +76,10 @@ public class Player : MonoBehaviour
         _moveInput = moveInput;
     }
 
-    private void MovePlayer(Vector2Int moveInput)
+    private void MovePlayer(Vector2Int moveInput, bool ignoreDialog = false)
     {
         // heyo Gemma added this. Disables movement when dialogue is present! :)
-        if (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive)
+        if (!ignoreDialog && DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive)
         {
             return;
         }   
