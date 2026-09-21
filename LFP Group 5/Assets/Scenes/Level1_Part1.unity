@@ -729,10 +729,10 @@ MonoBehaviour:
     dialogueLines:
     - character:
         icon: {fileID: 0}
-      line: Testing
+      line: Testing line 1
     - character:
         icon: {fileID: 0}
-      line: 
+      line: Testing Line 2
 --- !u!1 &254778776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1337,8 +1337,10 @@ MonoBehaviour:
   characterIcon: {fileID: 925947266}
   dialogueArea: {fileID: 310963391}
   isDialogueActive: 1
-  typingSpeed: 0.2
+  typingSpeed: 0.1
   animator: {fileID: 696951119}
+  isTyping: 0
+  currentSentence: 
 --- !u!1 &366245680
 GameObject:
   m_ObjectHideFlags: 0

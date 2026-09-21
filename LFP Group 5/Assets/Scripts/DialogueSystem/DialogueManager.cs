@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -14,9 +15,12 @@ public class DialogueManager : MonoBehaviour
     private Queue<DialogueLine> lines = new Queue<DialogueLine>();
 
     public bool isDialogueActive = false;
-    public float typingSpeed = 0.02f;
+    public float typingSpeed = 0.1f;
     
     public Animator animator;
+
+    public bool isTyping = false;
+    public string currentSentence;
 
     void Awake()
     {
@@ -51,6 +55,15 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         
+        if (isTyping)
+        {
+            StopAllCoroutines();
+            dialogueArea.text = currentSentence;
+            isTyping = false;
+            return;
+        }
+        
+        
         if (lines.Count == 0)
         {
             EndDialogue();
@@ -61,19 +74,24 @@ public class DialogueManager : MonoBehaviour
 
         characterIcon.sprite = currentLine.character.icon;
 
-        StopAllCoroutines();
+        //StopAllCoroutines();
 
         StartCoroutine(TypeSentence(currentLine));
     }
 
     IEnumerator TypeSentence(DialogueLine dialogueLine)
     {
+        isTyping = true;
+        currentSentence = dialogueLine.line;
+        
         dialogueArea.text = " ";
         foreach (char letter in dialogueLine.line.ToCharArray())
         {
             dialogueArea.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+
+        isTyping = false;
     }
 
     void EndDialogue()
@@ -85,7 +103,7 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (isDialogueActive && Input.GetMouseButtonDown(0))
+        if (isDialogueActive && Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             DisplayNextDialogueLine();
         }
