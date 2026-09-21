@@ -41,6 +41,7 @@ public class SOdialogueManager : MonoBehaviour
         }
 
         _dialoguePanel.SetActive(false);
+        _characterIcon.gameObject.SetActive(false);
     }
 
     void Update()
@@ -50,7 +51,7 @@ public class SOdialogueManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             ContinueDialogue();
         }
@@ -74,6 +75,8 @@ public class SOdialogueManager : MonoBehaviour
         _currentLineIndex = 0;
 
         IsDialogueActive = true;
+        _dialoguePanel.SetActive(true);
+        _characterIcon.gameObject.SetActive(true);
         _animator.Play("show");
 
         DisplayCurrentLine();

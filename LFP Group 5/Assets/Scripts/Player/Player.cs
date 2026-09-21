@@ -82,6 +82,12 @@ public class Player : MonoBehaviour
         if (!ignoreDialog && DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive)
         {
             return;
+        }
+
+        // SO needed to add in another disabler as I remade the dialogue system.
+        if (SOdialogueManager.Instance != null && SOdialogueManager.Instance.IsDialogueActive)
+        {
+            return;
         }   
 
         if(GridManager.Instance == null)
