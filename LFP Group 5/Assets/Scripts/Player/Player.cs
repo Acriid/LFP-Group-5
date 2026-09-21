@@ -30,12 +30,15 @@ public class Player : MonoBehaviour
     private Vector2Int _moveInput;
     private bool _forceImmediateMove;
 
+    // hello Gemma added this to trigger initial dialogue
+    private bool hasTriggeredMovementDialogue = false;
+    [SerializeField] private float movementDialogueDelay = 0.8f;
+
     void OnEnable()
     {
         //Gets first grid cell
-        MovePlayer(_startPosition);
-
         _moveCoolDown = _timeBetweenMoves;
+        MovePlayer(_startPosition,true);
 
         EnableInput();
     }
@@ -53,12 +56,34 @@ public class Player : MonoBehaviour
         if(moveInput != Vector2Int.zero && moveInput != _moveInput)
         {
             _forceImmediateMove = true;
+
+            // hello Gemma added this so movement triggers dialogue
+            if (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive)
+            {
+                _moveInput = moveInput;
+                return;
+            }
+            
+            
+            // hello Gemma added this so movement triggers dialogue
+            if (!hasTriggeredMovementDialogue)
+            {
+                hasTriggeredMovementDialogue = true;
+                
+                StartCoroutine(TriggerMovementDialogueAfterDelay());
+            }
         }
         _moveInput = moveInput;
     }
 
-    private void MovePlayer(Vector2Int moveInput)
+    private void MovePlayer(Vector2Int moveInput, bool ignoreDialog = false)
     {
+        // heyo Gemma added this. Disables movement when dialogue is present! :)
+        if (!ignoreDialog && DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive)
+        {
+            return;
+        }   
+
         if(GridManager.Instance == null)
         {
             Debug.LogWarning("No GridManager Instance in scene, Player cannot move");
@@ -206,5 +231,17 @@ public class Player : MonoBehaviour
     public GameMode GetCurrentMode()
     {
         return _currentMode;
+    }
+
+    // hello Gemma added this for dialogue purposes
+    private IEnumerator TriggerMovementDialogueAfterDelay()
+    {
+        yield return new WaitForSeconds(movementDialogueDelay);
+        DialogueTrigger dialogueTrigger = FindObjectOfType<DialogueTrigger>();
+
+        if (dialogueTrigger != null)
+        {
+            dialogueTrigger.TriggerMovementDialogue();
+        }
     }
 }
