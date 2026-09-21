@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
         //Gets first grid cell
         MovePlayer(_startPosition);
 
-        StartCoroutine(CooldownClock());
+        _moveCoolDown = _timeBetweenMoves;
 
         EnableInput();
     }

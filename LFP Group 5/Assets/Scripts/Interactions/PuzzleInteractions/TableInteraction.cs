@@ -3,7 +3,12 @@ using UnityEngine;
 public class TableInteraction : Interaction
 {
     [SerializeField] private GameObject _hiddenInItem;
+    private Collider2D _tableCollider;
 
+    private void Start()
+    {
+        _tableCollider = GetComponent<Collider2D>();
+    }
     public override void Interact(GameObject interactingObject)
     {
         if (!_canInteract) return;
@@ -21,5 +26,7 @@ public class TableInteraction : Interaction
 
         _hiddenInItem.SetActive(true);
         SetCanInteract(false);
+        gameObject.layer = 0;
+        _tableCollider.enabled = false;
     }
 }
