@@ -1,11 +1,15 @@
 using UnityEngine;
 using GridSystem;
+using System;
 
 public class PressurePlate : Interaction
 {
     [SerializeField] private ItemSO _requiredItem;
     private bool _isActivated = false;
     [SerializeField] private GameObject _gate;
+
+    // Gemma added this. Need it for triggering dialogue :p
+    public event Action OnGateOpened;
 
     private void Update()
     {
@@ -83,6 +87,9 @@ public class PressurePlate : Interaction
         if (_gate == null) return;
         _gate.SetActive(false);
         Debug.Log("PRESSURE PLATE ACTIVATED!");
+
+        // Gemma added this. Need it for triggering dialogue :p
+        OnGateOpened?.Invoke();
     }
 
     private void DeactivatePlate()

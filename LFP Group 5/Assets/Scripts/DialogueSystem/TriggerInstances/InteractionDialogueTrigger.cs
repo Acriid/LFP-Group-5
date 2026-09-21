@@ -11,16 +11,16 @@ using UnityEngine.InputSystem;
 
 public class InteractionDialogueTrigger : MonoBehaviour
 {
-    [Header("Password Items")]
-    [SerializeField] private ItemSO _passwordIncorrect;
-    [SerializeField] private ItemSO _passwordCorrect;
+    // list items needed
+    [SerializeField] private List<ItemSO> _requiredItems = new List<ItemSO>();
 
     [SerializeField] private ScriptableObjectDialogu _dialogueTrigger;
 
-    private bool _incorrectCollected;
-    private bool _correctCollected;
+    private List<ItemSO> _collectedItems = new List<ItemSO>();
 
     private Inventory inventory;
+
+    private bool _dialogueTriggered;
 
     void Start()
     {
@@ -43,23 +43,38 @@ public class InteractionDialogueTrigger : MonoBehaviour
 
         ItemSO collectedItem = item.GetItemSO();
 
-        if (collectedItem == _passwordIncorrect)
+        if (!_requiredItems.Contains(collectedItem))
         {
-            _incorrectCollected = true;
+            return;
         }
 
-        if (collectedItem == _passwordCorrect)
+        // Don't add the same item twice
+        if (_collectedItems.Contains(collectedItem))
         {
-            _correctCollected = true;
+            return;
         }
 
-        CheckPasswordItems();
+        _collectedItems.Add(collectedItem);
+
+        CheckRequiredItems();
     }
 
-    private void CheckPasswordItems()
+    private void CheckRequiredItems()
     {
-        if (!_incorrectCollected || !_correctCollected)
+        if (_dialogueTriggered)
+        {
             return;
+        }
+
+        foreach (ItemSO requiredItem in _requiredItems)
+        {
+            if (!_collectedItems.Contains(requiredItem))
+            {
+                return;
+            }
+        }
+
+        _dialogueTriggered = true;
 
         if (SOdialogueManager.Instance != null)
         {
@@ -67,7 +82,7 @@ public class InteractionDialogueTrigger : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning ("InteractionDialogueTrigger: No SOdialogueManager found.");
+            Debug.LogWarning("InteractionDialogueTrigger: No SOdialogueManager found.");
         }
     }
 

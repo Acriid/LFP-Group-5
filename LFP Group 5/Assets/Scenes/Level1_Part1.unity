@@ -8245,8 +8245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e802e1325b73c47bf59f58101097cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractionDialogueTrigger
-  _passwordIncorrect: {fileID: 11400000, guid: 8a19215ff04430e4f80f52eaeb5da3b9, type: 2}
-  _passwordCorrect: {fileID: 11400000, guid: 4b91395097bd39b4e8c1876c72060545, type: 2}
+  _requiredItems:
+  - {fileID: 11400000, guid: 4b91395097bd39b4e8c1876c72060545, type: 2}
+  - {fileID: 11400000, guid: 8a19215ff04430e4f80f52eaeb5da3b9, type: 2}
   _dialogueTrigger: {fileID: 11400000, guid: 99593c95c371d27459924dc5ab25e5e3, type: 2}
 --- !u!1 &1675799066
 GameObject:

@@ -1,9 +1,13 @@
 using UnityEngine;
+using System;
 
 public class DoorInteraction : Interaction
 {
     [SerializeField] private ItemSO _requiredItem;
     [SerializeField] private GameObject _lockedDoor, _unlockedDoor;
+
+    // hello Gemma here. Need to add this to trigger dialogue.
+    public event Action OnDoorOpened;
 
     public override void Interact(GameObject interactingObject, Item selectedItem)
     {
@@ -57,5 +61,8 @@ public class DoorInteraction : Interaction
         _unlockedDoor.SetActive(true);
 
         SetCanInteract(false);
+
+        // hello Gemma here. Need to add this to trigger dialogue.
+        OnDoorOpened?.Invoke();
     }
 }
