@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee850c578174c94a8ac88fe209aae22, type: 3}
+  m_Name: KeyCollectedVirusCOnvo
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectDialogu
+  dialogueLines:
+  - _characterIcon: {fileID: 0}
+    line: '[NEW ENTITY OBSERVED]'
+  - _characterIcon: {fileID: 0}
+    line: "Co-existence\u2026 plausible? Calculating percentage of successful co-existence\u2026"
+  - _characterIcon: {fileID: 0}
+    line: "\u202676%"
+  - _characterIcon: {fileID: 0}
+    line: AHHH!
+  - _characterIcon: {fileID: 0}
+    line: WHAT is going on?!
+  - _characterIcon: {fileID: 0}
+    line: "Scanning database and interweb to identify human response\u2026"
+  - _characterIcon: {fileID: 0}
+    line: 90% chance emotion is fear.
+  - _characterIcon: {fileID: 0}
+    line: "\u2026"
+  - _characterIcon: {fileID: 0}
+    line: "Am I\u2026"
+  - _characterIcon: {fileID: 0}
+    line: "Losing my mind? I think I should just move on\u2026"

@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ee850c578174c94a8ac88fe209aae22, type: 3}
-  m_Name: KeyMovesDialogue
+  m_Name: CompletedPressurePLatePuzzle
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectDialogu
   dialogueLines:
   - _characterIcon: {fileID: 0}
-    line: "\u2026..?!"
+    line: "Glad to know this is working. No signs of that weird\u2026 bug?"
   - _characterIcon: {fileID: 0}
-    line: "I don\u2019t remember coding that in here and I can\u2019t seem to bypass
-      these walls\u2026 Let me try\u2026"
+    line: "Identification incorrect. Definition of \u2018Bug\u2019 from Cambridge
+      Dictionary:"
   - _characterIcon: {fileID: 0}
-    line: ...
+    line: "\u201CBug \u2013 (noun) A very small insect.\u201D"
   - _characterIcon: {fileID: 0}
-    line: ...
+    line: "My lack of sleep has DEFINITELY caught up to me. I never coded this\u2026
+      thing in here."
   - _characterIcon: {fileID: 0}
-    line: "There. If I press \u2018Q\u2019 I should be able to draw on an older version
-      of the games code, allowing me to fetch that pesky key."
+    line: "Let me finish this level and I\u2019ll backdate to my previous version
+      of the game."

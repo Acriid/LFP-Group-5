@@ -10,18 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ee850c578174c94a8ac88fe209aae22, type: 3}
-  m_Name: KeyMovesDialogue
+  m_Name: PressurePlateDialogue
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectDialogu
   dialogueLines:
   - _characterIcon: {fileID: 0}
-    line: "\u2026..?!"
+    line: "Haha modelled this statue after that ugly piece of work in the office.
+      \u201CEnvironmental d\xE9cor to boost productivity\u201D pssh."
   - _characterIcon: {fileID: 0}
-    line: "I don\u2019t remember coding that in here and I can\u2019t seem to bypass
-      these walls\u2026 Let me try\u2026"
-  - _characterIcon: {fileID: 0}
-    line: ...
-  - _characterIcon: {fileID: 0}
-    line: ...
-  - _characterIcon: {fileID: 0}
-    line: "There. If I press \u2018Q\u2019 I should be able to draw on an older version
-      of the games code, allowing me to fetch that pesky key."
+    line: "Just got to put this back on its plinth. I can drop the item on the plinth
+      by pressing \u2018C\u2019."
