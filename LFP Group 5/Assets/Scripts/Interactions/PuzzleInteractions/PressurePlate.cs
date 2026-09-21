@@ -3,7 +3,9 @@ using GridSystem;
 
 public class PressurePlate : Interaction
 {
+    [SerializeField] private ItemSO _requiredItem;
     private bool _isActivated = false;
+    [SerializeField] private GameObject _gate;
 
     private void Update()
     {
@@ -32,8 +34,11 @@ public class PressurePlate : Interaction
             // Check if the item is occupying the same cell as the pressure plate
             if (itemCell.Equals(plateCell))
             {
-                ActivatePlate();
-                return;
+                if (item.GetItemSO() == _requiredItem)
+                {
+                    ActivatePlate();
+                    return;
+                }
             }
         }
 
@@ -75,6 +80,8 @@ public class PressurePlate : Interaction
 
         _isActivated = true;
 
+        if (_gate == null) return;
+        _gate.SetActive(false);
         Debug.Log("PRESSURE PLATE ACTIVATED!");
     }
 
@@ -85,6 +92,8 @@ public class PressurePlate : Interaction
 
         _isActivated = false;
 
+        if (_gate == null) return;
+        _gate.SetActive(true);
         Debug.Log("PRESSURE PLATE DEACTIVATED!");
     }
 }

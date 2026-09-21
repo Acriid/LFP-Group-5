@@ -9,6 +9,14 @@ public class DoorInteraction : Interaction
     {
         if (!_canInteract) return;
 
+        Player player = interactingObject.GetComponent<Player>();
+
+        if (player.GetCurrentMode() != GameMode.NormalMode)
+        {
+            Debug.Log("Door cannot be opened in Safe Mode");
+            return;
+        }
+
         if (selectedItem == null)
         {
             Debug.Log("No item selected.");
@@ -22,8 +30,6 @@ public class DoorInteraction : Interaction
         }
 
         Debug.Log("Correct item used! Door opening.");
-
-        Player player = interactingObject.GetComponent<Player>();
 
         if (player == null)
         {

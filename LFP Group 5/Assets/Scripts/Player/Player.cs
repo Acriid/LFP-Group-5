@@ -202,4 +202,9 @@ public class Player : MonoBehaviour
     {
         return _inventory;
     }
+
+    public GameMode GetCurrentMode()
+    {
+        return _currentMode;
+    }
 }

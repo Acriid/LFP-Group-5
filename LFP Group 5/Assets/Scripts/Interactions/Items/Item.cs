@@ -7,6 +7,7 @@ public class Item : Interaction
     public override void Interact(GameObject interactingObject)
     {
         if(!_canInteract) return;
+        if (_itemSO == null) return;
 
         PickUpItem(interactingObject);
     }
