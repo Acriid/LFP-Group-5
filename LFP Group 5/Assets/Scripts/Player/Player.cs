@@ -237,7 +237,7 @@ public class Player : MonoBehaviour
     private IEnumerator TriggerMovementDialogueAfterDelay()
     {
         yield return new WaitForSeconds(movementDialogueDelay);
-        DialogueTrigger dialogueTrigger = FindObjectOfType<DialogueTrigger>();
+        DialogueTrigger dialogueTrigger = FindAnyObjectByType<DialogueTrigger>();
 
         if (dialogueTrigger != null)
         {

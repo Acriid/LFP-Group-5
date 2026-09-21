@@ -21,7 +21,7 @@ public class PressurePlate : Interaction
             return;
 
         // Find all active Items in the scene
-        Item[] items = FindObjectsByType<Item>(FindObjectsSortMode.None);
+        Item[] items = FindObjectsByType<Item>();
 
         foreach (Item item in items)
         {
