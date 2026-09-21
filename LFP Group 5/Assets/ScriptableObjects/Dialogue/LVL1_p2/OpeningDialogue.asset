@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: OpeningDialogue
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectDialogu
   dialogueLines:
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "Haha onwards and upwards! All my base mechanics are working. \r\n"
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: 'Time to play my game for real now.
 
-      
+
 
 '

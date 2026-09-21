@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PressurePlateDialogue
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectDialogu
   dialogueLines:
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "Haha modelled this statue after that ugly piece of work in the office.
       \u201CEnvironmental d\xE9cor to boost productivity\u201D pssh."
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "Just got to put this back on its plinth. I can drop the item on the plinth
       by pressing \u2018C\u2019."

@@ -764,39 +764,39 @@ MonoBehaviour:
   dialogue:
     dialogueLines:
     - character:
-        icon: {fileID: 0}
+        icon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
       line: "Hah, only took 3 months of sleepless nights and debt-inducing amounts
         of Redbull, but I\u2019ve finally done it!"
     - character:
-        icon: {fileID: 0}
+        icon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
       line: To think, a night trapped in the office was all the inspiration I needed
         to build this game.
     - character:
-        icon: {fileID: 0}
+        icon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
       line: "I\u2019ve got a good feeling about this game too, it\u2019s the one
         that will finally skyrocket my career. Then, I can quit that good-for-nothing
         desk job of mine!"
     - character:
-        icon: {fileID: 0}
+        icon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
       line: ...
     - character:
-        icon: {fileID: 0}
+        icon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
       line: "Wait, let me take a step back. We\u2019re only in the playtesting phase,
         can\u2019t get too ahead of myself here."
     - character:
-        icon: {fileID: 0}
+        icon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
       line: Still a long road ahead.
     - character:
-        icon: {fileID: 0}
+        icon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
       line: "Right, let\u2019s test this movement system with WASD."
   movementDialogue:
     dialogueLines:
     - character:
-        icon: {fileID: 0}
+        icon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
       line: "Good, good. Let\u2019s test the item collection\r\nmechanic now. Just
         got to walk over to the desk and press \u2018E\u2019."
     - character:
-        icon: {fileID: 0}
+        icon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
       line: I can collect everything this way! I should go to all of the desks to
         make sure the mechanic is working properly.
 --- !u!1 &254778776
@@ -3494,14 +3494,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49400002, g: 0.49400002, b: 0.49400002, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

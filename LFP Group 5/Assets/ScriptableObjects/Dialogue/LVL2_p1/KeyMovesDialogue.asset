@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: KeyMovesDialogue
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectDialogu
   dialogueLines:
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "\u2026..?!"
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "I don\u2019t remember coding that in here and I can\u2019t seem to bypass
       these walls\u2026 Let me try\u2026"
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: ...
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: ...
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "There. If I press \u2018Q\u2019 I should be able to draw on an older version
       of the games code, allowing me to fetch that pesky key."

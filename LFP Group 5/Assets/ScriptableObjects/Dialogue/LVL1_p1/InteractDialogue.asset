@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: InteractDialogue
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectDialogu
   dialogueLines:
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: I love how collected items immediately fill my inventory. SO handy.
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: Time to solve the levels puzzle. Each paper has a code on it that I need
       to input into the lock to progress.
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: As designer of the game I know the answer, of course, but best to test
       the lock by inputting both codes.
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: I just need to click the item to select it then press E to enter the code.

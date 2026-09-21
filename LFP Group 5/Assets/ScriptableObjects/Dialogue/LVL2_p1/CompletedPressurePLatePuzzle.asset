@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: CompletedPressurePLatePuzzle
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectDialogu
   dialogueLines:
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "Glad to know this is working. No signs of that weird\u2026 bug?"
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -8625906013721215279, guid: e8aef95697aea1b488e16f474f46c216, type: 3}
     line: "Identification incorrect. Definition of \u2018Bug\u2019 from Cambridge
       Dictionary:"
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -8625906013721215279, guid: e8aef95697aea1b488e16f474f46c216, type: 3}
     line: "\u201CBug \u2013 (noun) A very small insect.\u201D"
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "My lack of sleep has DEFINITELY caught up to me. I never coded this\u2026
       thing in here."
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "Let me finish this level and I\u2019ll backdate to my previous version
       of the game."

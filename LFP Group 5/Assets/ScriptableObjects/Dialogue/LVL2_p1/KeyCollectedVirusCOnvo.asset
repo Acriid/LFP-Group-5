@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: KeyCollectedVirusCOnvo
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectDialogu
   dialogueLines:
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -8625906013721215279, guid: e8aef95697aea1b488e16f474f46c216, type: 3}
     line: '[NEW ENTITY OBSERVED]'
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -8625906013721215279, guid: e8aef95697aea1b488e16f474f46c216, type: 3}
     line: "Co-existence\u2026 plausible? Calculating percentage of successful co-existence\u2026"
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -8625906013721215279, guid: e8aef95697aea1b488e16f474f46c216, type: 3}
     line: "\u202676%"
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: AHHH!
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: WHAT is going on?!
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -8625906013721215279, guid: e8aef95697aea1b488e16f474f46c216, type: 3}
     line: "Scanning database and interweb to identify human response\u2026"
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -8625906013721215279, guid: e8aef95697aea1b488e16f474f46c216, type: 3}
     line: 90% chance emotion is fear.
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "\u2026"
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "Am I\u2026"
-  - _characterIcon: {fileID: 0}
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "Losing my mind? I think I should just move on\u2026"
