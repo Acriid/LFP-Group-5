@@ -30,6 +30,9 @@ public class Player : MonoBehaviour
     private Vector2Int _moveInput;
     private bool _forceImmediateMove;
 
+    // hello Gemma added this to trigger initial dialogue
+    private bool hasMovedForFirstTime = false;
+
     void OnEnable()
     {
         //Gets first grid cell
@@ -59,6 +62,12 @@ public class Player : MonoBehaviour
 
     private void MovePlayer(Vector2Int moveInput)
     {
+        // heyo Gemma added this. Disables movement when dialogue is present! :)
+        if (DialogueManager.Instance != null && DialogueManager.Instance.isDialogueActive)
+        {
+            return;
+        }   
+
         if(GridManager.Instance == null)
         {
             Debug.LogWarning("No GridManager Instance in scene, Player cannot move");
@@ -98,6 +107,19 @@ public class Player : MonoBehaviour
         transform.position = _nextCell.Center();
         _currentCell = _nextCell;
         _nextCell = null;
+
+        // hello Gemma added this to trigger initial dialogue
+        if (!hasMovedForFirstTime)
+        {
+            hasMovedForFirstTime = true;
+
+            DialogueTrigger dialogueTrigger = FindObjectOfType<DialogueTrigger>();
+
+            if (dialogueTrigger != null)
+            {
+                dialogueTrigger.TriggerMovementDialogue();
+            }
+        }
 
         StartCoroutine(CooldownClock());
     }

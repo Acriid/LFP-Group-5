@@ -25,6 +25,11 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
 
+    [Header("Level 1 Dialogue After Movement")]
+    public Dialogue movementDialogue;
+    private bool movementDialoguePlayed = false;
+
+    // initial dialogue for level start
     void Start()
     {
         TriggerDialogue();
@@ -33,5 +38,16 @@ public class DialogueTrigger : MonoBehaviour
     public void TriggerDialogue()
     {
         DialogueManager.Instance.StartDialogue(dialogue);
+    }
+
+    public void TriggerMovementDialogue()
+    {
+        if(movementDialoguePlayed)
+        {
+            return;
+        }
+
+        movementDialoguePlayed = true;
+        DialogueManager.Instance.StartDialogue(movementDialogue);
     }
 }
