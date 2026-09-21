@@ -2643,6 +2643,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 621595623073137999, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: movementDialogueDelay
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1110758083413880316, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_Name
       value: Player
