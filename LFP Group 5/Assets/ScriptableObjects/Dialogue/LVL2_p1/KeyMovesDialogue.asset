@@ -10,14 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ee850c578174c94a8ac88fe209aae22, type: 3}
-  m_Name: OpeningDialogue
+  m_Name: KeyMovesDialogue
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectDialogu
   dialogueLines:
   - _characterIcon: {fileID: 0}
-    line: "Haha onwards and upwards! All my base mechanics are working. \r\n"
-  - _characterIcon: {fileID: 0}
-    line: 'Time to play my game for real now.
-
-      
-
-'
+    line: 
