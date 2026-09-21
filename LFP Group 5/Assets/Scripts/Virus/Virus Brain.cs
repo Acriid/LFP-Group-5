@@ -24,7 +24,7 @@ public class VirusBrain : ScriptableObject
     {
         itemToCorrupt.SetIsCorrupt(true);
     }
-    public void MoveItem(Item itemToMove, Vector2 newPosition)
+    public void MoveItem(Interaction itemToMove, Vector2 newPosition)
     {
         itemToMove.transform.position = newPosition;
     }

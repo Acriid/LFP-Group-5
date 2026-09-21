@@ -7,7 +7,7 @@ public class VirusLevel2 : MonoBehaviour
 {
     [SerializeField] private VirusBrain _virusBrain;
     [SerializeField] private List<Transform> _cellBlockTransforms;
-    [SerializeField] private List<Item> _moveItems = new();
+    [SerializeField] private List<Interaction> _moveItems = new();
     [SerializeField] private List<Vector2> _moveItemPositions = new();
     [SerializeField] private List<Item> _corruptItems = new();
 
