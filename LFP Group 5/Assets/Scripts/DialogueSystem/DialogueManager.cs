@@ -11,17 +11,22 @@ public class DialogueManager : MonoBehaviour
     public Image characterIcon;
     public TextMeshProUGUI dialogueArea;
 
-    private Queue<DialogueLine> lines;
+    private Queue<DialogueLine> lines = new Queue<DialogueLine>();
 
     public bool isDialogueActive = false;
-    public float typingSpeed = 0.2f;
+    public float typingSpeed = 0.02f;
+    
     public Animator animator;
 
-    void Start()
+    void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 
@@ -41,6 +46,11 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextDialogueLine()
     {
+        if (!isDialogueActive)
+        {
+            return;
+        }
+        
         if (lines.Count == 0)
         {
             EndDialogue();
@@ -58,7 +68,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence(DialogueLine dialogueLine)
     {
-        dialogueArea.text = "";
+        dialogueArea.text = " ";
         foreach (char letter in dialogueLine.line.ToCharArray())
         {
             dialogueArea.text += letter;
@@ -69,6 +79,15 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         isDialogueActive = false;
+        StopAllCoroutines();
         animator.Play("hide");
+    }
+
+    void Update()
+    {
+        if (isDialogueActive && Input.GetMouseButtonDown(0))
+        {
+            DisplayNextDialogueLine();
+        }
     }
 }
