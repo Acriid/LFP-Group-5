@@ -9096,6 +9096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnableVirus
   _blockedCells: {fileID: 355896747}
   _virus: {fileID: 2061457685}
+  _player: {fileID: 1388884534}
 --- !u!61 &493458949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14785,6 +14786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnableVirus
   _blockedCells: {fileID: 934630394}
   _virus: {fileID: 1029570335}
+  _player: {fileID: 1388884534}
 --- !u!61 &1390130450
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16617,6 +16619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnableVirus
   _blockedCells: {fileID: 1854581192}
   _virus: {fileID: 88911535}
+  _player: {fileID: 1388884534}
 --- !u!61 &1623527739
 BoxCollider2D:
   m_ObjectHideFlags: 0
