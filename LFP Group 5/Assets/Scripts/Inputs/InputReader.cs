@@ -308,6 +308,14 @@ public class InputReader : ScriptableObject
     {
         _modeSwitchAction.Disable();
     }
+    public void EnableEscapeAction()
+    {
+        _escapeAction.Enable();
+    }
+    public void DisableEscapeAction()
+    {
+        _escapeAction.Disable();
+    }
     public void EnableAction(InputAction actionToEnable)
     {
         actionToEnable.Enable();
