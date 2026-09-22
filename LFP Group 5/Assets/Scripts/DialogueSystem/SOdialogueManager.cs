@@ -51,6 +51,7 @@ public class SOdialogueManager : MonoBehaviour
             return;
         }
 
+        if(Mathf.Approximately(Time.timeScale,0f)) return;
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             ContinueDialogue();

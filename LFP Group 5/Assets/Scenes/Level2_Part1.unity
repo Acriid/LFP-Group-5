@@ -9142,6 +9142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnableVirus
   _blockedCells: {fileID: 355896747}
   _virus: {fileID: 2061457685}
+  _player: {fileID: 0}
 --- !u!61 &493458949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11002,6 +11003,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1001 &732162090
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3692495522213333100, guid: d2c684d4cd5ec824c923d74f544ca2a3, type: 3}
+      propertyPath: m_Name
+      value: Pause Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363186447914409213, guid: d2c684d4cd5ec824c923d74f544ca2a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.14294
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363186447914409213, guid: d2c684d4cd5ec824c923d74f544ca2a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.22413
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363186447914409213, guid: d2c684d4cd5ec824c923d74f544ca2a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363186447914409213, guid: d2c684d4cd5ec824c923d74f544ca2a3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363186447914409213, guid: d2c684d4cd5ec824c923d74f544ca2a3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363186447914409213, guid: d2c684d4cd5ec824c923d74f544ca2a3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363186447914409213, guid: d2c684d4cd5ec824c923d74f544ca2a3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363186447914409213, guid: d2c684d4cd5ec824c923d74f544ca2a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363186447914409213, guid: d2c684d4cd5ec824c923d74f544ca2a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363186447914409213, guid: d2c684d4cd5ec824c923d74f544ca2a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d2c684d4cd5ec824c923d74f544ca2a3, type: 3}
 --- !u!1 &737359174
 GameObject:
   m_ObjectHideFlags: 0
@@ -15342,6 +15400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnableVirus
   _blockedCells: {fileID: 934630394}
   _virus: {fileID: 1029570335}
+  _player: {fileID: 0}
 --- !u!61 &1390130450
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15983,6 +16042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NextLevel
   _canInteract: 1
+  _nextLevel: 0
 --- !u!1 &1456170328
 GameObject:
   m_ObjectHideFlags: 0
@@ -17257,6 +17317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnableVirus
   _blockedCells: {fileID: 1854581192}
   _virus: {fileID: 88911535}
+  _player: {fileID: 0}
 --- !u!61 &1623527739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20229,3 +20290,4 @@ SceneRoots:
   - {fileID: 808594814}
   - {fileID: 1221601845}
   - {fileID: 1537465490}
+  - {fileID: 732162090}
