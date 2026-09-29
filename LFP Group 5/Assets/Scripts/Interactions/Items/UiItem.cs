@@ -13,19 +13,40 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Image _image = null;
     [SerializeField] private TMP_Text _itemNameText = null;
     [SerializeField] private TMP_Text _itemDescriptionText = null;
+    [SerializeField] private GameObject _lockImage = null;
     private Sprite _uiSprite = null;
     private string _itemName = "";
     private string _itemDescription = "";
     private bool _hasItem = false;
     private Item _currentItem = null;
     public event Action<UiItem> OnItemClicked;
+
+    void OnDisable()
+    {
+        if(_currentItem != null)
+        {
+            _currentItem.OnItemLock -= SetItemLock;
+        }       
+    }
+
     public bool GetHasItem()
     {
         return _hasItem;
     }
     public void SetItem(Item newItem)
     {
+        if(_currentItem != null)
+        {
+            _currentItem.OnItemLock -= SetItemLock;
+        }
+
         _currentItem = newItem;
+
+        if(_currentItem != null)
+        {
+            _currentItem.OnItemLock += SetItemLock;
+        }
+
         SetItemValues();
     }
     private void SetItemValues()
@@ -85,5 +106,10 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
         OnItemClicked?.Invoke(this);
     }
 
-
+    private void SetItemLock(bool newValue)
+    {
+        if(_lockImage == null) return;
+        Debug.Log($"Locked : {newValue}");
+        _lockImage.SetActive(!newValue);
+    }
 }

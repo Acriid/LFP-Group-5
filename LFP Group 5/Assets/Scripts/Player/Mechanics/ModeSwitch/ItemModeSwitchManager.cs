@@ -28,6 +28,7 @@ public class ItemModeSwitchManager : MonoBehaviour
 
         foreach(Item item in _itemList)
         {
+            if(item == null) continue;
             if(item.GetIsCorrupt())
             {
                 item.SetIsCorrupt(false);

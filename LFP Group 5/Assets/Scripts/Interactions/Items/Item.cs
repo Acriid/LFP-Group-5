@@ -1,9 +1,23 @@
-using Unity.VisualScripting;
+using System;
 using UnityEngine;
 
 public class Item : Interaction
 {
     [SerializeField] private ItemSO _itemSO = null;
+    public event Action<bool> OnItemLock;
+    void OnEnable()
+    {
+        _itemSO.OnIsActiveChange += InvokeItemLockEvent;
+    }
+    void OnDisable()
+    {
+        _itemSO.OnIsActiveChange -= InvokeItemLockEvent;
+    }
+    private void InvokeItemLockEvent(bool newValue)
+    {
+        Debug.Log("Invoked");
+        OnItemLock?.Invoke(newValue);
+    }
     public override void Interact(GameObject interactingObject)
     {
         if(!_canInteract) return;
