@@ -9,13 +9,12 @@ public class Item : Interaction
     {
         _itemSO.OnIsActiveChange += InvokeItemLockEvent;
     }
-    void OnDisable()
+    void OnDestroy()
     {
         _itemSO.OnIsActiveChange -= InvokeItemLockEvent;
     }
     private void InvokeItemLockEvent(bool newValue)
     {
-        Debug.Log("Invoked");
         OnItemLock?.Invoke(newValue);
     }
     public override void Interact(GameObject interactingObject)

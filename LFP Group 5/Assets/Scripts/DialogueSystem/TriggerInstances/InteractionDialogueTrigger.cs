@@ -24,7 +24,7 @@ public class InteractionDialogueTrigger : MonoBehaviour
 
     void Start()
     {
-        Player player = FindFirstObjectByType<Player>();
+        Player player = FindAnyObjectByType<Player>();
 
         inventory = player.GetInventory();
 

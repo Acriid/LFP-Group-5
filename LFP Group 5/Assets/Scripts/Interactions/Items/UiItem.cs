@@ -108,8 +108,8 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
 
     private void SetItemLock(bool newValue)
     {
+        if(!newValue) DeSelectItem();
         if(_lockImage == null) return;
-        Debug.Log($"Locked : {newValue}");
         _lockImage.SetActive(!newValue);
     }
 }

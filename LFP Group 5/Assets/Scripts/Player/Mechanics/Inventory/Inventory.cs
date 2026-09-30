@@ -116,7 +116,6 @@ public class Inventory : MonoBehaviour
         if(originalSlot == newSlot) return;
         if (originalSlot < 0) return;
 
-        Debug.Log("Change");
         (_itemList[originalSlot], _itemList[newSlot]) = (_itemList[newSlot], _itemList[originalSlot]);
     }
 
@@ -142,7 +141,6 @@ public class Inventory : MonoBehaviour
         //If not active returns false
         if(checkActive)
         {
-            Debug.Log(!itemComponent.GetIsActive());
             if(!itemComponent.GetIsActive()) return false;
         }
 
@@ -150,7 +148,6 @@ public class Inventory : MonoBehaviour
         if(checkCorrupt)
         {
             if(itemComponent.GetIsCorrupt()) return false;
-            Debug.Log("Corrupt");
         }
 
         return true;
