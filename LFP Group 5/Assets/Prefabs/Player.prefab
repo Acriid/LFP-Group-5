@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   _inputReader: {fileID: 11400000, guid: 073e7d718b0f7ee4c8caa590dd5771ba, type: 2}
   _startPosition: {x: 0, y: 0}
-  _timeBetweenMoves: 0.5
+  _timeBetweenMoves: 1
   _obstacleMask:
     serializedVersion: 2
     m_Bits: 16
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Interact with "thing"'
+  m_text: Dont look at this string
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -843,6 +843,10 @@ PrefabInstance:
     - target: {fileID: 177643553873729647, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067424861187939080, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.21838379
       objectReference: {fileID: 0}
     - target: {fileID: 2113410680941039413, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
       propertyPath: m_Pivot.x

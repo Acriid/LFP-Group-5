@@ -9,7 +9,7 @@ public class InteractVisualFeedback : MonoBehaviour
     [SerializeField] private GameObject _feedBackUI = null;
     [SerializeField] private TMP_Text _feedBackText = null;
     private int _interactionsInRange = 0;
-    private readonly WaitForSeconds _textUpdateWait = new(0.2f);
+    private readonly WaitForSeconds _textUpdateWait = new(0.1f);
     private Coroutine _updateRoutine = null;
 
     private Interaction _targetInteraction = null;
@@ -40,7 +40,7 @@ public class InteractVisualFeedback : MonoBehaviour
                 _updateRoutine = null;
                 _feedBackUI.SetActive(false);
 
-                _feedBackText.text = "Interact with ";
+                _feedBackText.text = "";
             }           
         }
     }
@@ -50,7 +50,7 @@ public class InteractVisualFeedback : MonoBehaviour
         {
             _targetInteraction = _interactMechanic.GetTargetInteraction();
             if(_targetInteraction != null)
-            _feedBackText.text = $"Interact with '{_targetInteraction.name}'";
+            _feedBackText.text = _targetInteraction.GetInteractionString();
             yield return _textUpdateWait;
         }
     }
