@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class InteractMechanic : MonoBehaviour
     private List<Interaction> _interactionsInRange = new();
     private Interaction _targetInteraction;
     private CircleCollider2D _detectionTrigger;
+
+    public event Action<int> OnAddedInteraction;
 
     void Start()
     {
@@ -96,7 +99,10 @@ public class InteractMechanic : MonoBehaviour
         Interaction interaction = collision.GetComponent<Interaction>();
 
         if (interaction != null && !_interactionsInRange.Contains(interaction))
+        {
             _interactionsInRange.Add(interaction);
+            OnAddedInteraction.Invoke(1);
+        }
 
     }
     //Remove from interaction list
@@ -105,6 +111,7 @@ public class InteractMechanic : MonoBehaviour
         if (collision.TryGetComponent<Interaction>(out var interaction))
         {
             _interactionsInRange.Remove(interaction);
+            OnAddedInteraction.Invoke(-1);
             if (_targetInteraction == interaction)
                 _targetInteraction = null;
 
