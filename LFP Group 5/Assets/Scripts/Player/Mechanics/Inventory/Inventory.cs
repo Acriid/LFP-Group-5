@@ -86,6 +86,7 @@ public class Inventory : MonoBehaviour
             if(item == null) continue;
             if(item.GetItemSO().IsSelected)
             {
+                if(item.GetIsCorrupt()) return null;
                 itemRemoved = item.gameObject;
                 RemoveItemFromInventory(item.gameObject);
                 break;

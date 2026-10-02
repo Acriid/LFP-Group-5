@@ -5,7 +5,8 @@ public class ItemModeSwitchManager : MonoBehaviour
 {
     [SerializeField] private ModeSwitchMechanic _modeSwitchMechanic = null;
     [SerializeField] private List<Item> _itemList = new();
-    private List<Item> _revertItemList = new();
+    private List<Item> _revertCorruptionItemList = new();
+    private List<Item> _implementCorruptionItemList = new();
     void OnEnable()
     {
         _modeSwitchMechanic.OnModeSwitch += ManageInputMode;
@@ -24,7 +25,8 @@ public class ItemModeSwitchManager : MonoBehaviour
 
     private void SafeModeLogic()
     {
-        _revertItemList.Clear();
+        _revertCorruptionItemList.Clear();
+        _implementCorruptionItemList.Clear();
 
         foreach(Item item in _itemList)
         {
@@ -32,17 +34,37 @@ public class ItemModeSwitchManager : MonoBehaviour
             if(item.GetIsCorrupt())
             {
                 item.SetIsCorrupt(false);
-                _revertItemList.Add(item);
+                _revertCorruptionItemList.Add(item);
+            }
+            else
+            {
+                item.SetIsCorrupt(true);
+                _implementCorruptionItemList.Add(item);
             }
         }
     }
     private void NormalModeLogic()
     {
-        foreach(Item item in _revertItemList)
+        foreach(Item item in _revertCorruptionItemList)
         {
             item.SetIsCorrupt(true);
         }
 
-        _revertItemList.Clear();
+        _revertCorruptionItemList.Clear();
+
+        foreach(Item item in _implementCorruptionItemList)
+        {
+            item.SetIsCorrupt(false);
+        }
+
+        _implementCorruptionItemList.Clear();
+    }
+    public void SetItemList(List<Item> newList)
+    {
+        _itemList = new(newList);
+    }
+    void OnDestroy()
+    {
+        NormalModeLogic();
     }
 }

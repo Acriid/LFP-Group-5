@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d5edace08274d43b4b46db19b5b813, type: 3}
   m_Name: TriangleItem
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  IsActive: 1
   IsCorrupt: 0
   IsSelected: 0
   UISprite: {fileID: 0}

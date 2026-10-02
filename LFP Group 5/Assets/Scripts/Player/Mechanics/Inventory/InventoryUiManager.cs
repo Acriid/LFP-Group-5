@@ -82,7 +82,11 @@ public class InventoryUiManager : MonoBehaviour
             inventorySlot.OnHeldObjectChange -= ChangeItemSlots;
         }
     }
-
+    void OnDestroy()
+    {
+        if(_currentSelectedItem == null) return;
+        _currentSelectedItem.DeSelectItem(); 
+    }
     private void UnsubscribeEvents()
     {
         foreach(UiItem uiItem in _uiItemPool)

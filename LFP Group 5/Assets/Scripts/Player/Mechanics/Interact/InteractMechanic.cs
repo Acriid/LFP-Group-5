@@ -101,7 +101,7 @@ public class InteractMechanic : MonoBehaviour
         if (interaction != null && !_interactionsInRange.Contains(interaction))
         {
             _interactionsInRange.Add(interaction);
-            OnAddedInteraction.Invoke(1);
+            OnAddedInteraction?.Invoke(1);
         }
 
     }
@@ -111,7 +111,7 @@ public class InteractMechanic : MonoBehaviour
         if (collision.TryGetComponent<Interaction>(out var interaction))
         {
             _interactionsInRange.Remove(interaction);
-            OnAddedInteraction.Invoke(-1);
+            OnAddedInteraction?.Invoke(-1);
             if (_targetInteraction == interaction)
                 _targetInteraction = null;
 
