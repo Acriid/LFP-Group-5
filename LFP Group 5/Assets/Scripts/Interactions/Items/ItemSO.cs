@@ -29,8 +29,15 @@ public class ItemSO : ScriptableObject
     
     public bool IsSelected = false;
 
+
+    public Sprite NormalModeSprite = null;
+    public Sprite SafeModeSprite = null;
+
+
+
     //UI Item Variables
-    public Sprite UISprite = null;
+    public Sprite UISpriteNormal = null;
+    public Sprite UISpriteSafe = null;
     public string ItemName = "";
     public string ItemDescription = "";
 }

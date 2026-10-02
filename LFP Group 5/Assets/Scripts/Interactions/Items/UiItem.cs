@@ -112,4 +112,17 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
         if(_lockImage == null) return;
         _lockImage.SetActive(!newValue);
     }
+
+
+    public void SetNormalModeSprite()
+    {
+        if(_currentItem == null) return;
+        _currentItem.SetNormalModeSprite();
+    }
+
+    public void SetSafeModeSprite()
+    {
+        if(_currentItem == null) return;
+        _currentItem.SetSafeModeSprite();
+    }
 }

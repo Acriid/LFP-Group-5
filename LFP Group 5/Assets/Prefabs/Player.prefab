@@ -812,6 +812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryModeSwitchManager
   _modeSwitchMechanic: {fileID: 11400000, guid: a2596f9b4addd7b4b974cd244a036f78, type: 2}
   _playerInventory: {fileID: 6104217305466799480}
+  _playerUIInventory: {fileID: 32675796936964075}
   _safeModeMaxSize: 1
 --- !u!114 &3917646182320602676
 MonoBehaviour:
@@ -1037,6 +1038,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
+--- !u!114 &32675796936964075 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7663753884680163689, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
+  m_PrefabInstance: {fileID: 7651345265891190402}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b396cd240929d4ab5b141aea40b6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryUiManager
 --- !u!224 &8609578648024803767 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2113410680941039413, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}

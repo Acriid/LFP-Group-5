@@ -31,6 +31,7 @@ public class ItemModeSwitchManager : MonoBehaviour
         foreach(Item item in _itemList)
         {
             if(item == null) continue;
+            item.SetSafeModeSprite();
             if(item.GetIsCorrupt())
             {
                 item.SetIsCorrupt(false);
@@ -45,6 +46,14 @@ public class ItemModeSwitchManager : MonoBehaviour
     }
     private void NormalModeLogic()
     {
+        foreach(Item item in _itemList)
+        {
+            if(item == null) continue;
+            item.SetNormalModeSprite();
+        }
+
+
+
         foreach(Item item in _revertCorruptionItemList)
         {
             item.SetIsCorrupt(true);

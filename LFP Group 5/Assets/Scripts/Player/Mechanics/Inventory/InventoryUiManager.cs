@@ -171,4 +171,20 @@ public class InventoryUiManager : MonoBehaviour
             }
         }       
     }
+
+
+    public void SetNormalModeSprite()
+    {
+        foreach(UiItem uiItem in _uiItemPool)
+        {
+            uiItem.SetNormalModeSprite();
+        }
+    }
+    public void SetSafeModeSprite()
+    {
+        foreach(UiItem uiItem in _uiItemPool)
+        {
+            uiItem.SetSafeModeSprite();
+        }        
+    }
 }

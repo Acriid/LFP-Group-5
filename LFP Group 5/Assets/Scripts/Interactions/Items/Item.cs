@@ -1,9 +1,11 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Item : Interaction
 {
     [SerializeField] private ItemSO _itemSO = null;
+    [SerializeField] private SpriteRenderer _spriteRenderer = null;
     public event Action<bool> OnItemLock;
     void OnEnable()
     {
@@ -57,7 +59,7 @@ public class Item : Interaction
     }
     public Sprite GetItemSprite()
     {
-        return _itemSO.UISprite;
+        return _itemSO.UISpriteNormal;
     }
 
     public void SetIsCorrupt(bool newValue)
@@ -71,5 +73,20 @@ public class Item : Interaction
     public void SetIsSelected(bool newValue)
     {
         _itemSO.IsSelected = newValue;
+    }
+
+    public void SetNormalModeSprite()
+    {
+        if(_spriteRenderer == null) return;
+        if(_itemSO.NormalModeSprite == null) return;
+
+        _spriteRenderer.sprite = _itemSO.NormalModeSprite;
+    }
+    public void SetSafeModeSprite()
+    {
+        if(_spriteRenderer == null) return;
+        if(_itemSO.SafeModeSprite == null) return;
+
+        _spriteRenderer.sprite = _itemSO.SafeModeSprite;       
     }
 }
