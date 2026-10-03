@@ -1009,6 +1009,10 @@ PrefabInstance:
       propertyPath: _dragParent
       value: 
       objectReference: {fileID: 8609578648024803767}
+    - target: {fileID: 7663753884680163689, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
+      propertyPath: _inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: 073e7d718b0f7ee4c8caa590dd5771ba, type: 2}
     - target: {fileID: 7966417523583559187, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

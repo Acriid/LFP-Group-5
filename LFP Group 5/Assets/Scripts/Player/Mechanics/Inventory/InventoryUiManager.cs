@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryUiManager : MonoBehaviour
 {
     [SerializeField] private Inventory _inventory = null;
+    [SerializeField] private InputReader _inputReader = null;
     [SerializeField] private List<InventorySlot> _inventorySlots = new();
     [SerializeField] private GameObject _uiItemPrefab = null;
     [SerializeField] private Transform _dragParent = null;
@@ -17,7 +18,52 @@ public class InventoryUiManager : MonoBehaviour
     {
         InitializeInventory();
         InitializeItemPool();
+
+        SubscribeInputs();
     }
+
+    void OnDisable()
+    {
+        UnsubscribeEvents();
+        UnSubScribeInputs();
+
+        foreach(InventorySlot inventorySlot in _inventorySlots)
+        {
+            inventorySlot.OnHeldObjectChange -= ChangeItemSlots;
+        }
+    }
+    void OnDestroy()
+    {
+        if(_currentSelectedItem == null) return;
+        _currentSelectedItem.DeSelectItem(); 
+    }
+
+
+    private void SubscribeInputs()
+    {
+        _inputReader.OnSelect1 += SetSelectedItem;
+        _inputReader.OnSelect2 += SetSelectedItem;
+        _inputReader.OnSelect3 += SetSelectedItem;
+        _inputReader.OnSelect4 += SetSelectedItem;
+
+        _inputReader.EnableSelectItem1Action();
+        _inputReader.EnableSelectItem2Action();
+        _inputReader.EnableSelectItem3Action();
+        _inputReader.EnableSelectItem4Action();
+    }
+    private void UnSubScribeInputs()
+    {
+        _inputReader.OnSelect1 -= SetSelectedItem;
+        _inputReader.OnSelect2 -= SetSelectedItem;
+        _inputReader.OnSelect3 -= SetSelectedItem;
+        _inputReader.OnSelect4 -= SetSelectedItem; 
+
+        _inputReader.DisableSelectItem1Action();
+        _inputReader.DisableSelectItem2Action();
+        _inputReader.DisableSelectItem3Action();
+        _inputReader.DisableSelectItem4Action();
+    }
+
     private void InitializeInventory()
     {
         if(_inventory == null) return;
@@ -57,6 +103,17 @@ public class InventoryUiManager : MonoBehaviour
         }
     }
 
+    private void SetSelectedItem(int itemSlot)
+    {
+        if(itemSlot > _inventorySlots.Count) return;
+
+        GameObject itemToSelect = _inventorySlots[itemSlot - 1].GetHeldObject();
+        if(itemToSelect == null) return;
+
+        if(!itemToSelect.TryGetComponent(out UiItem uiItemComponent)) return;
+
+        SetSelectedItem(uiItemComponent);
+    }
     private void SetSelectedItem(UiItem newItem)
     {
         foreach(UiItem uiItem in _uiItemPool)
@@ -64,6 +121,13 @@ public class InventoryUiManager : MonoBehaviour
             uiItem.DeSelectItem();
         }
         
+        if(_currentSelectedItem == newItem)
+        {
+            _currentSelectedItem.DeSelectItem();
+            _currentSelectedItem = null;
+            return;
+        }
+
         _currentSelectedItem = newItem;
         if(_currentSelectedItem == null) return;
         _currentSelectedItem.SelectItem();
@@ -73,20 +137,7 @@ public class InventoryUiManager : MonoBehaviour
         return _currentSelectedItem;
     }
 
-    void OnDisable()
-    {
-        UnsubscribeEvents();
 
-        foreach(InventorySlot inventorySlot in _inventorySlots)
-        {
-            inventorySlot.OnHeldObjectChange -= ChangeItemSlots;
-        }
-    }
-    void OnDestroy()
-    {
-        if(_currentSelectedItem == null) return;
-        _currentSelectedItem.DeSelectItem(); 
-    }
     private void UnsubscribeEvents()
     {
         foreach(UiItem uiItem in _uiItemPool)
