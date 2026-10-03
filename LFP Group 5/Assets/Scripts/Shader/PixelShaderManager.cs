@@ -13,6 +13,11 @@ public class PixelShaderManager : MonoBehaviour
     {
         FindFullScreenPass();
     }
+    void OnDestroy()
+    {
+        //Reset to no pixelation
+        PixelateScreen(false);
+    }
     private void FindFullScreenPass()
     {
         foreach (var feature in _renderer2DData.rendererFeatures)
