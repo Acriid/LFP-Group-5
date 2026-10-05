@@ -316,7 +316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.83725923}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.21829224}
+  m_AnchoredPosition: {x: 0, y: -0.21838379}
   m_SizeDelta: {x: 0, y: 0.43650055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2865115588509909337
@@ -653,9 +653,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryUiManager
   _inventory: {fileID: 0}
+  _inputReader: {fileID: 11400000, guid: 073e7d718b0f7ee4c8caa590dd5771ba, type: 2}
   _inventorySlots:
   - {fileID: 4521851243053665530}
   - {fileID: 4262150546941532540}
   - {fileID: 2172113350438135934}
   - {fileID: 2756399540999575154}
   _uiItemPrefab: {fileID: 4745218938609718183, guid: ee5a45990f18c0e409e74908e851ebe6, type: 3}
+  _dragParent: {fileID: 2113410680941039413}

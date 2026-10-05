@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 1443522419986308174}
   - component: {fileID: 621595623073137999}
   - component: {fileID: 6104217305466799480}
-  - component: {fileID: 3945536041186519946}
-  - component: {fileID: 7489625554084411521}
+  - component: {fileID: 1087942028710750314}
+  - component: {fileID: 8830707478483986165}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,9 +35,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7027281532148190308}
-  - {fileID: 8609578648024803767}
   - {fileID: 3672047489944703631}
+  - {fileID: 8609578648024803767}
   - {fileID: 565324996813966944}
+  - {fileID: 3699802008018631494}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1443522419986308174
@@ -119,7 +120,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16
   _itemParentTransform: {fileID: 0}
-  _interactMechanic: {fileID: 3945536041186519946}
+  _interactMechanic: {fileID: 4060883554002583379}
   _inventory: {fileID: 6104217305466799480}
   _modeSwitchMechanic: {fileID: 11400000, guid: a2596f9b4addd7b4b974cd244a036f78, type: 2}
   ModeSwitchPanel: {fileID: 6751703595176473019}
@@ -138,24 +139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
   _itemList: []
   _maxItems: 4
---- !u!114 &3945536041186519946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110758083413880316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73e0e579dfbc0d84db3d512621e89d3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractMechanic
-  _detectionRadius: 1
-  _interactionLayer:
-    serializedVersion: 2
-    m_Bits: 192
---- !u!58 &7489625554084411521
-CircleCollider2D:
+--- !u!61 &1087942028710750314
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -189,7 +174,44 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &8830707478483986165
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110758083413880316}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1164033136520021154
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bdff03270371245877f17215371db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractVisualFeedback
-  _interactMechanic: {fileID: 3945536041186519946}
+  _interactMechanic: {fileID: 4060883554002583379}
   _feedBackUI: {fileID: 2335302648407979077}
   _feedBackText: {fileID: 7502696801078338915}
 --- !u!1 &2335302648407979077
@@ -346,6 +368,91 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &4634784013680779430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3699802008018631494}
+  - component: {fileID: 4879897392355132635}
+  - component: {fileID: 4060883554002583379}
+  m_Layer: 0
+  m_Name: Interact Mechanic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3699802008018631494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4634784013680779430}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6737170003366781094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &4879897392355132635
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4634784013680779430}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
+--- !u!114 &4060883554002583379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4634784013680779430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e0e579dfbc0d84db3d512621e89d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractMechanic
+  _detectionRadius: 1
+  _interactionLayer:
+    serializedVersion: 2
+    m_Bits: 192
 --- !u!1 &5616212705861698218
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +801,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!114 &6817567674859940955
 MonoBehaviour:
@@ -827,8 +934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemModeSwitchManager
   _modeSwitchMechanic: {fileID: 11400000, guid: a2596f9b4addd7b4b974cd244a036f78, type: 2}
-  _itemList:
-  - {fileID: 0}
+  _itemList: []
 --- !u!1001 &7651345265891190402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -841,13 +947,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: InventoryCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 177643553873729647, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1067424861187939080, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.21838379
+    - target: {fileID: 2063422439124391773, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2113410680941039413, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
       propertyPath: m_Pivot.x
@@ -1005,14 +1107,6 @@ PrefabInstance:
       propertyPath: _inventory
       value: 
       objectReference: {fileID: 6104217305466799480}
-    - target: {fileID: 7663753884680163689, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
-      propertyPath: _dragParent
-      value: 
-      objectReference: {fileID: 8609578648024803767}
-    - target: {fileID: 7663753884680163689, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
-      propertyPath: _inputReader
-      value: 
-      objectReference: {fileID: 11400000, guid: 073e7d718b0f7ee4c8caa590dd5771ba, type: 2}
     - target: {fileID: 7966417523583559187, guid: 9d83be4b82f52f443ae6fa4d66f4b413, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

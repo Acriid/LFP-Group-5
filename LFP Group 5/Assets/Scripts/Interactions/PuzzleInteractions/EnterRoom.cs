@@ -5,6 +5,7 @@ public class EnterRoom : MonoBehaviour
     [SerializeField] private GameObject _roomBackdrop, _outsideBackdrop, _trigger;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(!collision.CompareTag("Player")) return;
         if (_roomBackdrop.activeInHierarchy)
         {
             _roomBackdrop.SetActive(false);
@@ -20,6 +21,7 @@ public class EnterRoom : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if(!collision.CompareTag("Player")) return;
         _trigger.SetActive(true);
         gameObject.SetActive(false);
     }

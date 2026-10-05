@@ -5216,7 +5216,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
+  _interactionString: 
   _itemSO: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
+  _spriteRenderer: {fileID: 0}
 --- !u!1 &490024230
 GameObject:
   m_ObjectHideFlags: 0
@@ -5558,7 +5560,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
+  _interactionString: 
   _itemSO: {fileID: 11400000, guid: b7e251c8257f53d4cac78b607c4953ed, type: 2}
+  _spriteRenderer: {fileID: 0}
 --- !u!1 &640687583
 GameObject:
   m_ObjectHideFlags: 0
@@ -5855,6 +5859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
+  _interactionString: 
   _hiddenInItem: {fileID: 2116977366}
 --- !u!1 &661752153
 GameObject:
@@ -6011,6 +6016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
+  _interactionString: 
   _hiddenInItem: {fileID: 528122012}
 --- !u!1 &681854438
 GameObject:
@@ -7682,6 +7688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
+  _interactionString: 
   _requiredItem: {fileID: 11400000, guid: bbf63bf7d8b761f439363fd9abc9d13d, type: 2}
   _lockedDoor: {fileID: 1221512439}
   _unlockedDoor: {fileID: 1230400200}
@@ -7874,6 +7881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1110758083413880316, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2470467256971708708, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7898,10 +7909,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3917646182320602676, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
-      propertyPath: _itemList.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4418022854222739859, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7925,6 +7932,10 @@ PrefabInstance:
     - target: {fileID: 4418022854222739859, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879897392355132635, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_Radius
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5355333519009179686, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7993,48 +8004,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1110758083413880316, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1388884529}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
 --- !u!224 &1307382403 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8609578648024803767, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
   m_PrefabInstance: {fileID: 1245135396}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1388884526 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1110758083413880316, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
-  m_PrefabInstance: {fileID: 1245135396}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1388884529
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388884526}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!4 &1388884530 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6737170003366781094, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
@@ -8193,6 +8169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NextLevel
   _canInteract: 1
+  _interactionString: 
   _nextLevel: -1
 --- !u!1 &1445709411
 GameObject:
@@ -8608,6 +8585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
+  _interactionString: 
   _requiredItem: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _lockedDoor: {fileID: 1544150309}
   _unlockedDoor: {fileID: 1432612563}
@@ -10362,6 +10340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BatteryInteraction
   _canInteract: 1
+  _interactionString: 
   _requiredItem: {fileID: 11400000, guid: b7e251c8257f53d4cac78b607c4953ed, type: 2}
   _shadow: {fileID: 2045217172}
   _revealKey: {fileID: 450033898}
@@ -10475,7 +10454,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
+  _interactionString: 
   _itemSO: {fileID: 11400000, guid: bbf63bf7d8b761f439363fd9abc9d13d, type: 2}
+  _spriteRenderer: {fileID: 0}
 --- !u!58 &2116977372
 CircleCollider2D:
   m_ObjectHideFlags: 0
