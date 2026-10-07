@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnableVirus : MonoBehaviour
 {
-    [SerializeField] private GameObject _blockedCells, _virus;
+    [SerializeField] private GameObject _blockedCells, _virus, _nextVirus;
     [SerializeField] private Player _player;
 
     void Awake()
@@ -23,6 +23,12 @@ public class EnableVirus : MonoBehaviour
     {
         if(!collision.CompareTag("Player")) return;
         if (_player.GetCurrentMode() != GameMode.NormalMode) return;
+
+        if (_nextVirus != null)
+        {
+            _nextVirus.SetActive(true);
+        }
+
         gameObject.SetActive(false);
     }
 }

@@ -1963,7 +1963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 192109375}
   - component: {fileID: 192109376}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Table (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5716,7 +5716,7 @@ GameObject:
   - component: {fileID: 656441590}
   - component: {fileID: 656441589}
   - component: {fileID: 656441591}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Table2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5873,7 +5873,7 @@ GameObject:
   - component: {fileID: 661752155}
   - component: {fileID: 661752157}
   - component: {fileID: 661752158}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: 'Table '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6120,7 +6120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687948794}
   - component: {fileID: 687948795}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Table (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6212,7 +6212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718068259}
   - component: {fileID: 718068260}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Table (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7546,7 +7546,7 @@ GameObject:
   - component: {fileID: 1221512441}
   - component: {fileID: 1221512442}
   - component: {fileID: 1221512443}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Door2
   m_TagString: Locked
   m_Icon: {fileID: 0}
@@ -7877,6 +7877,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 621595623073137999, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: _obstacleMask.m_Bits
+      value: 272
+      objectReference: {fileID: 0}
     - target: {fileID: 1110758083413880316, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_Name
       value: Player
@@ -7908,6 +7912,26 @@ PrefabInstance:
     - target: {fileID: 2470467256971708708, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917646182320602676, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: _itemList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917646182320602676, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: '_itemList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 528122017}
+    - target: {fileID: 3917646182320602676, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: '_itemList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 450033903}
+    - target: {fileID: 3917646182320602676, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: '_itemList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2116977371}
+    - target: {fileID: 4060883554002583379, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: _interactionLayer.m_Bits
+      value: 448
       objectReference: {fileID: 0}
     - target: {fileID: 4418022854222739859, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8692,7 +8716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1767556724}
   - component: {fileID: 1767556725}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Table (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9554,7 +9578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1999417136}
   - component: {fileID: 1999417137}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

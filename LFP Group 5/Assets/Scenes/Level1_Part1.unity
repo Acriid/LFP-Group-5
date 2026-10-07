@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NextLevel
   _canInteract: 1
+  _interactionString: 
   _nextLevel: -1
 --- !u!61 &152370549
 BoxCollider2D:
@@ -632,7 +633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 192109375}
   - component: {fileID: 192109376}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Table (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1218,7 +1219,7 @@ GameObject:
   - component: {fileID: 333267446}
   - component: {fileID: 333267448}
   - component: {fileID: 333267449}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Table  (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1361,6 +1362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
+  _interactionString: 
   _hiddenInItem: {fileID: 0}
 --- !u!50 &333267449
 Rigidbody2D:
@@ -1903,7 +1905,7 @@ GameObject:
   - component: {fileID: 661752157}
   - component: {fileID: 661752158}
   - component: {fileID: 661752159}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: 'Table '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2046,6 +2048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
+  _interactionString: 
   _hiddenInItem: {fileID: 688361113}
 --- !u!50 &661752159
 Rigidbody2D:
@@ -2087,7 +2090,7 @@ GameObject:
   - component: {fileID: 677945180}
   - component: {fileID: 677945182}
   - component: {fileID: 677945183}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Table  (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2230,6 +2233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
+  _interactionString: 
   _hiddenInItem: {fileID: 1458578337}
 --- !u!50 &677945183
 Rigidbody2D:
@@ -2268,7 +2272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687948794}
   - component: {fileID: 687948795}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Table (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2465,7 +2469,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
+  _interactionString: 
   _itemSO: {fileID: 11400000, guid: 8a19215ff04430e4f80f52eaeb5da3b9, type: 2}
+  _spriteRenderer: {fileID: 0}
 --- !u!61 &688361117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2734,7 +2740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 776519356}
   - component: {fileID: 776519357}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Table (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2826,7 +2832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 812288917}
   - component: {fileID: 812288918}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Table (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2941,6 +2947,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 621595623073137999, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: _obstacleMask.m_Bits
+      value: 272
+      objectReference: {fileID: 0}
+    - target: {fileID: 621595623073137999, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: movementDialogueDelay
       value: 0.8
       objectReference: {fileID: 0}
@@ -2979,6 +2989,10 @@ PrefabInstance:
     - target: {fileID: 3917646182320602676, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: _itemList.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4060883554002583379, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: _interactionLayer.m_Bits
+      value: 448
       objectReference: {fileID: 0}
     - target: {fileID: 4418022854222739859, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4371,7 +4385,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
+  _interactionString: 
   _itemSO: {fileID: 11400000, guid: 4b91395097bd39b4e8c1876c72060545, type: 2}
+  _spriteRenderer: {fileID: 0}
 --- !u!212 &1458578342
 SpriteRenderer:
   serializedVersion: 3
@@ -7760,7 +7776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1539070783}
   - component: {fileID: 1539070784}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Table (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7997,6 +8013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
+  _interactionString: 
   _requiredItem: {fileID: 11400000, guid: 4b91395097bd39b4e8c1876c72060545, type: 2}
   _lockedDoor: {fileID: 1544150309}
   _unlockedDoor: {fileID: 152370546}
@@ -10461,7 +10478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2052868297}
   - component: {fileID: 2052868298}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Table (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

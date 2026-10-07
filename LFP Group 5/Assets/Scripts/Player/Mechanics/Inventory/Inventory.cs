@@ -71,7 +71,19 @@ public class Inventory : MonoBehaviour
                 break;
             }
         }
-        if(openSlot < 0) return;
+        if(openSlot < 0)
+        {
+            if (_allowedSize == 1)
+            {
+                Debug.Log("You can only hold one item in Safe Mode.");
+            }
+            else
+            {
+                Debug.Log("Inventory is full.");
+            }
+
+            return;
+        }
 
         itemToAdd.SetActive(false);
         _itemList[openSlot] = itemComponent;
@@ -173,5 +185,9 @@ public class Inventory : MonoBehaviour
         }
 
         return null;
+    }
+    public List<Item> GetItemList()
+    {
+        return _itemList;
     }
 }
