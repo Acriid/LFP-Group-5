@@ -30,8 +30,6 @@ public class InteractVisualFeedback : MonoBehaviour
             {
                 _updateRoutine = StartCoroutine(UpdateInteractionText());
                 _targetInteraction = _interactMechanic.GetTargetInteraction();
-                if(_targetInteraction != null && _targetInteraction.GetCanInteract())
-                _feedBackUI.SetActive(true);
             }
         }
         else
@@ -52,7 +50,17 @@ public class InteractVisualFeedback : MonoBehaviour
         {
             _targetInteraction = _interactMechanic.GetTargetInteraction();
             if(_targetInteraction != null)
-            _feedBackText.text = _targetInteraction.GetInteractionString();
+            {
+                if(_targetInteraction.GetCanInteract())
+                {
+                    _feedBackText.text = _targetInteraction.GetInteractionString();
+                    if(_feedBackText.text != "")
+                    _feedBackUI.SetActive(true);
+                }
+                else
+                _feedBackUI.SetActive(false);
+            }
+
             yield return _textUpdateWait;
         }
     }
