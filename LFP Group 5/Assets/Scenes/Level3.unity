@@ -1101,7 +1101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryScanner
   _canInteract: 1
   _interactionString: Scan Items
-  _failedInteractionString: 
   _scannerPanel: {fileID: 1819869762}
   _requiredItems:
   - {fileID: 11400000, guid: 91ededd865f4ae145bcdda7b7e0ac669, type: 2}
@@ -1588,7 +1587,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryScanner
   _canInteract: 1
   _interactionString: Scan Items
-  _failedInteractionString: 
   _scannerPanel: {fileID: 1819869762}
   _requiredItems:
   - {fileID: 11400000, guid: 91ededd865f4ae145bcdda7b7e0ac669, type: 2}
@@ -9088,7 +9086,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 'Pick Up ID Card '
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 0171375ad5eb1e54fa439a6758627dcb, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &184797377
@@ -9293,7 +9290,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: Search Drawer
-  _failedInteractionString: 
   _hiddenInItem: {fileID: 1987500711}
 --- !u!61 &193126813
 BoxCollider2D:
@@ -9652,7 +9648,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &236062727
@@ -9904,8 +9899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: Pick up cbs%Hcj$
-  _failedInteractionString: 
-  _itemSO: {fileID: 11400000, guid: c1fe5c1db5c40f047b039ff60da31a50, type: 2}
+  _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &242244334
 SpriteRenderer:
@@ -12961,7 +12955,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 'Pick Up Key '
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!1 &458342672
@@ -13170,7 +13163,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 1
   _interactionString: 
-  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 0}
 --- !u!212 &483047493
@@ -14062,7 +14054,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: Search Drawer
-  _failedInteractionString: 
   _hiddenInItem: {fileID: 853452774}
 --- !u!61 &555431107
 BoxCollider2D:
@@ -15130,7 +15121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 'Pick Up ID Card '
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 3d1f43532830f544a8c6b3d4ddcf0ed7, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &642243508
@@ -15399,7 +15389,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 1
   _interactionString: 
-  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 298124964}
 --- !u!212 &644344375
@@ -15833,7 +15822,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: Search Drawer
-  _failedInteractionString: 
   _hiddenInItem: {fileID: 922312255}
 --- !u!1 &668423956
 GameObject:
@@ -16582,7 +16570,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 1
   _interactionString: 
-  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 1093911836}
 --- !u!212 &737359179
@@ -17384,7 +17371,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -18635,7 +18622,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 'Pick Up ID Card '
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 2645dc0425585884da2af9d8db5e4a8a, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &853452778
@@ -18904,7 +18890,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 1
   _interactionString: 
-  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 28288230}
 --- !u!212 &891534580
@@ -19385,7 +19370,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: Pick Up Note
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: ee4b355ca87bc57459bbc8b61936cb84, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!61 &922312259
@@ -19724,7 +19708,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &992990464
@@ -20905,7 +20888,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 1
   _interactionString: 
-  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 0}
 --- !u!212 &1094749845
@@ -21066,7 +21048,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 'Pick Up ID Card '
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 1a218deb7510e6147814e6a431d3fae6, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &1100932732
@@ -21432,7 +21413,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryScanner
   _canInteract: 1
   _interactionString: Scan Items
-  _failedInteractionString: 
   _scannerPanel: {fileID: 1819869762}
   _requiredItems:
   - {fileID: 11400000, guid: 2645dc0425585884da2af9d8db5e4a8a, type: 2}
@@ -21783,7 +21763,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!61 &1211895196
@@ -22101,7 +22080,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
   _interactionString: Open Door
-  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _lockedDoor: {fileID: 1221512439}
   _unlockedDoor: {fileID: 1230400200}
@@ -23553,7 +23531,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryScanner
   _canInteract: 1
   _interactionString: Scan Items
-  _failedInteractionString: 
   _scannerPanel: {fileID: 1819869762}
   _requiredItems:
   - {fileID: 11400000, guid: 91ededd865f4ae145bcdda7b7e0ac669, type: 2}
@@ -24479,7 +24456,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 1
   _interactionString: 
-  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 1637004812}
 --- !u!212 &1409813919
@@ -24828,7 +24804,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 1
   _interactionString: 
-  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 298124964}
 --- !u!212 &1419951830
@@ -25045,7 +25020,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NextLevel
   _canInteract: 1
   _interactionString: Enter Door
-  _failedInteractionString: 
   _nextLevel: 0
 --- !u!1 &1456170328
 GameObject:
@@ -25437,8 +25411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 1
   _interactionString: 'Interact with Plate '
-  _failedInteractionString: 
-  _requiredItem: {fileID: 11400000, guid: c1fe5c1db5c40f047b039ff60da31a50, type: 2}
+  _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 668423956}
 --- !u!212 &1497028537
 SpriteRenderer:
@@ -26150,7 +26123,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
   _interactionString: Open Door
-  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _lockedDoor: {fileID: 1544150309}
   _unlockedDoor: {fileID: 1432612563}
@@ -26697,7 +26669,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 'Pick Up ID Card '
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 91ededd865f4ae145bcdda7b7e0ac669, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &1617967046
@@ -27339,7 +27310,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 'Pick Up ID Card '
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 7f6cd4e8a49abec4484b6a2f877d0d6e, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &1652250463
@@ -28549,7 +28519,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SafeInteraction
   _canInteract: 1
   _interactionString: Unlock Mr. van Deventer's Safe
-  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: ee4b355ca87bc57459bbc8b61936cb84, type: 2}
   _lockedSafe: {fileID: 1797499275}
   _unlockedSafe: {fileID: 1035422973}
@@ -29037,7 +29006,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: Search Drawer
-  _failedInteractionString: 
   _hiddenInItem: {fileID: 0}
 --- !u!61 &1850804060
 BoxCollider2D:
@@ -29327,7 +29295,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SafeInteraction
   _canInteract: 1
   _interactionString: Unlock Ms. Ferguson's Safe
-  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: b4b1e2d91ec83d049bdcc7669e065340, type: 2}
   _lockedSafe: {fileID: 1881504310}
   _unlockedSafe: {fileID: 1359984730}
@@ -29567,7 +29534,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 'Pick Up ID Card '
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 53da060e0faa1364ab15a0e209a3aee0, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &1909008122
@@ -30430,7 +30396,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: Pick Up Note
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: b4b1e2d91ec83d049bdcc7669e065340, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &1987500715
@@ -30634,7 +30599,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryScanner
   _canInteract: 1
   _interactionString: Scan Items
-  _failedInteractionString: 
   _scannerPanel: {fileID: 1819869762}
   _requiredItems:
   - {fileID: 11400000, guid: 91ededd865f4ae145bcdda7b7e0ac669, type: 2}
@@ -31182,7 +31146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 
-  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &2032700143
@@ -31985,7 +31948,8 @@ MonoBehaviour:
   - {fileID: 242244333}
   _moveItemPositions:
   - {x: 3.5, y: 7}
-  _corruptItems: []
+  _corruptItems:
+  - {fileID: 242244333}
 --- !u!114 &2061457689
 MonoBehaviour:
   m_ObjectHideFlags: 0
