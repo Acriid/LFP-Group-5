@@ -9899,7 +9899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: Pick up cbs%Hcj$
-  _itemSO: {fileID: 11400000, guid: c1fe5c1db5c40f047b039ff60da31a50, type: 2}
+  _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &242244334
 SpriteRenderer:
@@ -25411,7 +25411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 1
   _interactionString: 'Interact with Plate '
-  _requiredItem: {fileID: 11400000, guid: c1fe5c1db5c40f047b039ff60da31a50, type: 2}
+  _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 668423956}
 --- !u!212 &1497028537
 SpriteRenderer:
@@ -31948,7 +31948,8 @@ MonoBehaviour:
   - {fileID: 242244333}
   _moveItemPositions:
   - {x: 3.5, y: 7}
-  _corruptItems: []
+  _corruptItems:
+  - {fileID: 242244333}
 --- !u!114 &2061457689
 MonoBehaviour:
   m_ObjectHideFlags: 0
