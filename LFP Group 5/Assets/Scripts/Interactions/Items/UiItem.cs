@@ -81,27 +81,27 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
     public void DeSelectItem()
     {
         if(_currentItem == null) return;
-        _currentItem.GetItemSO().IsSelected = false;
+        _currentItem.SetIsSelected(false);
         _image.color = Color.white;
     }
     public void SelectItem()
     {
         if(_currentItem == null) return;
-        _currentItem.GetItemSO().IsSelected = true;
+        _currentItem.SetIsSelected(true);
         _image.color = Color.red;
     }
     public void OnPointerClick(PointerEventData eventData)
     {
+        
         if(_currentItem == null) return;
         if(!_currentItem.GetIsActive()) return;
 
         if(_currentItem.GetIsSelected())
         {
-            _currentItem.SetIsSelected(false);
             DeSelectItem();
+            OnItemClicked.Invoke(null);
             return;
         }
-        _currentItem.SetIsSelected(true);
 
         OnItemClicked?.Invoke(this);
     }
