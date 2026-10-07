@@ -89,4 +89,13 @@ public class Item : Interaction
 
         _spriteRenderer.sprite = _itemSO.SafeModeSprite;       
     }
+
+    public void FailedInteraction()
+    {
+        InvokeFailedInteraction();
+    }
+    public void FailedInteraction(string interActionString)
+    {
+        InvokeFailedInteraction(interActionString);
+    }
 }

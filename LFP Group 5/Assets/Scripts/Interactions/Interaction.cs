@@ -6,6 +6,7 @@ public class Interaction : MonoBehaviour
 {
     [SerializeField] protected bool _canInteract = true;
     [SerializeField] protected string _interactionString = "";
+    [SerializeField] protected string _failedInteractionString = "";
     public event Action<string> OnFailedInteraction;
     public virtual void Interact(GameObject interactingObject){}
 
@@ -19,5 +20,13 @@ public class Interaction : MonoBehaviour
     public bool GetCanInteract()
     {
         return _canInteract;
+    }
+    protected void InvokeFailedInteraction()
+    {
+        OnFailedInteraction?.Invoke(_failedInteractionString);
+    }
+    protected void InvokeFailedInteraction(string interactionString)
+    {
+        OnFailedInteraction?.Invoke(interactionString);
     }
 }

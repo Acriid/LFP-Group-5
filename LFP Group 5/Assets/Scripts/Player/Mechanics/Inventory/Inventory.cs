@@ -75,6 +75,7 @@ public class Inventory : MonoBehaviour
         {
             if (_allowedSize == 1)
             {
+                itemComponent.FailedInteraction("First Inventory Slot is Occupied");
                 Debug.Log("You can only hold one item in Safe Mode.");
             }
             else
@@ -160,7 +161,12 @@ public class Inventory : MonoBehaviour
         //If corrupted returns false
         if(checkCorrupt)
         {
-            if(itemComponent.GetIsCorrupt()) return false;
+            if(itemComponent.GetIsCorrupt())
+            {
+                itemComponent.FailedInteraction("Item is Corrupted");
+                return false;
+            }
+            
         }
 
         return true;

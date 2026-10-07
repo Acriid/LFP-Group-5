@@ -14,6 +14,7 @@ public class InteractMechanic : MonoBehaviour
     private CircleCollider2D _detectionTrigger;
 
     public event Action<int> OnAddedInteraction;
+    public event Action<Interaction> OnInteraction;
 
     void Start()
     {
@@ -60,8 +61,9 @@ public class InteractMechanic : MonoBehaviour
     {
         if (_targetInteraction == null) return false;
 
-
+        OnInteraction?.Invoke(_targetInteraction);
         _targetInteraction.Interact(player);
+        
         return true;
     }
 
@@ -70,10 +72,11 @@ public class InteractMechanic : MonoBehaviour
     {
         if (_targetInteraction == null) return false;
 
+        OnInteraction?.Invoke(_targetInteraction);
         _targetInteraction.Interact(player, selectedItem);
+        
         return true;
     }
-
 
     public Interaction GetTargetInteraction()
     {

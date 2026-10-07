@@ -379,6 +379,7 @@ GameObject:
   - component: {fileID: 3699802008018631494}
   - component: {fileID: 4879897392355132635}
   - component: {fileID: 4060883554002583379}
+  - component: {fileID: 4715617349379894353}
   m_Layer: 0
   m_Name: Interact Mechanic
   m_TagString: Untagged
@@ -453,6 +454,23 @@ MonoBehaviour:
   _interactionLayer:
     serializedVersion: 2
     m_Bits: 192
+--- !u!114 &4715617349379894353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4634784013680779430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5d240b6b3954847b725bf3386086de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FailedInteractionFeedback
+  _interactMechanic: {fileID: 4060883554002583379}
+  _failedInteractObject: {fileID: 8118758689812156373, guid: 12f40f6905bed17418d4556e49d1aa24, type: 3}
+  _failedInteractPoolSize: 5
+  _failedMoveDistance: 3
+  _failedLifetime: 3
 --- !u!1 &5616212705861698218
 GameObject:
   m_ObjectHideFlags: 0

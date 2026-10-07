@@ -90,7 +90,7 @@ public class InventoryUiManager : MonoBehaviour
         _uiItemPool = PoolManager.Instance.GetUIPool<UiItem>(_uiItemPrefab,_inventorySlots.Count);
         if(_uiItemPool == null)
         {
-            Debug.LogError("Failed to load bullet pool.");
+            Debug.LogError("Failed to load uiItem pool.");
         }
 
         foreach(UiItem uiItem in _uiItemPool)

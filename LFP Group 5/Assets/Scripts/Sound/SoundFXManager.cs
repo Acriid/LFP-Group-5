@@ -26,7 +26,7 @@ public class SoundFXManager : MonoBehaviour
         _audioPool = PoolManager.Instance.GetPool<AudioSource>(_soundFXObject.gameObject,_poolCount);
         if(_audioPool == null)
         {
-            Debug.LogError("Failed to load bullet pool.");
+            Debug.LogError("Failed to load sound pool.");
         }
 
 
