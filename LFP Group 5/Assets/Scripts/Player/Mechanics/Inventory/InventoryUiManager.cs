@@ -121,7 +121,7 @@ public class InventoryUiManager : MonoBehaviour
             uiItem.DeSelectItem();
         }
         
-        if(_currentSelectedItem == newItem)
+        if(_currentSelectedItem == newItem && _currentSelectedItem != null)
         {
             _currentSelectedItem.DeSelectItem();
             _currentSelectedItem = null;

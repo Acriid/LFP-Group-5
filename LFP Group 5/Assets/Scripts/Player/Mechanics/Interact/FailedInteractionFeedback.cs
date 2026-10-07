@@ -33,16 +33,19 @@ public class FailedInteractionFeedback : MonoBehaviour
         _lastInteraction = targetInteraction;
     }
     private void ShowFailedInteraction(string failedText)
-    {
+    {     
 
-        _lastInteraction.OnFailedInteraction -= ShowFailedInteraction;
+        if(_currentTextList.Contains(_lastInteraction)) return;
 
         
-        if(_currentTextList.Contains(_lastInteraction)) return;
+        if(failedText != "-1")
+        _lastInteraction.OnFailedInteraction -= ShowFailedInteraction;
 
         FailedInteractionObject interactionInstance = _failedInteractionPool.Get();
 
+        if(failedText != "-1")
         _currentTextList.Add(_lastInteraction);
+
         interactionInstance.SetFailedInteraction(_lastInteraction);
 
         interactionInstance.OnFinishMove += ReturnObject;
@@ -52,7 +55,19 @@ public class FailedInteractionFeedback : MonoBehaviour
         else
         interactionInstance.SetText("Cannot interact (ADD TEXT)");
 
-        Vector2 startPosition = _lastInteraction.gameObject.transform.position;
+        Vector2 startPosition = Vector2.zero;
+        if(failedText == "-1")
+        {
+            Debug.Log("Corrupt item drop");
+            startPosition = transform.position;
+            //Might want to remove
+            interactionInstance.SetText("Cannot drop corrupt items");
+        }
+        else
+        {
+            startPosition = _lastInteraction.gameObject.transform.position;
+        }
+        
         Vector2 endPosition = startPosition + new Vector2(0f,_failedMoveDistance);
 
         interactionInstance.MoveObject(startPosition,endPosition,_failedLifetime);
@@ -61,6 +76,7 @@ public class FailedInteractionFeedback : MonoBehaviour
     {
         objectToReturn.OnFinishMove -= ReturnObject;
 
+        if(_currentTextList.Contains(objectToReturn.GetFailedInteraction()))
         _currentTextList.Remove(objectToReturn.GetFailedInteraction());
 
         _failedInteractionPool.Return(objectToReturn);

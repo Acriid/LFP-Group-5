@@ -99,7 +99,12 @@ public class Inventory : MonoBehaviour
             if(item == null) continue;
             if(item.GetItemSO().IsSelected)
             {
-                if(item.GetIsCorrupt()) return null;
+                if(item.GetIsCorrupt())
+                {
+                    Debug.Log("Trying to drop corrupted item");
+                    item.FailedInteraction("-1");
+                    return itemRemoved;
+                }
                 itemRemoved = item.gameObject;
                 RemoveItemFromInventory(item.gameObject);
                 break;
