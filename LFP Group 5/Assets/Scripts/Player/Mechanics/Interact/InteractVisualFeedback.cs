@@ -30,7 +30,7 @@ public class InteractVisualFeedback : MonoBehaviour
             {
                 _updateRoutine = StartCoroutine(UpdateInteractionText());
                 _targetInteraction = _interactMechanic.GetTargetInteraction();
-                if(_targetInteraction != null && !_targetInteraction.GetCanInteract())
+                if(_targetInteraction != null && _targetInteraction.GetCanInteract())
                 _feedBackUI.SetActive(true);
             }
         }
