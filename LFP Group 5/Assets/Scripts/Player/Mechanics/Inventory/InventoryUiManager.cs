@@ -228,14 +228,14 @@ public class InventoryUiManager : MonoBehaviour
     {
         foreach(UiItem uiItem in _uiItemPool)
         {
-            uiItem.SetNormalModeSprite();
+            uiItem.SetNormalModeUISprite();
         }
     }
     public void SetSafeModeSprite()
     {
         foreach(UiItem uiItem in _uiItemPool)
         {
-            uiItem.SetSafeModeSprite();
+            uiItem.SetSafeModeUISprite();
         }        
     }
 }

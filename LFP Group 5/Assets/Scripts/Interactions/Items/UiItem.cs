@@ -66,6 +66,7 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
             _hasItem = true;
         }
         _image.sprite = _uiSprite;
+        _image.preserveAspect = true;
         _itemDescriptionText.text = _itemDescription;
         _itemNameText.text = _itemName;
     }
@@ -114,15 +115,17 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
     }
 
 
-    public void SetNormalModeSprite()
+    public void SetNormalModeUISprite()
     {
         if(_currentItem == null) return;
-        _currentItem.SetNormalModeSprite();
+        _image.sprite = _currentItem.GetNormalModeUISprite();
+        _image.preserveAspect = true;
     }
 
-    public void SetSafeModeSprite()
+    public void SetSafeModeUISprite()
     {
         if(_currentItem == null) return;
-        _currentItem.SetSafeModeSprite();
+        _image.sprite = _currentItem.GetSafeModeUISprite();
+        _image.preserveAspect = true;
     }
 }

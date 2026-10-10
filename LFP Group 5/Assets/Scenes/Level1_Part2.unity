@@ -5217,6 +5217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!1 &490024230
@@ -5561,6 +5562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: b7e251c8257f53d4cac78b607c4953ed, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!1 &640687583
@@ -5860,6 +5862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _hiddenInItem: {fileID: 2116977366}
 --- !u!1 &661752153
 GameObject:
@@ -6017,6 +6020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _hiddenInItem: {fileID: 528122012}
 --- !u!1 &681854438
 GameObject:
@@ -7689,6 +7693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: bbf63bf7d8b761f439363fd9abc9d13d, type: 2}
   _lockedDoor: {fileID: 1221512439}
   _unlockedDoor: {fileID: 1230400200}
@@ -8194,6 +8199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NextLevel
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _nextLevel: -1
 --- !u!1 &1445709411
 GameObject:
@@ -8610,6 +8616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _lockedDoor: {fileID: 1544150309}
   _unlockedDoor: {fileID: 1432612563}
@@ -10365,6 +10372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BatteryInteraction
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: b7e251c8257f53d4cac78b607c4953ed, type: 2}
   _shadow: {fileID: 2045217172}
   _revealKey: {fileID: 450033898}
@@ -10479,6 +10487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: bbf63bf7d8b761f439363fd9abc9d13d, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!58 &2116977372

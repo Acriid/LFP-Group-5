@@ -90,6 +90,15 @@ public class Item : Interaction
         _spriteRenderer.sprite = _itemSO.SafeModeSprite;       
     }
 
+    public Sprite GetNormalModeUISprite()
+    {
+        return _itemSO.UISpriteNormal;
+    }
+    public Sprite GetSafeModeUISprite()
+    {
+        return _itemSO.UISpriteSafe;
+    }
+
     public void FailedInteraction()
     {
         InvokeFailedInteraction();
