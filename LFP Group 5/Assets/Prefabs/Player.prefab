@@ -118,7 +118,7 @@ MonoBehaviour:
   _timeBetweenMoves: 1
   _obstacleMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 272
   _itemParentTransform: {fileID: 0}
   _interactMechanic: {fileID: 4060883554002583379}
   _inventory: {fileID: 6104217305466799480}
@@ -453,7 +453,7 @@ MonoBehaviour:
   _detectionRadius: 1
   _interactionLayer:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 448
 --- !u!114 &4715617349379894353
 MonoBehaviour:
   m_ObjectHideFlags: 0
