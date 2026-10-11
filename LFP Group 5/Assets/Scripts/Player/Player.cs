@@ -146,7 +146,7 @@ public class Player : MonoBehaviour
     private bool CheckIfBlocked(GridCell cellToCheck)
     {
         Vector2 direction = cellToCheck.Center() - (Vector2)transform.position; 
-        if(Physics2D.Raycast(transform.position,direction,cellToCheck.GridBounds.size.x,_obstacleMask)) return true;
+        if(Physics2D.Raycast(transform.position,direction,direction.magnitude,_obstacleMask)) return true;
         return false;
     }
 
