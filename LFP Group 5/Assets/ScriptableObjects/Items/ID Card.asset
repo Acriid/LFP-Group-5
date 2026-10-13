@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d5edace08274d43b4b46db19b5b813, type: 3}
   m_Name: ID Card
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  IsCorrupt: 0
+  IsCorrupt: 1
   IsSelected: 0
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
