@@ -260,6 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NextLevel
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _nextLevel: -1
 --- !u!61 &152370549
 BoxCollider2D:
@@ -440,7 +441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 168969411}
   - component: {fileID: 168969412}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1363,6 +1364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _hiddenInItem: {fileID: 0}
 --- !u!50 &333267449
 Rigidbody2D:
@@ -1456,7 +1458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 366245681}
   - component: {fileID: 366245682}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Square (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2049,6 +2051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _hiddenInItem: {fileID: 688361113}
 --- !u!50 &661752159
 Rigidbody2D:
@@ -2234,6 +2237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _hiddenInItem: {fileID: 1458578337}
 --- !u!50 &677945183
 Rigidbody2D:
@@ -2470,6 +2474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 8a19215ff04430e4f80f52eaeb5da3b9, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!61 &688361117
@@ -3101,7 +3106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 848744584}
   - component: {fileID: 848744585}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Square (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3879,7 +3884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1076056185}
   - component: {fileID: 1076056186}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Square (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4063,7 +4068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1120555148}
   - component: {fileID: 1120555149}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Square (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4386,6 +4391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _itemSO: {fileID: 11400000, guid: 4b91395097bd39b4e8c1876c72060545, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &1458578342
@@ -4458,7 +4464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1488002194}
   - component: {fileID: 1488002195}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7871,7 +7877,7 @@ GameObject:
   - component: {fileID: 1544150313}
   - component: {fileID: 1544150314}
   - component: {fileID: 1544150315}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Door1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8014,6 +8020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
   _interactionString: 
+  _failedInteractionString: 
   _requiredItem: {fileID: 11400000, guid: 4b91395097bd39b4e8c1876c72060545, type: 2}
   _lockedDoor: {fileID: 1544150309}
   _unlockedDoor: {fileID: 152370546}
@@ -8426,7 +8433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1713806056}
   - component: {fileID: 1713806057}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Square (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8603,7 +8610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1751967294}
   - component: {fileID: 1751967295}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9888,7 +9895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886687751}
   - component: {fileID: 1886687752}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Square (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10249,7 +10256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1996014268}
   - component: {fileID: 1996014269}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Square (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

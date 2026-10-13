@@ -250,4 +250,23 @@ public class Player : MonoBehaviour
             dialogueTrigger.TriggerMovementDialogue();
         }
     }
+
+    public GridCell GetCurrentCell()
+    {
+        return _currentCell;
+    }
+
+    public void TeleportToCell(GridCell cell)
+    {
+        if (cell == null) return;
+
+        _currentCell = cell;
+        _nextCell = null;
+
+        transform.position = cell.Center();
+
+        _moveInput = Vector2Int.zero;
+        _forceImmediateMove = false;
+        _moveCoolDown = _timeBetweenMoves;
+    }
 }

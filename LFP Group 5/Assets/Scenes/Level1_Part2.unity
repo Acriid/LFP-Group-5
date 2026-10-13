@@ -8473,7 +8473,7 @@ GameObject:
   - component: {fileID: 1544150311}
   - component: {fileID: 1544150313}
   - component: {fileID: 1544150314}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Door1
   m_TagString: Locked
   m_Icon: {fileID: 0}
@@ -9433,7 +9433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1988188878}
   - component: {fileID: 1988188879}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
