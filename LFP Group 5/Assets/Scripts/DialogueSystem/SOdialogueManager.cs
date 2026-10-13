@@ -44,6 +44,7 @@ public class SOdialogueManager : MonoBehaviour
 
         _dialoguePanel.SetActive(false);
         _characterIcon.gameObject.SetActive(false);
+        _dialogueEnabled = PlayerPrefs.GetInt("DialogueEnabled", 1) == 1;
     }
 
     void Update()
