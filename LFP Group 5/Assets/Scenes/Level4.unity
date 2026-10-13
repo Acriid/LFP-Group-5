@@ -24364,7 +24364,7 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 'Pick Up XSchJ*&B% '
   _failedInteractionString: 
-  _itemSO: {fileID: 11400000, guid: 91ededd865f4ae145bcdda7b7e0ac669, type: 2}
+  _itemSO: {fileID: 11400000, guid: 668ee3f75e5418e43ad7eba35824a28a, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &1617967046
 SpriteRenderer:
