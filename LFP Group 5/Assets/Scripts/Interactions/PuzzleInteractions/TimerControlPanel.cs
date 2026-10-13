@@ -9,7 +9,7 @@ public class TimerControlPanel : Interaction
 
     [Header("Timer UI")]
     [SerializeField] private TMP_Text _timerText;
-    [SerializeField] private GameObject _timeLeft, _timeText;
+    [SerializeField] private GameObject _timeLeft, _timeText, _startGate;
 
     private float _remainingTime;
     private bool _timerRunning = false;
@@ -69,6 +69,7 @@ public class TimerControlPanel : Interaction
             if (_timeText != null)
                 _timeText.SetActive(false);
 
+            _startGate.SetActive(true);
             Debug.Log("TIME EXPIRED - PUZZLE FAILED");
 
             // Return player to saved grid cell
@@ -82,6 +83,9 @@ public class TimerControlPanel : Interaction
     {
         _remainingTime = _timeLimit;
         _timerRunning = true;
+
+        
+        _startGate.SetActive(false);
 
         // Show timer UI
         if (_timeLeft != null)
