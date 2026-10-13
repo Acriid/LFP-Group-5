@@ -504,53 +504,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!1 &53743773
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 53743774}
-  - component: {fileID: 53743775}
-  m_Layer: 0
-  m_Name: InitialKeyMoves
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &53743774
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53743773}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1537465490}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &53743775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53743773}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2ed4e735acc9704da727224c90ee29b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TriggerColliderDialogue
-  _triggerCollider: {fileID: 1623527739}
-  _normalModeDialog: 1
-  _dialogue: {fileID: 11400000, guid: 1f6fb0f09f542f24db2efb19730d83cb, type: 2}
 --- !u!1 &67114062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,6 +1339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 174593064}
+  - component: {fileID: 174593065}
   m_Layer: 0
   m_Name: collectedCorruptedItem
   m_TagString: Untagged
@@ -1408,6 +1362,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 898827143}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &174593065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174593063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e802e1325b73c47bf59f58101097cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionDialogueTrigger
+  _requiredItems: []
+  _dialogueTrigger: {fileID: 11400000, guid: 2e1d9e51f9a748a45a17b5607566eb43, type: 2}
 --- !u!1 &182416519
 GameObject:
   m_ObjectHideFlags: 0
@@ -9994,6 +9962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 289129036}
+  - component: {fileID: 289129037}
   m_Layer: 0
   m_Name: lvlStartDialogue
   m_TagString: Untagged
@@ -10016,6 +9985,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 898827143}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &289129037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289129035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef211d06942fce549a86b8111e9e303d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelStartDialogue
+  _dialogue: {fileID: 11400000, guid: ce54581c7eb0f384bbbeda44bc45436b, type: 2}
 --- !u!1 &297080464
 GameObject:
   m_ObjectHideFlags: 0
@@ -12793,37 +12775,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!1 &466130475
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 466130476}
-  m_Layer: 0
-  m_Name: SODialogueManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &466130476
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466130475}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.57286, y: 2.11893, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &483047488
 GameObject:
   m_ObjectHideFlags: 0
@@ -15362,6 +15313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 659209340}
+  - component: {fileID: 659209341}
   m_Layer: 0
   m_Name: corruptedItemEncounter
   m_TagString: Untagged
@@ -15384,6 +15336,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 898827143}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &659209341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659209339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ed4e735acc9704da727224c90ee29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerColliderDialogue
+  _triggerCollider: {fileID: 493458949}
+  _normalModeDialog: 1
+  _dialogue: {fileID: 0}
 --- !u!1 &661752153
 GameObject:
   m_ObjectHideFlags: 0
@@ -21350,53 +21317,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 543838828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1186335630
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1186335631}
-  - component: {fileID: 1186335632}
-  m_Layer: 0
-  m_Name: KeyCollected
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1186335631
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186335630}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1537465490}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1186335632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186335630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e802e1325b73c47bf59f58101097cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractionDialogueTrigger
-  _requiredItems:
-  - {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
-  _dialogueTrigger: {fileID: 11400000, guid: d132ab9205d6b6647b346f23ebe7f014, type: 2}
 --- !u!1 &1194338042
 GameObject:
   m_ObjectHideFlags: 0
@@ -25363,41 +25283,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!1 &1537465489
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1537465490}
-  m_Layer: 0
-  m_Name: DialogueTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1537465490
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537465489}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 967.5853, y: 306.79742, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 53743774}
-  - {fileID: 1186335631}
-  - {fileID: 1602563375}
-  - {fileID: 1682308432}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1540124784
 GameObject:
   m_ObjectHideFlags: 0
@@ -25925,53 +25810,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!1 &1602563374
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1602563375}
-  - component: {fileID: 1602563376}
-  m_Layer: 0
-  m_Name: FirstDoorUnlocked
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1602563375
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602563374}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1537465490}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1602563376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602563374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e802e1325b73c47bf59f58101097cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractionDialogueTrigger
-  _requiredItems:
-  - {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
-  _dialogueTrigger: {fileID: 11400000, guid: c3f89bf4e49c6334b91079df1ca1a09b, type: 2}
 --- !u!1 &1604850693
 GameObject:
   m_ObjectHideFlags: 0
@@ -27102,52 +26940,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 543838828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1682308431
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1682308432}
-  - component: {fileID: 1682308433}
-  m_Layer: 0
-  m_Name: CompletedPressurePlat1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1682308432
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682308431}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1537465490}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1682308433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682308431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da9be636ff4f8dd42a585e72fc46f29d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GateDiaogueTrigger
-  _pressurePlate: {fileID: 1409813918}
-  _dialogue: {fileID: 11400000, guid: 6c5ca1a6f967b244aaf3ef0746045a63, type: 2}
 --- !u!1 &1682740808
 GameObject:
   m_ObjectHideFlags: 0
@@ -30144,6 +29936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2020349076}
+  - component: {fileID: 2020349077}
   m_Layer: 0
   m_Name: initialKeyCard
   m_TagString: Untagged
@@ -30166,6 +29959,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 898827143}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2020349077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020349075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4e802e1325b73c47bf59f58101097cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractionDialogueTrigger
+  _requiredItems:
+  - {fileID: 11400000, guid: 91ededd865f4ae145bcdda7b7e0ac669, type: 2}
+  _dialogueTrigger: {fileID: 11400000, guid: f6493ac0b04763041aa7e4722bfb45ac, type: 2}
 --- !u!1 &2028901734
 GameObject:
   m_ObjectHideFlags: 0
@@ -31968,10 +31776,8 @@ SceneRoots:
   - {fileID: 1607490475}
   - {fileID: 382184436}
   - {fileID: 1979132380}
-  - {fileID: 808594814}
   - {fileID: 1221601845}
-  - {fileID: 1537465490}
   - {fileID: 732162090}
   - {fileID: 824520740}
+  - {fileID: 808594814}
   - {fileID: 898827143}
-  - {fileID: 466130476}
