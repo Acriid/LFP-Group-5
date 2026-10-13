@@ -1,27 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class InventoryScanner : Interaction
 {
     [Header("Scanner")]
-    [SerializeField] private GameObject _scannerPanel;
+    [SerializeField] private Image _scannerPanel;
+    [SerializeField] private TMP_Text _scannerText;
     [SerializeField] private List<ItemSO> _requiredItems = new();
 
     [Header("Door Movement")]
     [SerializeField] private bool _isHorizontal;
     [SerializeField] private float _gridCellSize = 1f;
     [SerializeField] private float _slideSpeed = 3f;
+    [SerializeField] private float _scanTime = 1f;
 
+    private Color _originalColor;
+    void OnEnable()
+    {
+        if (_scannerPanel != null)
+        _originalColor = _scannerPanel.color;
+    }
     public override void Interact(GameObject interactingObject)
     {
         if (!_canInteract)
             return;
 
         // Get the player interacting with the scanner
-        Player player = interactingObject.GetComponent<Player>();
 
-        if (player == null)
+        if (!interactingObject.TryGetComponent<Player>(out Player player))
         {
             Debug.LogWarning("Scanner could not find Player.");
             return;
@@ -52,18 +61,45 @@ public class InventoryScanner : Interaction
 
         if (_scannerPanel != null)
         {
-            _scannerPanel.SetActive(true);
+            _scannerPanel.color = _originalColor;
+            _scannerPanel.gameObject.SetActive(true);
         }
+        
 
-        yield return new WaitForSeconds(1f);
-
-        if (_scannerPanel != null)
+        // Shows scanning
+        float elapsedTime = 0f;
+        string startText = "Scanning";
+        int dotCount = 0;
+        float elapsedTime2 = 0f;
+        while(elapsedTime < _scanTime)
         {
-            _scannerPanel.SetActive(false);
-        }
             
+            if(elapsedTime2 > 0.5f)
+            {
+                elapsedTime2 = 0f;
+                startText = "Scanning";
+                for(int i = 0; i < dotCount; i++)
+                {
+                    startText += ".";
+                }
+                dotCount++;
+                if(dotCount >= 4)
+                {
+                    dotCount = 0;
+                }
+            }
+
+            if(_scannerText != null)
+            _scannerText.text = startText;
+
+            elapsedTime2 += Time.deltaTime;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        
 
         bool scanSuccessful = true;
+        int missingItems = 0;
 
         foreach (ItemSO requiredItem in _requiredItems)
         {
@@ -84,9 +120,12 @@ public class InventoryScanner : Interaction
             if (!itemFound)
             {
                 scanSuccessful = false;
+                missingItems++;
             }
         }
 
+        Color failedColor = Color.red;
+        failedColor.a = _originalColor.a;
         if (scanSuccessful)
         {
             Debug.Log("SCAN SUCCESSFUL - ACCESS GRANTED");
@@ -107,7 +146,22 @@ public class InventoryScanner : Interaction
             }
 
             Debug.Log("Clearance for: " + requiredItemNames + " needed to enter.");
+            
+            _scannerPanel.color = failedColor;
+            if(_scannerText != null)
+            _scannerText.text = $"Scan Failed Missing {missingItems} ID";
+
+            yield return new WaitForSeconds(4f);
         }
+
+        
+
+        if (_scannerPanel != null)
+        {
+            _scannerPanel.gameObject.SetActive(false);
+        }
+            
+
     }
 
     private void OpenDoor()
