@@ -28,6 +28,8 @@ public class SOdialogueManager : MonoBehaviour
 
     public bool IsDialogueActive {get; private set;}
 
+    private bool _dialogueEnabled = true;
+
     private void Awake()
     {
         if (Instance == null)
@@ -42,6 +44,7 @@ public class SOdialogueManager : MonoBehaviour
 
         _dialoguePanel.SetActive(false);
         _characterIcon.gameObject.SetActive(false);
+        _dialogueEnabled = PlayerPrefs.GetInt("DialogueEnabled", 1) == 1;
     }
 
     void Update()
@@ -60,6 +63,11 @@ public class SOdialogueManager : MonoBehaviour
 
     public void StartDialogue(ScriptableObjectDialogu dialogue)
     {
+        if (!_dialogueEnabled)
+        {
+            return;
+        }
+        
         if (dialogue == null)
         {
             Debug.Log("SOdialogueManager: No dialogue rn");
@@ -165,5 +173,32 @@ public class SOdialogueManager : MonoBehaviour
         _currentSentence = "";
 
         _animator.Play("hide");
+    }
+
+    public void SetDialogueEnabled(bool isEnabled)
+    {
+        _dialogueEnabled = isEnabled;
+
+        if (!isEnabled)
+        {
+            // Stop any dialogue currently typing
+            if (_typingCoroutine != null)
+            {
+                StopCoroutine(_typingCoroutine);
+            }
+
+            _typingCoroutine = null;
+            _isTyping = false;
+            IsDialogueActive = false;
+
+            // Clear the current dialogue
+            _currentDialogue = null;
+            _currentSentence = "";
+            _dialogueText.text = "";
+
+            // Hide the dialogue immediately
+            _dialoguePanel.SetActive(false);
+            _characterIcon.gameObject.SetActive(false);
+        }
     }
 }
