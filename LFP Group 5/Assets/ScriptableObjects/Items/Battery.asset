@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d5edace08274d43b4b46db19b5b813, type: 3}
   m_Name: Battery
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  IsActive: 1
   IsCorrupt: 0
   IsSelected: 0
-  UISprite: {fileID: 0}
+  NormalModeSprite: {fileID: 0}
+  SafeModeSprite: {fileID: 0}
+  UISpriteNormal: {fileID: 840156806258385442, guid: 47aae85825481e842bc0ac270b38dab5, type: 3}
+  UISpriteSafe: {fileID: 6759633921709996654, guid: f25c22e77e5fade40b484d5c652bb670, type: 3}
   ItemName: Battery
   ItemDescription: Battery used to turn on lights

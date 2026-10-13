@@ -7,7 +7,6 @@ public class Lighting : MonoBehaviour
     [SerializeField] private Light2D _roomLight;
 
     [Header("Brightness")]
-    [SerializeField] private float _darkIntensity = 0f;
     [SerializeField] private float _brightIntensity = 1f;
     [SerializeField] private float _fadeDuration = 1f;
 

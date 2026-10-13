@@ -25,6 +25,12 @@ public class InputReader : ScriptableObject
     //UI
     private InputAction _escapeAction;
 
+    //Inventory
+    private InputAction _selectItem1Action;
+    private InputAction _selectItem2Action;
+    private InputAction _selectItem3Action;
+    private InputAction _selectItem4Action;
+
     #endregion
 
     #region public Event Action Variables
@@ -40,6 +46,12 @@ public class InputReader : ScriptableObject
 
     //UI
     public event Action OnEscape;
+
+    //Inventory 
+    public event Action<int> OnSelect1;
+    public event Action<int> OnSelect2;
+    public event Action<int> OnSelect3;
+    public event Action<int> OnSelect4;
     #endregion
 
     #region Current Direction Values
@@ -70,6 +82,12 @@ public class InputReader : ScriptableObject
 
     //UI
     private Action<InputAction.CallbackContext> _escapePerformed;
+
+    //Inventory
+    private Action<InputAction.CallbackContext> _select1Performed;
+    private Action<InputAction.CallbackContext> _select2Performed;
+    private Action<InputAction.CallbackContext> _select3Performed;
+    private Action<InputAction.CallbackContext> _select4Performed;
     #endregion
     #region Enable/Disable
     void OnEnable()
@@ -111,6 +129,12 @@ public class InputReader : ScriptableObject
         _inventoryAction = _playerInputs.Player.Inventory;
 
         _modeSwitchAction = _playerInputs.Player.ModeSwitch;
+
+        //Inventory
+        _selectItem1Action = _playerInputs.Player.SelectItem1;
+        _selectItem2Action = _playerInputs.Player.SelectItem2;
+        _selectItem3Action = _playerInputs.Player.SelectItem3;
+        _selectItem4Action = _playerInputs.Player.SelectItem4;
     }
     private void InitializeUIActions()
     {
@@ -146,6 +170,12 @@ public class InputReader : ScriptableObject
 
         _modeSwitchPerformed = ctx => OnModeSwitch?.Invoke();
 
+
+        //Inventory
+        _select1Performed = ctx => OnSelect1?.Invoke(1);
+        _select2Performed = ctx => OnSelect2?.Invoke(2);
+        _select3Performed = ctx => OnSelect3?.Invoke(3);
+        _select4Performed = ctx => OnSelect4?.Invoke(4);
     }
     private void InitializeUIEvents()
     {
@@ -180,6 +210,12 @@ public class InputReader : ScriptableObject
         _inventoryAction.performed += _inventoryPerformed;
 
         _modeSwitchAction.performed += _modeSwitchPerformed;
+
+        //Inventory
+        _selectItem1Action.performed += _select1Performed;
+        _selectItem2Action.performed += _select2Performed;
+        _selectItem3Action.performed += _select3Performed;
+        _selectItem4Action.performed += _select4Performed;
     }
     public void UnSubscribePlayerActions()
     {
@@ -205,6 +241,12 @@ public class InputReader : ScriptableObject
         _inventoryAction.performed -= _inventoryPerformed;
 
         _modeSwitchAction.performed -= _modeSwitchPerformed;
+
+        //Inventory
+        _selectItem1Action.performed -= _select1Performed;
+        _selectItem2Action.performed -= _select2Performed;
+        _selectItem3Action.performed -= _select3Performed;
+        _selectItem4Action.performed -= _select4Performed;
     }
     #endregion
     #region UI
@@ -276,55 +318,30 @@ public class InputReader : ScriptableObject
         RaiseMoveEvent();
     }
     #endregion
-    public void EnableInteractAction()
-    {
-        _interactAction.Enable();
-    }
-    public void DisableInteractAction()
-    {
-        _interactAction.Disable();
-    }
-    public void EnableDropItemAction()
-    {
-        _dropItemAction.Enable();
-    }
-    public void DisableDropItemAction()
-    {
-        _dropItemAction.Disable();
-    }
-    public void EnableInventoryAction()
-    {
-        _inventoryAction.Enable();
-    }
-    public void DisableInventoryAction()
-    {
-        _inventoryAction.Disable();
-    }
-    public void EnableModeSwitchAction()
-    {
-        _modeSwitchAction.Enable();
-    }
-    public void DisableModeSwitchAction()
-    {
-        _modeSwitchAction.Disable();
-    }
-    public void EnableEscapeAction()
-    {
-        _escapeAction.Enable();
-    }
-    public void DisableEscapeAction()
-    {
-        _escapeAction.Disable();
-    }
-    public void EnableAction(InputAction actionToEnable)
-    {
-        actionToEnable.Enable();
-    }
+    public void EnableInteractAction() {_interactAction.Enable();}
+    public void DisableInteractAction() {_interactAction.Disable();}
+    public void EnableDropItemAction() {_dropItemAction.Enable();}
+    public void DisableDropItemAction() {_dropItemAction.Disable();}
+    public void EnableInventoryAction() {_inventoryAction.Enable();}
+    public void DisableInventoryAction() {_inventoryAction.Disable();}
+    public void EnableModeSwitchAction() {_modeSwitchAction.Enable();}
+    public void DisableModeSwitchAction(){_modeSwitchAction.Disable();}
+    public void EnableSelectItem1Action() {_selectItem1Action.Enable();}
+    public void DisableSelectItem1Action() {_selectItem1Action.Disable();}
+    public void EnableSelectItem2Action() {_selectItem2Action.Enable();}
+    public void DisableSelectItem2Action() {_selectItem2Action.Disable();}
+    public void EnableSelectItem3Action() {_selectItem3Action.Enable();}
+    public void DisableSelectItem3Action() {_selectItem3Action.Disable();}
+    public void EnableSelectItem4Action() {_selectItem4Action.Enable();}
+    public void DisableSelectItem4Action() {_selectItem4Action.Disable();}
 
-    public void DisableAction(InputAction actionToDisable)
-    {
-        actionToDisable.Disable();
-    }
+
+
+    public void EnableEscapeAction(){_escapeAction.Enable();}
+    public void DisableEscapeAction(){_escapeAction.Disable();}
+    public void EnableAction(InputAction actionToEnable){actionToEnable.Enable();}
+
+    public void DisableAction(InputAction actionToDisable){actionToDisable.Disable();}
     #endregion
     #region Raise Combined Event
     private void RaiseMoveEvent()

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee850c578174c94a8ac88fe209aae22, type: 3}
+  m_Name: collectedCorrupted
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectDialogu
+  dialogueLines:
+  - _characterIcon: {fileID: -8625906013721215279, guid: e8aef95697aea1b488e16f474f46c216, type: 3}
+    line: '[TACTIC SUBVERTED]'
+  - _characterIcon: {fileID: -8625906013721215279, guid: e8aef95697aea1b488e16f474f46c216, type: 3}
+    line: My database does not contain any plausible explanation on the event that
+      just occurred.
+  - _characterIcon: {fileID: -8625906013721215279, guid: e8aef95697aea1b488e16f474f46c216, type: 3}
+    line: 'Proceeding forward, data drawn from ''The Art of War'' indicates that
+      the best defence is a good offense. '
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
+    line: Oh, I saw that book trending in the red-pill male section. Dunno what that
+      quote means though.
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
+    line: Probably a good sign to read through every line of my code.

@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d5edace08274d43b4b46db19b5b813, type: 3}
   m_Name: TableKey
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  IsActive: 1
   IsCorrupt: 0
   IsSelected: 0
-  UISprite: {fileID: 0}
+  NormalModeSprite: {fileID: 0}
+  SafeModeSprite: {fileID: 0}
+  UISpriteNormal: {fileID: 3309451237785667368, guid: 31f9b6a48e7d2034098c8928621e1a44, type: 3}
+  UISpriteSafe: {fileID: -7681555754168499655, guid: ced3c2299a229fb4598137014491e60a, type: 3}
   ItemName: Key
   ItemDescription: A Red Drawer Key

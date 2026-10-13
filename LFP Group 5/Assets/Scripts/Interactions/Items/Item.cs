@@ -1,9 +1,24 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class Item : Interaction
 {
     [SerializeField] private ItemSO _itemSO = null;
+    [SerializeField] private SpriteRenderer _spriteRenderer = null;
+    public event Action<bool> OnItemLock;
+    void OnEnable()
+    {
+        _itemSO.OnIsActiveChange += InvokeItemLockEvent;
+    }
+    void OnDestroy()
+    {
+        _itemSO.OnIsActiveChange -= InvokeItemLockEvent;
+    }
+    private void InvokeItemLockEvent(bool newValue)
+    {
+        OnItemLock?.Invoke(newValue);
+    }
     public override void Interact(GameObject interactingObject)
     {
         if(!_canInteract) return;
@@ -44,7 +59,7 @@ public class Item : Interaction
     }
     public Sprite GetItemSprite()
     {
-        return _itemSO.UISprite;
+        return _itemSO.UISpriteNormal;
     }
 
     public void SetIsCorrupt(bool newValue)
@@ -58,5 +73,38 @@ public class Item : Interaction
     public void SetIsSelected(bool newValue)
     {
         _itemSO.IsSelected = newValue;
+    }
+
+    public void SetNormalModeSprite()
+    {
+        if(_spriteRenderer == null) return;
+        if(_itemSO.NormalModeSprite == null) return;
+
+        _spriteRenderer.sprite = _itemSO.NormalModeSprite;
+    }
+    public void SetSafeModeSprite()
+    {
+        if(_spriteRenderer == null) return;
+        if(_itemSO.SafeModeSprite == null) return;
+
+        _spriteRenderer.sprite = _itemSO.SafeModeSprite;       
+    }
+
+    public Sprite GetNormalModeUISprite()
+    {
+        return _itemSO.UISpriteNormal;
+    }
+    public Sprite GetSafeModeUISprite()
+    {
+        return _itemSO.UISpriteSafe;
+    }
+
+    public void FailedInteraction()
+    {
+        InvokeFailedInteraction();
+    }
+    public void FailedInteraction(string interActionString)
+    {
+        InvokeFailedInteraction(interActionString);
     }
 }

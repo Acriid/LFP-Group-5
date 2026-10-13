@@ -146,7 +146,7 @@ public class Player : MonoBehaviour
     private bool CheckIfBlocked(GridCell cellToCheck)
     {
         Vector2 direction = cellToCheck.Center() - (Vector2)transform.position; 
-        if(Physics2D.Raycast(transform.position,direction,cellToCheck.GridBounds.size.x,_obstacleMask)) return true;
+        if(Physics2D.Raycast(transform.position,direction,direction.magnitude,_obstacleMask)) return true;
         return false;
     }
 
@@ -249,5 +249,24 @@ public class Player : MonoBehaviour
         {
             dialogueTrigger.TriggerMovementDialogue();
         }
+    }
+
+    public GridCell GetCurrentCell()
+    {
+        return _currentCell;
+    }
+
+    public void TeleportToCell(GridCell cell)
+    {
+        if (cell == null) return;
+
+        _currentCell = cell;
+        _nextCell = null;
+
+        transform.position = cell.Center();
+
+        _moveInput = Vector2Int.zero;
+        _forceImmediateMove = false;
+        _moveCoolDown = _timeBetweenMoves;
     }
 }

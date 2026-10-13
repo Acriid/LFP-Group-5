@@ -25,3 +25,6 @@ MonoBehaviour:
   - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "There. If I press \u2018Q\u2019 I should be able to draw on an older version
       of the games code, allowing me to fetch that pesky key."
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
+    line: 'I unfortunately can''t use the key to open the door in the older version.
+      I need to switch back to my current code. '

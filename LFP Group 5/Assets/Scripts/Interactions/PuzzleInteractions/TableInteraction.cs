@@ -20,6 +20,7 @@ public class TableInteraction : Interaction
     {
         if (_hiddenInItem == null)
         {
+            InvokeFailedInteraction();
             Debug.Log("No item found in the drawer");
             return;
         }

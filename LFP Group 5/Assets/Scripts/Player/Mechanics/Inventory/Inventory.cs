@@ -71,7 +71,20 @@ public class Inventory : MonoBehaviour
                 break;
             }
         }
-        if(openSlot < 0) return;
+        if(openSlot < 0)
+        {
+            if (_allowedSize == 1)
+            {
+                itemComponent.FailedInteraction("First Inventory Slot is Occupied");
+                Debug.Log("You can only hold one item in Safe Mode.");
+            }
+            else
+            {
+                Debug.Log("Inventory is full.");
+            }
+
+            return;
+        }
 
         itemToAdd.SetActive(false);
         _itemList[openSlot] = itemComponent;
@@ -86,6 +99,12 @@ public class Inventory : MonoBehaviour
             if(item == null) continue;
             if(item.GetItemSO().IsSelected)
             {
+                if(item.GetIsCorrupt())
+                {
+                    Debug.Log("Trying to drop corrupted item");
+                    item.FailedInteraction("-1");
+                    return itemRemoved;
+                }
                 itemRemoved = item.gameObject;
                 RemoveItemFromInventory(item.gameObject);
                 break;
@@ -116,7 +135,6 @@ public class Inventory : MonoBehaviour
         if(originalSlot == newSlot) return;
         if (originalSlot < 0) return;
 
-        Debug.Log("Change");
         (_itemList[originalSlot], _itemList[newSlot]) = (_itemList[newSlot], _itemList[originalSlot]);
     }
 
@@ -142,15 +160,18 @@ public class Inventory : MonoBehaviour
         //If not active returns false
         if(checkActive)
         {
-            Debug.Log(!itemComponent.GetIsActive());
             if(!itemComponent.GetIsActive()) return false;
         }
 
         //If corrupted returns false
         if(checkCorrupt)
         {
-            if(itemComponent.GetIsCorrupt()) return false;
-            Debug.Log("Corrupt");
+            if(itemComponent.GetIsCorrupt())
+            {
+                itemComponent.FailedInteraction("Item is Corrupted");
+                return false;
+            }
+            
         }
 
         return true;
@@ -175,5 +196,31 @@ public class Inventory : MonoBehaviour
         }
 
         return null;
+    }
+    public List<Item> GetItemList()
+    {
+        return _itemList;
+    }
+    
+    //Forces items which are locked by safe mode invetory limitations to return to their original position
+    public void ForceRemoveItem(GameObject itemToRemove)
+    {
+        if (itemToRemove == null) return;
+
+        Item item = itemToRemove.GetComponent<Item>();
+
+        if (item == null) return;
+
+        int index = _itemList.IndexOf(item);
+
+        if (index < 0) return;
+
+        _itemList[index] = null;
+        _currentItems--;
+
+        item.SetIsSelected(false);
+        item.SetIsActive(true);
+
+        OnItemRemove?.Invoke(item);
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 public class TriggerColliderDialogue : MonoBehaviour
 {
     [SerializeField] private Collider2D _triggerCollider;
+    [SerializeField] private bool _normalModeDialog = true;
     [SerializeField] private ScriptableObjectDialogu _dialogue;
 
     private bool _hasTriggered = false;
@@ -22,7 +23,7 @@ public class TriggerColliderDialogue : MonoBehaviour
             listener = _triggerCollider.gameObject.AddComponent<DialogueColliderListener>();
         }
 
-        listener.SetDialogueTrigger(this);
+        listener.SetDialogueTrigger(this,_normalModeDialog);
     }
 
     public void TriggerDialogue()

@@ -13,19 +13,40 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Image _image = null;
     [SerializeField] private TMP_Text _itemNameText = null;
     [SerializeField] private TMP_Text _itemDescriptionText = null;
+    [SerializeField] private GameObject _lockImage = null;
     private Sprite _uiSprite = null;
     private string _itemName = "";
     private string _itemDescription = "";
     private bool _hasItem = false;
     private Item _currentItem = null;
     public event Action<UiItem> OnItemClicked;
+
+    void OnDisable()
+    {
+        if(_currentItem != null)
+        {
+            _currentItem.OnItemLock -= SetItemLock;
+        }       
+    }
+
     public bool GetHasItem()
     {
         return _hasItem;
     }
     public void SetItem(Item newItem)
     {
+        if(_currentItem != null)
+        {
+            _currentItem.OnItemLock -= SetItemLock;
+        }
+
         _currentItem = newItem;
+
+        if(_currentItem != null)
+        {
+            _currentItem.OnItemLock += SetItemLock;
+        }
+
         SetItemValues();
     }
     private void SetItemValues()
@@ -45,6 +66,7 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
             _hasItem = true;
         }
         _image.sprite = _uiSprite;
+        _image.preserveAspect = true;
         _itemDescriptionText.text = _itemDescription;
         _itemNameText.text = _itemName;
     }
@@ -60,30 +82,50 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
     public void DeSelectItem()
     {
         if(_currentItem == null) return;
-        _currentItem.GetItemSO().IsSelected = false;
+        _currentItem.SetIsSelected(false);
         _image.color = Color.white;
     }
     public void SelectItem()
     {
         if(_currentItem == null) return;
-        _currentItem.GetItemSO().IsSelected = true;
+        _currentItem.SetIsSelected(true);
         _image.color = Color.red;
     }
     public void OnPointerClick(PointerEventData eventData)
     {
+        
         if(_currentItem == null) return;
         if(!_currentItem.GetIsActive()) return;
 
         if(_currentItem.GetIsSelected())
         {
-            _currentItem.SetIsSelected(false);
             DeSelectItem();
+            OnItemClicked.Invoke(null);
             return;
         }
-        _currentItem.SetIsSelected(true);
 
         OnItemClicked?.Invoke(this);
     }
 
+    private void SetItemLock(bool newValue)
+    {
+        if(!newValue) DeSelectItem();
+        if(_lockImage == null) return;
+        _lockImage.SetActive(!newValue);
+    }
 
+
+    public void SetNormalModeUISprite()
+    {
+        if(_currentItem == null) return;
+        _image.sprite = _currentItem.GetNormalModeUISprite();
+        _image.preserveAspect = true;
+    }
+
+    public void SetSafeModeUISprite()
+    {
+        if(_currentItem == null) return;
+        _image.sprite = _currentItem.GetSafeModeUISprite();
+        _image.preserveAspect = true;
+    }
 }
