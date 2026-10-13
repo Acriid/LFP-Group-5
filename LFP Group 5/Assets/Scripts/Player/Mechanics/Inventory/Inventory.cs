@@ -201,4 +201,26 @@ public class Inventory : MonoBehaviour
     {
         return _itemList;
     }
+    
+    //Forces items which are locked by safe mode invetory limitations to return to their original position
+    public void ForceRemoveItem(GameObject itemToRemove)
+    {
+        if (itemToRemove == null) return;
+
+        Item item = itemToRemove.GetComponent<Item>();
+
+        if (item == null) return;
+
+        int index = _itemList.IndexOf(item);
+
+        if (index < 0) return;
+
+        _itemList[index] = null;
+        _currentItems--;
+
+        item.SetIsSelected(false);
+        item.SetIsActive(true);
+
+        OnItemRemove?.Invoke(item);
+    }
 }

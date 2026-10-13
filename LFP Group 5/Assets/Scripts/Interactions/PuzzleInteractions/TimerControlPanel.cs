@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using GridSystem;
+using System.Collections;
 
 public class TimerControlPanel : Interaction
 {
@@ -9,7 +10,10 @@ public class TimerControlPanel : Interaction
 
     [Header("Timer UI")]
     [SerializeField] private TMP_Text _timerText;
-    [SerializeField] private GameObject _timeLeft, _timeText, _startGate;
+    [SerializeField] private GameObject _timeLeft, _timeText, _startGate, _completeTrigger, _greenPanel;
+
+    [Header("Puzzle Reset")]
+    [SerializeField] private ItemPositionReset _itemPositionReset;
 
     private float _remainingTime;
     private bool _timerRunning = false;
@@ -72,6 +76,11 @@ public class TimerControlPanel : Interaction
             _startGate.SetActive(true);
             Debug.Log("TIME EXPIRED - PUZZLE FAILED");
 
+            if (_itemPositionReset != null && _player != null)
+            {
+                _itemPositionReset.ResetItems(_player.GetInventory());
+            }
+
             // Return player to saved grid cell
             ResetPlayerPosition();
         }
@@ -86,6 +95,7 @@ public class TimerControlPanel : Interaction
 
         
         _startGate.SetActive(false);
+        _completeTrigger.SetActive(true);
 
         // Show timer UI
         if (_timeLeft != null)
@@ -117,5 +127,28 @@ public class TimerControlPanel : Interaction
         if (_timerText == null) return;
 
         _timerText.text = _remainingTime.ToString("F2") + "s";
+    }
+
+    public void StopTimer()
+    {
+        if (!_timerRunning) return;
+
+        _timerRunning = false;
+
+        _timeLeft.SetActive(false);
+        _timeText.SetActive(false);
+
+        StartCoroutine(CompleteTimedPuzzle());
+        Debug.Log("PUZZLE COMPLETED - TIMER STOPPED");
+
+        // Prevent the player from restarting this timer
+        SetCanInteract(false);
+    }
+
+    private IEnumerator CompleteTimedPuzzle()
+    {
+        _greenPanel.SetActive(true);
+        yield return new WaitForSeconds(0.25f);
+        _greenPanel.SetActive(false);
     }
 }
