@@ -1534,7 +1534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e802e1325b73c47bf59f58101097cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractionDialogueTrigger
-  _requiredItems: []
+  _requiredItems:
+  - {fileID: 11400000, guid: c1fe5c1db5c40f047b039ff60da31a50, type: 2}
   _dialogueTrigger: {fileID: 11400000, guid: 2e1d9e51f9a748a45a17b5607566eb43, type: 2}
 --- !u!1 &182416519
 GameObject:
@@ -15510,7 +15511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TriggerColliderDialogue
   _triggerCollider: {fileID: 493458949}
   _normalModeDialog: 1
-  _dialogue: {fileID: 0}
+  _dialogue: {fileID: 11400000, guid: 3d4a3a9aa443c9f4bbc346183eddb294, type: 2}
 --- !u!1 &661752153
 GameObject:
   m_ObjectHideFlags: 0
