@@ -2547,6 +2547,7 @@ GameObject:
   - component: {fileID: 2958212871266167055}
   - component: {fileID: 7580997028721066639}
   - component: {fileID: 1890968791270657806}
+  - component: {fileID: 5953840992086783410}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -2652,6 +2653,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cab488e9edb20418e85b9d8c5f9520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseGame
+--- !u!114 &5953840992086783410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076751854832056749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34808d17043fc9e409a6ff3bc8ae2ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DitherManager
+  _inputReader: {fileID: 11400000, guid: 073e7d718b0f7ee4c8caa590dd5771ba, type: 2}
+  _ditherMaterial: {fileID: 2100000, guid: 149976c17b6c71048956c5395a6af0ef, type: 2}
+  _imageList:
+  - {fileID: 6262294344208615895}
+  - {fileID: 4645507937350493124}
+  - {fileID: 2703703959374491934}
+  - {fileID: 5666399727306000696}
+  - {fileID: 4258865645615651909}
+  - {fileID: 4643529268625416555}
 --- !u!1 &5105702913059656869
 GameObject:
   m_ObjectHideFlags: 0
