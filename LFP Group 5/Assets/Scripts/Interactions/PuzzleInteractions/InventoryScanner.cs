@@ -17,11 +17,34 @@ public class InventoryScanner : Interaction
     [SerializeField] private float _slideSpeed = 3f;
     [SerializeField] private float _scanTime = 1f;
 
+    [Header("Player")]
+    [SerializeField] private InputReader _inputReader;
     private Color _originalColor;
+    private Coroutine _scanningRoutine = null;
+    private Coroutine _slideRoutine = null;
+    private Vector2 _targetPosition = Vector2.zero;
     void OnEnable()
     {
         if (_scannerPanel != null)
         _originalColor = _scannerPanel.color;
+    }
+    void OnDisable()
+    {
+        if(_scanningRoutine != null)
+        {
+            StopCoroutine(_scanningRoutine);
+            _scanningRoutine = null;
+            ResetScanPanel();
+            _inputReader.EnablePlayerActions();
+        }
+        if(_slideRoutine != null)
+        {
+            StopCoroutine(_slideRoutine);
+            _slideRoutine = null;
+            
+            //Finish slide
+            transform.position = _targetPosition;
+        }
     }
     public override void Interact(GameObject interactingObject)
     {
@@ -52,7 +75,7 @@ public class InventoryScanner : Interaction
     {
         Debug.Log("SCANNING PLAYER INVENTORY...");
 
-        StartCoroutine(ScannerOpen(inventory));
+        _scanningRoutine ??= StartCoroutine(ScannerOpen(inventory));
     }
 
     private IEnumerator ScannerOpen(Inventory inventory)
@@ -65,6 +88,9 @@ public class InventoryScanner : Interaction
             _scannerPanel.gameObject.SetActive(true);
         }
         
+
+        _inputReader.DisablePlayerActions();
+
 
         // Shows scanning
         float elapsedTime = 0f;
@@ -151,16 +177,13 @@ public class InventoryScanner : Interaction
             if(_scannerText != null)
             _scannerText.text = $"Scan Failed Missing {missingItems} ID";
 
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(3f);
+
+            ResetScanPanel();
+            _inputReader.EnablePlayerActions();
         }
 
-        
-
-        if (_scannerPanel != null)
-        {
-            _scannerPanel.gameObject.SetActive(false);
-        }
-            
+        _scanningRoutine = null;
 
     }
 
@@ -169,7 +192,11 @@ public class InventoryScanner : Interaction
         // This stops the player from scanning again once the door opens
         SetCanInteract(false);
 
-        StartCoroutine(SlideDoorOpen());
+        ResetScanPanel();
+        _inputReader.EnablePlayerActions();
+
+        if(_slideRoutine == null)
+        _slideRoutine = StartCoroutine(SlideDoorOpen());
     }
 
     private IEnumerator SlideDoorOpen()
@@ -189,23 +216,33 @@ public class InventoryScanner : Interaction
             direction = Vector3.down;
         }
 
-        Vector3 targetPosition =
+        _targetPosition =
             startPosition + direction * (_gridCellSize * 3f);
 
         // Smoothly slide the door
-        while (Vector3.Distance(transform.position, targetPosition) > 0.01f)
+        while (Vector3.Distance(transform.position, _targetPosition) > 0.01f)
         {
             transform.position = Vector3.MoveTowards(
                 transform.position,
-                targetPosition,
+                _targetPosition,
                 _slideSpeed * Time.deltaTime
             );
 
             yield return null;
         }
 
-        transform.position = targetPosition;
+        transform.position = _targetPosition;
 
         Debug.Log("SCANNER DOOR OPENED");
+    }
+
+
+    private void ResetScanPanel()
+    {
+        if(_scannerPanel == null) return;
+
+        _scannerText.text = "";
+        _scannerPanel.color = _originalColor;
+        _scannerPanel.gameObject.SetActive(false);
     }
 }

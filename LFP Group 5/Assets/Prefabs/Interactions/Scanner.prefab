@@ -435,6 +435,7 @@ MonoBehaviour:
   _gridCellSize: 1
   _slideSpeed: 3.5
   _scanTime: 3
+  _inputReader: {fileID: 11400000, guid: 073e7d718b0f7ee4c8caa590dd5771ba, type: 2}
 --- !u!1 &8276781788647572906
 GameObject:
   m_ObjectHideFlags: 0
