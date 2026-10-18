@@ -52,6 +52,8 @@ public class SafeInteraction : Interaction
         inventory.RemoveItemFromInventory(selectedItem.gameObject);
 
         OpenSafe();
+
+        base.Interact(interactingObject,selectedItem);
     }
 
     private void OpenSafe()
