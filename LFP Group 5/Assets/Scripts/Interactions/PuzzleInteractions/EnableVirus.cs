@@ -1,9 +1,13 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnableVirus : MonoBehaviour
 {
     [SerializeField] private GameObject _blockedCells, _virus, _nextVirus;
     [SerializeField] private Player _player;
+
+    [SerializeField] private float _pixelationTime = 0.5f;
 
     void Awake()
     {
@@ -15,8 +19,11 @@ public class EnableVirus : MonoBehaviour
         if(!collision.CompareTag("Player")) return;
         if (_player.GetCurrentMode() != GameMode.NormalMode) return;
  
-            _virus.SetActive(true);
+        _virus.SetActive(true);
         _blockedCells.SetActive(true);
+        
+        if(PixelShaderManager.Instance == null) return;
+        PixelShaderManager.Instance.PixelateScreen(_pixelationTime);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
