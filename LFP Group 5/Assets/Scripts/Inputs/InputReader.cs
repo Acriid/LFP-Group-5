@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -373,5 +374,19 @@ public class InputReader : ScriptableObject
         return disabledActions;
     }
     #endregion
+
+
+    public void DisablePlayerActions()
+    {
+        DisableMoveActions();
+        DisableInteractAction();
+        DisableDropItemAction();
+    }
+    public void EnablePlayerActions()
+    {
+        EnableMoveActions();
+        EnableInteractAction();
+        EnableDropItemAction();
+    }
 
 }

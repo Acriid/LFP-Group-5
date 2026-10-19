@@ -21,6 +21,7 @@ public class TableInteraction : Interaction
         if (_hiddenInItem == null)
         {
             InvokeFailedInteraction();
+            PlayRandomFailedInteractionSound();
             Debug.Log("No item found in the drawer");
             return;
         }
@@ -29,5 +30,6 @@ public class TableInteraction : Interaction
         SetCanInteract(false);
         gameObject.layer = 0;
         _tableCollider.enabled = false;
+        PlayRandomInteractionSound();
     }
 }

@@ -42,6 +42,8 @@ public class BatteryInteraction : Interaction
         inventory.RemoveItemFromInventory(selectedItem.gameObject);
 
         LightUp();
+
+        base.Interact(interactingObject,selectedItem);
     }
 
     private void LightUp()

@@ -52,6 +52,8 @@ public class DoorInteraction : Interaction
         inventory.RemoveItemFromInventory(selectedItem.gameObject);
 
         OpenDoor();
+
+        base.Interact(interactingObject,selectedItem);
     }
 
     private void OpenDoor()

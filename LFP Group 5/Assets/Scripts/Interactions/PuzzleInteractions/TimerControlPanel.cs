@@ -53,6 +53,8 @@ public class TimerControlPanel : Interaction
         Debug.Log("PLAYER STARTING CELL SAVED: " + _savedCell.Center());
 
         StartTimer();
+
+        base.Interact(interactingObject);
     }
 
     private void Update()

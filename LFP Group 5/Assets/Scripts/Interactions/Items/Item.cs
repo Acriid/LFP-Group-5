@@ -25,6 +25,9 @@ public class Item : Interaction
         if (_itemSO == null) return;
 
         PickUpItem(interactingObject);
+
+        
+        base.Interact(interactingObject);
     }
     private void PickUpItem(GameObject interactingObject)
     {
