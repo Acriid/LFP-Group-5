@@ -1,15 +1,20 @@
 using System;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class InventorySlot : MonoBehaviour
 {
     [SerializeField] private GameObject _heldObject = null;
+    [SerializeField] private Image _backGroundImage = null;
     private Vector2 _centerPosition = Vector2.zero;
 
     private bool _isActive = true;
     public Action<InventorySlot> OnHeldObjectChange;
+
+    private Color _originalColor;
     void Awake()
     {
+        _originalColor = _backGroundImage.color;
         _centerPosition = ((RectTransform)transform).anchoredPosition;
     }
     public Vector2 GetCenterPosition()
@@ -30,9 +35,18 @@ public class InventorySlot : MonoBehaviour
         {
             //Snap to center
             _heldObject.GetComponent<RectTransform>().anchoredPosition = _centerPosition;
+
+            if(_heldObject.TryGetComponent(out UiItem uiItemComponent))
+            {
+                uiItemComponent.SetBackGroundImage(_backGroundImage);
+            }
+        }
+        else
+        {
+            _backGroundImage.color = _originalColor;
         }
 
-        
+
         OnHeldObjectChange?.Invoke(this);
     }
     public GameObject GetHeldObject()
