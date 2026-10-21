@@ -60,10 +60,6 @@ public class Item : Interaction
     {
         return _itemSO.ItemDescription;
     }
-    public Sprite GetItemSprite()
-    {
-        return _itemSO.UISpriteNormal;
-    }
 
     public void SetIsCorrupt(bool newValue)
     {

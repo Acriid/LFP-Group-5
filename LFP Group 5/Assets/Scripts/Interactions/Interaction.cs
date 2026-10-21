@@ -9,8 +9,8 @@ public class Interaction : MonoBehaviour
     [SerializeField] protected string _interactionString = "";
     [SerializeField] protected string _failedInteractionString = "";
     [Header("Audio")]
-    [SerializeField] protected List<AudioClip> _interactionAudioList = new();
-    [SerializeField] protected List<AudioClip> _failedInteractionAudioList = new();
+    [SerializeField] protected AudioSetScriptableObject _interactionAudioSet = null;
+    [SerializeField] protected AudioSetScriptableObject _failedInteractionAudioSet = null;
     [Range(0f,1f)]
     [SerializeField] protected float _audioVolume = 1f;
 
@@ -53,15 +53,15 @@ public class Interaction : MonoBehaviour
     protected void PlayRandomInteractionSound()
     {
         if(SoundFXManager.Instance == null) return;
-        if(_interactionAudioList.Count == 0) return;
+        if(_interactionAudioSet != null) return;
 
-        SoundFXManager.Instance.PlaySoundFXClip(_interactionAudioList,transform,_audioVolume);       
+        SoundFXManager.Instance.PlaySoundFXClip(_interactionAudioSet.AudioList,transform,_audioVolume);       
     }
     protected void PlayRandomFailedInteractionSound()
     {
         if(SoundFXManager.Instance == null) return;
-        if(_failedInteractionAudioList.Count == 0) return;
+        if(_failedInteractionAudioSet != null) return;
 
-        SoundFXManager.Instance.PlaySoundFXClip(_failedInteractionAudioList,transform,_audioVolume);        
+        SoundFXManager.Instance.PlaySoundFXClip(_failedInteractionAudioSet.AudioList,transform,_audioVolume);        
     }
 }

@@ -21,6 +21,17 @@ public class PauseMenuInputController : MonoBehaviour
 
         Debug.Log("Toggled menu");
         _pauseMenu.SetActive(!_pauseMenu.activeSelf);
+
+        if(_pauseMenu.activeSelf)
+        {
+            _inputReader.DisableDropItemAction();
+            _inputReader.DisableModeSwitchAction();
+        }
+        else
+        {
+            _inputReader.EnableDropItemAction();
+            _inputReader.EnableModeSwitchAction();
+        }
     }
     public void SetEscapeDisabled(bool newValue)
     {

@@ -4,6 +4,7 @@ using UnityEngine.Rendering.Universal;
 
 public class PixelShaderManager : MonoBehaviour
 {
+    public static PixelShaderManager Instance {get; private set;}
     [SerializeField] private Renderer2DData _renderer2DData = null;
     [SerializeField] private Material _pixelMaterial = null;
 
@@ -11,6 +12,11 @@ public class PixelShaderManager : MonoBehaviour
 
     private void Awake()
     {
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+        }
+        Instance = this;
         FindFullScreenPass();
     }
     void OnDestroy()

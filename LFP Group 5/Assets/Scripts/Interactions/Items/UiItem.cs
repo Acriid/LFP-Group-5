@@ -21,6 +21,11 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
     private Item _currentItem = null;
     public event Action<UiItem> OnItemClicked;
 
+    private GameMode _currentMode = GameMode.NormalMode;
+
+    private Image _backGroundImage = null;
+    private Color _originalColour;
+
     void OnDisable()
     {
         if(_currentItem != null)
@@ -62,7 +67,13 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
         {
             _itemName = _currentItem.GetItemName();
             _itemDescription = _currentItem.GetItemDescription();
-            _uiSprite = _currentItem.GetItemSprite();
+
+            if(_currentMode == GameMode.NormalMode)
+            _uiSprite = _currentItem.GetNormalModeUISprite();
+            else
+            _uiSprite = _currentItem.GetSafeModeUISprite();
+
+
             _hasItem = true;
         }
         _image.sprite = _uiSprite;
@@ -83,13 +94,15 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
     {
         if(_currentItem == null) return;
         _currentItem.SetIsSelected(false);
-        _image.color = Color.white;
+        if(_backGroundImage != null)
+        _backGroundImage.color = _originalColour;
     }
     public void SelectItem()
     {
         if(_currentItem == null) return;
         _currentItem.SetIsSelected(true);
-        _image.color = Color.red;
+        if(_backGroundImage != null)
+        _backGroundImage.color = Color.yellowGreen;
     }
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -114,7 +127,16 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
         _lockImage.SetActive(!newValue);
     }
 
-
+    public void SetNormalMode()
+    {
+        _currentMode = GameMode.NormalMode;
+        SetNormalModeUISprite();
+    }
+    public void SetSafeMode()
+    {
+        _currentMode = GameMode.SafeMode;
+        SetSafeModeUISprite();
+    }
     public void SetNormalModeUISprite()
     {
         if(_currentItem == null) return;
@@ -127,5 +149,11 @@ public class UiItem : MonoBehaviour, IPointerClickHandler
         if(_currentItem == null) return;
         _image.sprite = _currentItem.GetSafeModeUISprite();
         _image.preserveAspect = true;
+    }
+
+    public void SetBackGroundImage(Image newImage)
+    {
+        _backGroundImage = newImage;
+        _originalColour = _backGroundImage.color;
     }
 }
