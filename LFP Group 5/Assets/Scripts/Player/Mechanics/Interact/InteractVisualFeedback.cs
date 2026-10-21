@@ -38,10 +38,12 @@ public class InteractVisualFeedback : MonoBehaviour
             {
                 StopCoroutine(_updateRoutine);
                 _updateRoutine = null;
-                _feedBackUI.SetActive(false);
 
-                _feedBackText.text = "";
-            }           
+            } 
+
+            _feedBackUI.SetActive(false);
+
+            _feedBackText.text = "";          
         }
     }
     private IEnumerator UpdateInteractionText()

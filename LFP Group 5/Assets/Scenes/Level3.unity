@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: 
+  _interactionString: Pick up Statue
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
@@ -9850,7 +9850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: 
+  _interactionString: Pick up Statue
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
@@ -14753,7 +14753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
@@ -17067,7 +17067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
@@ -17645,7 +17645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: Search Drawer
-  _failedInteractionString: 
+  _failedInteractionString: Drawer is Empty
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -18487,7 +18487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
@@ -20941,7 +20941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
@@ -21898,7 +21898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: 
+  _interactionString: Pick up Statue
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
@@ -30369,7 +30369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
@@ -31670,7 +31670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
   _interactionString: Open Door
-  _failedInteractionString: 
+  _failedInteractionString: Door is Locked
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -34066,7 +34066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
@@ -34464,7 +34464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
@@ -36081,7 +36081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
   _interactionString: Open Door
-  _failedInteractionString: 
+  _failedInteractionString: Door is Locked
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -38515,7 +38515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SafeInteraction
   _canInteract: 1
   _interactionString: Unlock Mr. van Deventer's Safe
-  _failedInteractionString: 
+  _failedInteractionString: Wrong safe code
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -38903,7 +38903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: Search Drawer
-  _failedInteractionString: 
+  _failedInteractionString: Drawer is Empty
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -39201,7 +39201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SafeInteraction
   _canInteract: 1
   _interactionString: Unlock Ms. Ferguson's Safe
-  _failedInteractionString: 
+  _failedInteractionString: Wrong safe code
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -40922,7 +40922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: 
+  _interactionString: Pick up Statue
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}

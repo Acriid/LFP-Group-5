@@ -48,7 +48,7 @@ public class InteractMechanic : MonoBehaviour
         {
             float distance = Vector3.Distance(player.position, interaction.transform.position);
 
-            if (distance < bestScore)
+            if (distance < bestScore && interaction.GetCanInteract())
             {
                 bestScore = distance;
                 _targetInteraction = interaction;
@@ -63,7 +63,7 @@ public class InteractMechanic : MonoBehaviour
 
         OnInteraction?.Invoke(_targetInteraction);
         _targetInteraction.Interact(player);
-        
+
         return true;
     }
 
