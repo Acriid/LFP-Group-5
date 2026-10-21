@@ -24,12 +24,14 @@ public class DoorInteraction : Interaction
         if (selectedItem == null)
         {
             Debug.Log("No item selected.");
+            InvokeFailedInteraction();
             return;
         }
 
         if (selectedItem.GetItemSO() != _requiredItem)
         {
             Debug.Log("This item cannot open the door.");
+            InvokeFailedInteraction();
             return;
         }
 
@@ -38,6 +40,7 @@ public class DoorInteraction : Interaction
         if (player == null)
         {
             Debug.LogWarning("Door interaction could not find Player.");
+            InvokeFailedInteraction();
             return;
         }
 
@@ -46,6 +49,7 @@ public class DoorInteraction : Interaction
         if (inventory == null)
         {
             Debug.LogWarning("Player has no Inventory.");
+            InvokeFailedInteraction();
             return;
         }
 

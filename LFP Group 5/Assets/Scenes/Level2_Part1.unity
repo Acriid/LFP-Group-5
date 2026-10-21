@@ -2216,16 +2216,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 7, y: 0, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 8, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -3579,18 +3569,18 @@ Tilemap:
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - serializedVersion: 2
-    m_RefCount: 264
+    m_RefCount: 263
     m_Data: {fileID: 11400000, guid: c41cade823512b34ea6d93d85c04a16b, type: 2}
   - serializedVersion: 2
     m_RefCount: 0
     m_Data: {fileID: 11400000, guid: cd5ee19e6ec9f2b418540a3ef5062c95, type: 2}
   m_TileSpriteArray:
   - serializedVersion: 2
-    m_RefCount: 264
+    m_RefCount: 263
     m_Data: {fileID: 7482667652216324306, guid: 4f2564406b2d3bf438c91dcbd68b5c9e, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 264
+    m_RefCount: 263
     m_Data:
       e00: 1
       e01: 0
@@ -3610,7 +3600,7 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - serializedVersion: 2
-    m_RefCount: 264
+    m_RefCount: 263
     m_Data: {r: 0.4943396, g: 0.3837623, b: 0.23038088, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -3873,6 +3863,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Pick Up Statue
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &236062727
@@ -8785,8 +8778,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: 
+  _interactionString: Pick up Key
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!1 &483047488
@@ -8901,9 +8897,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 182902048}
 --- !u!212 &483047493
@@ -9107,6 +9106,7 @@ MonoBehaviour:
   _virus: {fileID: 2061457685}
   _nextVirus: {fileID: 0}
   _player: {fileID: 0}
+  _pixelationTime: 0.5
 --- !u!61 &493458949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9993,9 +9993,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 298124964}
 --- !u!212 &644344375
@@ -10194,6 +10197,30 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1923492327709169935, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923492327709169935, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923492327709169935, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923492327709169935, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923492327709169935, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923492327709169935, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2470467256971708708, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10215,6 +10242,54 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2470467256971708708, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173775355452863371, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173775355452863371, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173775355452863371, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173775355452863371, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173775355452863371, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173775355452863371, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463017444412402612, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463017444412402612, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463017444412402612, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463017444412402612, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463017444412402612, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463017444412402612, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -10286,6 +10361,54 @@ PrefabInstance:
       propertyPath: _normalMap
       value: 
       objectReference: {fileID: 1984815222}
+    - target: {fileID: 5023239751389557435, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023239751389557435, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023239751389557435, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023239751389557435, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023239751389557435, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023239751389557435, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104887490135967770, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104887490135967770, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104887490135967770, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104887490135967770, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104887490135967770, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104887490135967770, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5355333519009179686, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10348,6 +10471,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6737170003366781094, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775544755929261917, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775544755929261917, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775544755929261917, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775544755929261917, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775544755929261917, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775544755929261917, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077766853867994153, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077766853867994153, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077766853867994153, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077766853867994153, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077766853867994153, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077766853867994153, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10892,9 +11063,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 28288230}
 --- !u!212 &737359179
@@ -14834,9 +15008,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 526640832}
 --- !u!212 &891534580
@@ -14997,6 +15174,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Pick Up Statue
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &919365878
@@ -15547,6 +15727,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &992990464
@@ -16150,9 +16333,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 970464349}
 --- !u!212 &1094749845
@@ -16675,8 +16861,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: 
+  _interactionString: Pick up Key
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!61 &1211895196
@@ -16993,8 +17182,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
-  _interactionString: 
-  _failedInteractionString: 
+  _interactionString: Open Door
+  _failedInteractionString: Door is Locked
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _lockedDoor: {fileID: 1221512439}
   _unlockedDoor: {fileID: 1230400200}
@@ -17736,6 +17928,7 @@ MonoBehaviour:
   _virus: {fileID: 1029570335}
   _nextVirus: {fileID: 0}
   _player: {fileID: 0}
+  _pixelationTime: 0.5
 --- !u!61 &1390130450
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17846,9 +18039,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 668423956}
 --- !u!212 &1409813919
@@ -18195,9 +18391,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c8e96c8a396d443ac47f47470f5747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
-  _canInteract: 1
+  _canInteract: 0
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 0}
 --- !u!212 &1419951830
@@ -18415,6 +18614,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Enter Door
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _nextLevel: 4
 --- !u!1 &1456170328
 GameObject:
@@ -19341,8 +19543,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
-  _interactionString: 
-  _failedInteractionString: 
+  _interactionString: Open Door
+  _failedInteractionString: Door is Locked
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _lockedDoor: {fileID: 1544150309}
   _unlockedDoor: {fileID: 1432612563}
@@ -19694,6 +19899,7 @@ MonoBehaviour:
   _virus: {fileID: 88911535}
   _nextVirus: {fileID: 0}
   _player: {fileID: 0}
+  _pixelationTime: 0.5
 --- !u!61 &1623527739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21893,6 +22099,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Pick Up Statue
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &2032700143
@@ -22176,6 +22385,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Pick Up Statue
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &2052804855
@@ -22594,6 +22806,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &2099140006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2099140008}
+  - component: {fileID: 2099140007}
+  m_Layer: 0
+  m_Name: PixelShaderManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2099140007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099140006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94dd153e2dac214c84e3a5c50f3fa29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PixelShaderManager
+  _renderer2DData: {fileID: 11400000, guid: 424799608f7334c24bf367e4bbfa7f9a, type: 2}
+  _pixelMaterial: {fileID: 2100000, guid: c107fe35c53132a4d818b55e24281238, type: 2}
+--- !u!4 &2099140008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099140006}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.09861, y: -0.42998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2103479762
 GameObject:
   m_ObjectHideFlags: 0
@@ -22893,3 +23151,4 @@ SceneRoots:
   - {fileID: 1984815223}
   - {fileID: 1394927262}
   - {fileID: 1196467524}
+  - {fileID: 2099140008}
