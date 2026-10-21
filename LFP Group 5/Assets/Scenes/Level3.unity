@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: 
+  _interactionString: Pick up Statue
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
@@ -9850,7 +9850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: 
+  _interactionString: Pick up Statue
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
@@ -21898,7 +21898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: 
+  _interactionString: Pick up Statue
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
@@ -38899,7 +38899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: Search Drawer
-  _failedInteractionString: 
+  _failedInteractionString: Drawer is Empty
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -40918,7 +40918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: 
+  _interactionString: Pick up Statue
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
