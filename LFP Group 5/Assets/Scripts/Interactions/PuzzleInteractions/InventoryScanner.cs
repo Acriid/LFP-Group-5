@@ -177,7 +177,7 @@ public class InventoryScanner : Interaction
             
             _scannerPanel.color = failedColor;
             if(_scannerText != null)
-            _scannerText.text = $"Scan Failed Missing {missingItems} ID";
+            _scannerText.text = $"Scan Failed Missing {missingItems} ID: {requiredItemNames}";
 
             yield return new WaitForSeconds(3f);
 

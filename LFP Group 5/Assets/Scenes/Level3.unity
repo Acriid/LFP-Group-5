@@ -37773,6 +37773,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1125467366}
     m_Modifications:
     - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
+      propertyPath: _failedInteractionString
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: _requiredItems.Array.size
       value: 1
       objectReference: {fileID: 0}
