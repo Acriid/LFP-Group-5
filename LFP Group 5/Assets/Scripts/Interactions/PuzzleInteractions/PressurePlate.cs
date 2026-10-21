@@ -11,6 +11,12 @@ public class PressurePlate : Interaction
     // Gemma added this. Need it for triggering dialogue :p
     public event Action OnGateOpened;
 
+    void OnEnable()
+    {
+        //Stop the pressure plate from taking the interaction.
+        _canInteract = false;
+    }
+
     private void Update()
     {
         CheckPlate();
