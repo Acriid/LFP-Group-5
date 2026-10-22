@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -20,7 +19,11 @@ public class UiItemHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             panelHover.OnPanelExit += () => { _isHoveringPanel = false; UpdatePanelVisibility(); };
         }
     }
-
+    void OnDisable()
+    {
+        if(_informationPanel != null)
+        _informationPanel.SetActive(false);
+    }
     public void OnPointerEnter(PointerEventData eventData)
     {
         _isHoveringItem = true;
