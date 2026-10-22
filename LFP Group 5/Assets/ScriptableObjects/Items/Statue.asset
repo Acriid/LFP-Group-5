@@ -17,6 +17,6 @@ MonoBehaviour:
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
   UISpriteNormal: {fileID: -2010349124305102429, guid: 00c0cf357fdb49446aa73d6c0ab8f72a, type: 3}
-  UISpriteSafe: {fileID: -8536787702624949336, guid: 7c413b529e3ce5e47b25c48be7665d2d, type: 3}
+  UISpriteSafe: {fileID: -8692378536355825528, guid: e9a6e42d2c4dd424c8988e6b121155c1, type: 3}
   ItemName: Statue
   ItemDescription: A Misplaced Statue
