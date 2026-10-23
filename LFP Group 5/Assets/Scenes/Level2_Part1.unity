@@ -9174,6 +9174,7 @@ MonoBehaviour:
   _nextVirus: {fileID: 0}
   _player: {fileID: 0}
   _pixelationTime: 0.5
+  _audioSet: {fileID: 11400000, guid: 62c7c92421949824eb3b555a394bd7ff, type: 2}
 --- !u!61 &493458949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17812,6 +17813,7 @@ MonoBehaviour:
   _nextVirus: {fileID: 0}
   _player: {fileID: 0}
   _pixelationTime: 0.5
+  _audioSet: {fileID: 11400000, guid: 62c7c92421949824eb3b555a394bd7ff, type: 2}
 --- !u!61 &1390130450
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19507,6 +19509,7 @@ MonoBehaviour:
   _nextVirus: {fileID: 0}
   _player: {fileID: 0}
   _pixelationTime: 0.5
+  _audioSet: {fileID: 11400000, guid: 62c7c92421949824eb3b555a394bd7ff, type: 2}
 --- !u!61 &1623527739
 BoxCollider2D:
   m_ObjectHideFlags: 0

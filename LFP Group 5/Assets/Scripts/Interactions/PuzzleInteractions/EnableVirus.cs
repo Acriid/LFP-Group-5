@@ -8,6 +8,7 @@ public class EnableVirus : MonoBehaviour
     [SerializeField] private Player _player;
 
     [SerializeField] private float _pixelationTime = 0.5f;
+    [SerializeField] private AudioSetScriptableObject _audioSet = null;
 
     void Awake()
     {
@@ -24,6 +25,9 @@ public class EnableVirus : MonoBehaviour
         
         if(PixelShaderManager.Instance == null) return;
         PixelShaderManager.Instance.PixelateScreen(_pixelationTime);
+
+        if(SoundFXManager.Instance != null && _audioSet != null)
+        SoundFXManager.Instance.PlaySoundFXClip(_audioSet,transform,1f);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

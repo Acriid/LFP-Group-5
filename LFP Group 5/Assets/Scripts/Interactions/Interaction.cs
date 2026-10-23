@@ -53,14 +53,14 @@ public class Interaction : MonoBehaviour
     protected void PlayRandomInteractionSound()
     {
         if(SoundFXManager.Instance == null) return;
-        if(_interactionAudioSet != null) return;
+        if(_interactionAudioSet == null) return;
 
         SoundFXManager.Instance.PlaySoundFXClip(_interactionAudioSet.AudioList,transform,_audioVolume);       
     }
     protected void PlayRandomFailedInteractionSound()
     {
         if(SoundFXManager.Instance == null) return;
-        if(_failedInteractionAudioSet != null) return;
+        if(_failedInteractionAudioSet == null) return;
 
         SoundFXManager.Instance.PlaySoundFXClip(_failedInteractionAudioSet.AudioList,transform,_audioVolume);        
     }
