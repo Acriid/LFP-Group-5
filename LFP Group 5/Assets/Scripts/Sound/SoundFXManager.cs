@@ -57,7 +57,10 @@ public class SoundFXManager : MonoBehaviour
     {
         PlaySoundFXClip(audioClip[Random.Range(0,audioClip.Count)],spawnTransform,volume);
     }
-
+    public void PlaySoundFXClip(AudioSetScriptableObject audioSet, Transform spawnTransform, float volume)
+    {
+        PlaySoundFXClip(audioSet.GetRandomAudioClip(),spawnTransform,volume);
+    }
     private IEnumerator ReturnAfterTime(AudioSource sourceToReturn, float returnTime)
     {
         yield return new WaitForSeconds(returnTime);

@@ -8712,6 +8712,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 'Pick Up ID Card '
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 0171375ad5eb1e54fa439a6758627dcb, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &184797377
@@ -8917,6 +8920,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Search Drawer
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _hiddenInItem: {fileID: 1987500711}
 --- !u!61 &193126813
 BoxCollider2D:
@@ -9214,6 +9220,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &236062727
@@ -9466,6 +9475,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Pick up cbs%Hcj$
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &242244334
@@ -12578,6 +12590,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 'Pick Up Key '
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!1 &483047488
@@ -12695,6 +12710,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 0}
 --- !u!212 &483047493
@@ -12990,6 +13008,7 @@ MonoBehaviour:
   _virus: {fileID: 2061457685}
   _nextVirus: {fileID: 0}
   _player: {fileID: 0}
+  _pixelationTime: 0.5
 --- !u!61 &493458949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13087,6 +13106,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Search Drawer
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _hiddenInItem: {fileID: 853452774}
 --- !u!61 &555431107
 BoxCollider2D:
@@ -14402,6 +14424,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 'Pick Up ID Card '
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 3d1f43532830f544a8c6b3d4ddcf0ed7, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &642243508
@@ -14671,6 +14696,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 0}
 --- !u!212 &644344375
@@ -14982,6 +15010,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Search Drawer
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _hiddenInItem: {fileID: 922312255}
 --- !u!1 &668423956
 GameObject:
@@ -15800,6 +15831,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 0}
 --- !u!212 &737359179
@@ -17614,6 +17648,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 'Pick Up ID Card '
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 2645dc0425585884da2af9d8db5e4a8a, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &853452778
@@ -17883,6 +17920,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 0}
 --- !u!212 &891534580
@@ -18224,6 +18264,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Pick Up Note
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: ee4b355ca87bc57459bbc8b61936cb84, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!61 &922312259
@@ -18496,6 +18539,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &992990464
@@ -19391,6 +19437,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 0}
 --- !u!212 &1094749845
@@ -19552,6 +19601,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 'Pick Up ID Card '
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 1a218deb7510e6147814e6a431d3fae6, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &1100932732
@@ -20226,6 +20278,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!61 &1211895196
@@ -20544,6 +20599,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Open Door
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _lockedDoor: {fileID: 1221512439}
   _unlockedDoor: {fileID: 1230400200}
@@ -21090,6 +21148,54 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3173775355452863371, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173775355452863371, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173775355452863371, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173775355452863371, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173775355452863371, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173775355452863371, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463017444412402612, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463017444412402612, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463017444412402612, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463017444412402612, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463017444412402612, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3463017444412402612, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3917646182320602676, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: _itemList.Array.size
       value: 13
@@ -21179,6 +21285,54 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4418022854222739859, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023239751389557435, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023239751389557435, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023239751389557435, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023239751389557435, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023239751389557435, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023239751389557435, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104887490135967770, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104887490135967770, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104887490135967770, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104887490135967770, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104887490135967770, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5104887490135967770, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -22103,6 +22257,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 1637004812}
 --- !u!212 &1409813919
@@ -22452,6 +22609,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 0}
 --- !u!212 &1419951830
@@ -22669,6 +22829,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Enter Door
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _nextLevel: 0
 --- !u!1001 &1449521485
 PrefabInstance:
@@ -23058,6 +23221,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 'Interact with Plate '
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 1542648026}
 --- !u!212 &1497028537
@@ -23910,6 +24076,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Open Door
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _lockedDoor: {fileID: 1544150309}
   _unlockedDoor: {fileID: 1432612563}
@@ -24364,6 +24533,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 'Pick Up XSchJ*&B% '
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 668ee3f75e5418e43ad7eba35824a28a, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &1617967046
@@ -24526,6 +24698,7 @@ MonoBehaviour:
   _virus: {fileID: 88911535}
   _nextVirus: {fileID: 970642185}
   _player: {fileID: 1388884533}
+  _pixelationTime: 0.5
 --- !u!61 &1623527739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24914,6 +25087,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 'Pick Up ID Card '
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 7f6cd4e8a49abec4484b6a2f877d0d6e, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &1652250463
@@ -25729,6 +25905,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Unlock Mr. van Deventer's Safe
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: ee4b355ca87bc57459bbc8b61936cb84, type: 2}
   _lockedSafe: {fileID: 1797499275}
   _unlockedSafe: {fileID: 1035422973}
@@ -25992,6 +26171,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Start Control Timer
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _timeLimit: 12
   _timerText: {fileID: 670916936}
   _timeLeft: {fileID: 304804693}
@@ -26157,6 +26339,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Search Drawer
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _hiddenInItem: {fileID: 0}
 --- !u!61 &1850804060
 BoxCollider2D:
@@ -26493,6 +26678,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &1878657129
@@ -26667,6 +26855,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Start Control Timer
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _timeLimit: 10
   _timerText: {fileID: 670916936}
   _timeLeft: {fileID: 304804693}
@@ -26778,6 +26969,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Unlock Ms. Ferguson's Safe
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: b4b1e2d91ec83d049bdcc7669e065340, type: 2}
   _lockedSafe: {fileID: 1881504310}
   _unlockedSafe: {fileID: 1359984730}
@@ -27218,6 +27412,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 'Pick Up ID Card '
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 53da060e0faa1364ab15a0e209a3aee0, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &1909008122
@@ -27556,6 +27753,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Pick Up Note
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: b4b1e2d91ec83d049bdcc7669e065340, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &1987500715
@@ -28023,6 +28223,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: 
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _spriteRenderer: {fileID: 0}
 --- !u!212 &2032700143
@@ -28985,6 +29188,9 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Start Control Timer
   _failedInteractionString: 
+  _interactionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 0}
+  _audioVolume: 1
   _timeLimit: 10
   _timerText: {fileID: 670916936}
   _timeLeft: {fileID: 304804693}
@@ -29352,6 +29558,52 @@ Transform:
   - {fileID: 970642186}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2127575436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2127575438}
+  - component: {fileID: 2127575437}
+  m_Layer: 0
+  m_Name: SoundFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2127575437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127575436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49da405dd47c6924c8069a1a804f7c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundFXManager
+  _soundFXObject: {fileID: 4274896565161257496, guid: dfeb9c02ce936d04498d98c72da7a9a0, type: 3}
+  _poolCount: 4
+--- !u!4 &2127575438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127575436}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1296.4377, y: 582.492, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2141583562
 GameObject:
   m_ObjectHideFlags: 0
@@ -29471,3 +29723,4 @@ SceneRoots:
   - {fileID: 608627751}
   - {fileID: 1690798984}
   - {fileID: 83845932}
+  - {fileID: 2127575438}
