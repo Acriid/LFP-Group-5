@@ -5915,7 +5915,7 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Search Drawer
   _failedInteractionString: 
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: a60f0116c7d42b24fbc970be012f3799, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _hiddenInItem: {fileID: 2116977366}
@@ -6076,7 +6076,7 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Search Drawer
   _failedInteractionString: 
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: a60f0116c7d42b24fbc970be012f3799, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _hiddenInItem: {fileID: 528122012}
@@ -10608,7 +10608,7 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Add Something
   _failedInteractionString: 'Needs Battery '
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: a128c291cbb932648b84897403f49f4f, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: b7e251c8257f53d4cac78b607c4953ed, type: 2}

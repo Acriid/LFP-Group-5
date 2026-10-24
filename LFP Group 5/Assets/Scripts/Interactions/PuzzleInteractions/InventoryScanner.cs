@@ -94,6 +94,9 @@ public class InventoryScanner : Interaction
         _inputReader.DisablePlayerActions();
 
 
+        //0 is scanning
+        PlayInteractionSound(_interactionAudioSet.AudioList[0]);
+
         // Shows scanning
         float elapsedTime = 0f;
         string startText = "Scanning";
@@ -179,6 +182,7 @@ public class InventoryScanner : Interaction
             if(_scannerText != null)
             _scannerText.text = $"Scan Failed Missing {missingItems} ID: {requiredItemNames}";
 
+            PlayRandomFailedInteractionSound();
             yield return new WaitForSeconds(3f);
 
             ResetScanPanel();
@@ -221,6 +225,9 @@ public class InventoryScanner : Interaction
         _targetPosition =
             startPosition + direction * (_gridCellSize * 3f);
 
+        //1 is success
+        PlayInteractionSound(_interactionAudioSet.AudioList[1]);
+
         // Smoothly slide the door
         while (Vector3.Distance(transform.position, _targetPosition) > 0.01f)
         {
@@ -232,6 +239,7 @@ public class InventoryScanner : Interaction
 
             yield return null;
         }
+
 
         transform.position = _targetPosition;
 

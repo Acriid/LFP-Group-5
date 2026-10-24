@@ -1369,7 +1369,7 @@ MonoBehaviour:
   _interactionString: Search Drawer
   _failedInteractionString: Drawer is empty
   _interactionAudioSet: {fileID: 0}
-  _failedInteractionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 11400000, guid: d0fd44fc773ccb743b25e98206b9eb42, type: 2}
   _audioVolume: 1
   _hiddenInItem: {fileID: 0}
 --- !u!50 &333267449
@@ -2058,7 +2058,7 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Search Drawer
   _failedInteractionString: 
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: a60f0116c7d42b24fbc970be012f3799, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _hiddenInItem: {fileID: 688361113}
@@ -2247,7 +2247,7 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Search Drawer
   _failedInteractionString: 
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: a60f0116c7d42b24fbc970be012f3799, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _hiddenInItem: {fileID: 1458578337}

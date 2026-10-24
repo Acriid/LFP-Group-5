@@ -9327,7 +9327,7 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Search Drawer
   _failedInteractionString: 
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: a60f0116c7d42b24fbc970be012f3799, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _hiddenInItem: {fileID: 1987500711}
@@ -16068,7 +16068,7 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Search Drawer
   _failedInteractionString: 
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: a60f0116c7d42b24fbc970be012f3799, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _hiddenInItem: {fileID: 853452774}
@@ -17831,7 +17831,7 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Search Drawer
   _failedInteractionString: Drawer is Empty
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: a60f0116c7d42b24fbc970be012f3799, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _hiddenInItem: {fileID: 922312255}
@@ -17987,9 +17987,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
+      propertyPath: _interactionAudioSet
+      value: 
+      objectReference: {fileID: 11400000, guid: ed39d4951844a324195b32526608199f, type: 2}
+    - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: _requiredItems.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
+      propertyPath: _failedInteractionAudioSet
+      value: 
+      objectReference: {fileID: 11400000, guid: bc9b17d19418e524a80af8e5b4266b70, type: 2}
     - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: '_requiredItems.Array.data[0]'
       value: 
@@ -19126,9 +19134,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
+      propertyPath: _interactionAudioSet
+      value: 
+      objectReference: {fileID: 11400000, guid: ed39d4951844a324195b32526608199f, type: 2}
+    - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: _requiredItems.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
+      propertyPath: _failedInteractionAudioSet
+      value: 
+      objectReference: {fileID: 11400000, guid: bc9b17d19418e524a80af8e5b4266b70, type: 2}
     - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: '_requiredItems.Array.data[0]'
       value: 
@@ -33069,9 +33085,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 382184436}
     m_Modifications:
     - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
+      propertyPath: _interactionAudioSet
+      value: 
+      objectReference: {fileID: 11400000, guid: ed39d4951844a324195b32526608199f, type: 2}
+    - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: _requiredItems.Array.size
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
+      propertyPath: _failedInteractionAudioSet
+      value: 
+      objectReference: {fileID: 11400000, guid: bc9b17d19418e524a80af8e5b4266b70, type: 2}
     - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: '_requiredItems.Array.data[0]'
       value: 
@@ -34845,9 +34869,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
+      propertyPath: _interactionAudioSet
+      value: 
+      objectReference: {fileID: 11400000, guid: ed39d4951844a324195b32526608199f, type: 2}
+    - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: _requiredItems.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
+      propertyPath: _failedInteractionAudioSet
+      value: 
+      objectReference: {fileID: 11400000, guid: bc9b17d19418e524a80af8e5b4266b70, type: 2}
     - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: '_requiredItems.Array.data[0]'
       value: 
@@ -37986,6 +38018,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1125467366}
     m_Modifications:
     - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
+      propertyPath: _interactionAudioSet
+      value: 
+      objectReference: {fileID: 11400000, guid: ed39d4951844a324195b32526608199f, type: 2}
+    - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: _failedInteractionString
       value: 
       objectReference: {fileID: 0}
@@ -37993,6 +38029,10 @@ PrefabInstance:
       propertyPath: _requiredItems.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
+      propertyPath: _failedInteractionAudioSet
+      value: 
+      objectReference: {fileID: 11400000, guid: bc9b17d19418e524a80af8e5b4266b70, type: 2}
     - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: '_requiredItems.Array.data[0]'
       value: 
@@ -38729,7 +38769,7 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Unlock Mr. van Deventer's Safe
   _failedInteractionString: Wrong safe code
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: 58943d5434ca1d8428213046a67cd6d4, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: ee4b355ca87bc57459bbc8b61936cb84, type: 2}
@@ -39118,7 +39158,7 @@ MonoBehaviour:
   _interactionString: Search Drawer
   _failedInteractionString: Drawer is Empty
   _interactionAudioSet: {fileID: 0}
-  _failedInteractionAudioSet: {fileID: 0}
+  _failedInteractionAudioSet: {fileID: 11400000, guid: d0fd44fc773ccb743b25e98206b9eb42, type: 2}
   _audioVolume: 1
   _hiddenInItem: {fileID: 0}
 --- !u!61 &1850804060
@@ -39415,7 +39455,7 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Unlock Ms. Ferguson's Safe
   _failedInteractionString: Wrong safe code
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: 58943d5434ca1d8428213046a67cd6d4, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: b4b1e2d91ec83d049bdcc7669e065340, type: 2}
