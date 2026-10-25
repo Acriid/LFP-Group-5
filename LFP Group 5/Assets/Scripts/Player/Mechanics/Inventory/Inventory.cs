@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private List<Item> _itemList;
     //When max items gets smaller items drop from back of the list.
     [SerializeField] private int _maxItems = 4;
+    [SerializeField] private AudioSetScriptableObject _audioSet = null;
     private int _allowedSize = 0;
     private int _currentItems = 0;
     private int _lockedIndex = 0;
@@ -80,10 +81,16 @@ public class Inventory : MonoBehaviour
             }
             else
             {
+                itemComponent.FailedInteraction("Inventory is full.");
                 Debug.Log("Inventory is full.");
             }
 
             return;
+        }
+
+        if(_audioSet != null && SoundFXManager.Instance != null)
+        {
+            SoundFXManager.Instance.PlaySoundFXClip(_audioSet,transform,1f);
         }
 
         itemToAdd.SetActive(false);
