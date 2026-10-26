@@ -3,7 +3,8 @@ using UnityEngine;
 public class BatteryInteraction : Interaction
 {
     [SerializeField] private ItemSO _requiredItem;
-    [SerializeField] private GameObject _shadow, _revealKey;
+    [SerializeField] private GameObject _shadow, _revealKey, _otherBattery;
+    [SerializeField] private TimerControlPanel _panel;
 
     public override void Interact(GameObject interactingObject, Item selectedItem)
     {
@@ -43,6 +44,11 @@ public class BatteryInteraction : Interaction
 
         LightUp();
 
+        if(_panel != null)
+        {
+            _panel.StopTimer();
+        }
+
         base.Interact(interactingObject,selectedItem);
     }
 
@@ -50,6 +56,12 @@ public class BatteryInteraction : Interaction
     {
         _shadow.SetActive(false);
         _revealKey.SetActive(true);
+
+        if (_otherBattery != null)
+        {
+            _otherBattery.SetActive(true);
+        }
+
         SetCanInteract(false);
     }
 }

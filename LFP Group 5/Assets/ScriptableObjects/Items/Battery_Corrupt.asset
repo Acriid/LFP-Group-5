@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d5edace08274d43b4b46db19b5b813, type: 3}
+  m_Name: Battery_Corrupt
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSO
+  IsCorrupt: 1
+  IsSelected: 0
+  NormalModeSprite: {fileID: 0}
+  SafeModeSprite: {fileID: 0}
+  UISpriteNormal: {fileID: -4093145455614793586, guid: d6b3c6e2b63d1d24c8077611a36a775e, type: 3}
+  UISpriteSafe: {fileID: 6759633921709996654, guid: f25c22e77e5fade40b484d5c652bb670, type: 3}
+  ItemName: Battery
+  ItemDescription: Battery used to turn on lights
