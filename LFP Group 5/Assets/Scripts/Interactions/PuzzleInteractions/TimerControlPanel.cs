@@ -15,6 +15,7 @@ public class TimerControlPanel : Interaction
     [Header("Puzzle Reset")]
     [SerializeField] private ItemPositionReset _itemPositionReset;
     [SerializeField] private InventoryScanner _inventoryScanner;
+    [SerializeField] private Transform _playerResetPosition = null;
 
     [Header("Virus Enable")]
     [SerializeField] private GameObject _virus;
@@ -46,7 +47,8 @@ public class TimerControlPanel : Interaction
 
         // Save the player's current grid cell
         _player = player;
-        _savedCell = player.GetCurrentCell();
+        if(_playerResetPosition == null) return;
+        _savedCell = GridManager.Instance.GetGridCellAtPosition((Vector2)_playerResetPosition.position);
 
         if (_savedCell == null)
         {

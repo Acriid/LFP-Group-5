@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PauseGame : MonoBehaviour
 {
+    [SerializeField] private InputReader _inputReader = null;
     void OnEnable()
     {
         Time.timeScale = 0;
@@ -9,6 +10,9 @@ public class PauseGame : MonoBehaviour
 
     void OnDisable()
     {
+        _inputReader.EnableDropItemAction();
+        _inputReader.EnableModeSwitchAction();
+        
         Time.timeScale = 1;
     }
 }

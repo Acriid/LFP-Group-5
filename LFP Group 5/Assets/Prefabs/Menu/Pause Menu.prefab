@@ -2861,6 +2861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cab488e9edb20418e85b9d8c5f9520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseGame
+  _inputReader: {fileID: 11400000, guid: 073e7d718b0f7ee4c8caa590dd5771ba, type: 2}
 --- !u!114 &5953840992086783410
 MonoBehaviour:
   m_ObjectHideFlags: 0

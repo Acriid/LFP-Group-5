@@ -78,6 +78,11 @@ namespace GridSystem
         {
             _cellSize = mapToCopy._cellSize;
             _mapBounds = mapToCopy._mapBounds;
+            Vector3Int newMin = _mapBounds.min;
+            newMin.z = -1;
+            Vector3Int newMax = _mapBounds.max;
+            newMax.z = 1;
+            _mapBounds.SetMinMax(newMin,newMax);
 
             _gridList = new();
 
@@ -154,6 +159,11 @@ namespace GridSystem
 
             _cellSize = cellSize;
             _mapBounds = mapBounds;
+            Vector3Int newMin = _mapBounds.min;
+            newMin.z = -1;
+            Vector3Int newMax = _mapBounds.max;
+            newMax.z = 1;
+            _mapBounds.SetMinMax(newMin,newMax);
             
             int distanceBetween = mapBounds.max.x - mapBounds.min.x;
             int cellAmountX = distanceBetween/cellSize;
@@ -306,8 +316,12 @@ namespace GridSystem
 
         public GridCell GetGridCell(Vector2 worldPosition)
         {
-            if (!_mapBounds.Contains((Vector3Int)Vector2Int.FloorToInt(worldPosition)))
+            Debug.Log(worldPosition);
+            Vector3Int vector3IntWorldPosition = (Vector3Int)Vector2Int.FloorToInt(worldPosition);
+            Debug.Log(_mapBounds.Contains(vector3IntWorldPosition));
+            if (!_mapBounds.Contains(vector3IntWorldPosition))
             {
+                Debug.Log( 0 < 0);
                 return null;
             }
 
