@@ -14,6 +14,10 @@ public class TimerControlPanel : Interaction
 
     [Header("Puzzle Reset")]
     [SerializeField] private ItemPositionReset _itemPositionReset;
+    [SerializeField] private InventoryScanner _inventoryScanner;
+
+    [Header("Virus Enable")]
+    [SerializeField] private GameObject _virus;
 
     private float _remainingTime;
     private bool _timerRunning = false;
@@ -85,6 +89,11 @@ public class TimerControlPanel : Interaction
 
             // Return player to saved grid cell
             ResetPlayerPosition();
+
+            if (_inventoryScanner != null)
+            {
+                _inventoryScanner.ResetScannerDoor();
+            }
         }
 
         UpdateTimerUI();
@@ -92,6 +101,11 @@ public class TimerControlPanel : Interaction
 
     public void StartTimer()
     {
+        if (_virus != null)
+        {
+            _virus.SetActive(true);
+        }
+
         _remainingTime = _timeLimit;
         _timerRunning = true;
 
@@ -120,8 +134,6 @@ public class TimerControlPanel : Interaction
         }
 
         _player.TeleportToCell(_savedCell);
-
-        Debug.Log("PLAYER RETURNED TO STARTING CELL: " + _savedCell.Center());
     }
 
     private void UpdateTimerUI()

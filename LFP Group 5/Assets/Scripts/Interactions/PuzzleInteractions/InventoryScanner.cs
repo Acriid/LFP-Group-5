@@ -16,6 +16,7 @@ public class InventoryScanner : Interaction
     [SerializeField] private float _gridCellSize = 1f;
     [SerializeField] private float _slideSpeed = 3f;
     [SerializeField] private float _scanTime = 1f;
+    private Vector3 _closedPosition;
 
     [Header("Player")]
     [SerializeField] private InputReader _inputReader;
@@ -25,8 +26,10 @@ public class InventoryScanner : Interaction
     private Vector2 _targetPosition = Vector2.zero;
     void OnEnable()
     {
+        _closedPosition = transform.position;
+
         if (_scannerPanel != null)
-        _originalColor = _scannerPanel.color;
+            _originalColor = _scannerPanel.color;
     }
     void OnDisable()
     {
@@ -180,7 +183,7 @@ public class InventoryScanner : Interaction
             
             _scannerPanel.color = failedColor;
             if(_scannerText != null)
-            _scannerText.text = $"Scan Failed Missing {missingItems} ID: {requiredItemNames}";
+            _scannerText.text = $"Scan Failed Missing {missingItems} ID";
 
             PlayRandomFailedInteractionSound();
             yield return new WaitForSeconds(3f);
@@ -244,6 +247,7 @@ public class InventoryScanner : Interaction
         transform.position = _targetPosition;
 
         Debug.Log("SCANNER DOOR OPENED");
+        _slideRoutine = null;
     }
 
 
@@ -254,5 +258,49 @@ public class InventoryScanner : Interaction
         _scannerText.text = "";
         _scannerPanel.color = _originalColor;
         _scannerPanel.gameObject.SetActive(false);
+    }
+
+
+
+    //This'll reset the door when timer fails
+    public void ResetScannerDoor()
+    {
+        // Stop any existing door movement
+        if (_slideRoutine != null)
+        {
+            StopCoroutine(_slideRoutine);
+            _slideRoutine = null;
+        }
+
+        // Allow the scanner to be used again
+        SetCanInteract(true);
+
+        ResetScanPanel();
+
+        if (_inputReader != null)
+            _inputReader.EnablePlayerActions();
+
+        // Start moving the door back to its original position
+        _slideRoutine = StartCoroutine(SlideDoorClosed());
+    }
+
+    private IEnumerator SlideDoorClosed()
+    {
+        while (Vector3.Distance(transform.position, _closedPosition) > 0.01f)
+        {
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                _closedPosition,
+                _slideSpeed * Time.deltaTime
+            );
+
+            yield return null;
+        }
+
+        transform.position = _closedPosition;
+
+        Debug.Log("SCANNER DOOR CLOSED");
+
+        _slideRoutine = null;
     }
 }
