@@ -72,8 +72,6 @@ public class InventoryScanner : Interaction
         }
 
         ScanInventory(inventory);
-
-        base.Interact(interactingObject);
     }
 
     private void ScanInventory(Inventory inventory)
