@@ -30404,6 +30404,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1649509022}
     m_Modifications:
     - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
+      propertyPath: _scanTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705741143707668567, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: _interactionAudioSet
       value: 
       objectReference: {fileID: 11400000, guid: ed39d4951844a324195b32526608199f, type: 2}

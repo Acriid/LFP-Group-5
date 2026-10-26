@@ -34855,7 +34855,7 @@ MonoBehaviour:
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
-  _nextLevel: 0
+  _nextLevel: 5
 --- !u!1001 &1449521485
 PrefabInstance:
   m_ObjectHideFlags: 0
