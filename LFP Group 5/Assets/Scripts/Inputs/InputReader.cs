@@ -389,4 +389,8 @@ public class InputReader : ScriptableObject
         EnableDropItemAction();
     }
 
+    public InputAction GetMoveLeftAction => _moveLeftAction;
+    public InputAction GetMoveRightAction => _moveRightAction;
+    public InputAction GetMoveUpAction => _moveUpAction;
+    public InputAction GetMoveDownAction => _moveDownAction;
 }
