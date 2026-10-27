@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using GridSystem;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 [CreateAssetMenu(fileName = "VirusBrain", menuName = "Virus/VirusBrain")]
 public class VirusBrain : ScriptableObject
@@ -15,6 +17,32 @@ public class VirusBrain : ScriptableObject
     //
 
 
+    public List<InputAction> DisableActionsList {get; private set;} = new();
+    public InputReader InputReader {get; private set;} = null;
+    public void SetInputReader(InputReader newInputReader)
+    {
+        InputReader = newInputReader;
+    }
+    public void SetDisableActionsList(List<InputAction> newList)
+    {
+        DisableActionsList = new(newList);
+    }
+    public void DisableActions()
+    {
+        if(InputReader == null) return;
+        foreach(InputAction inputAction in DisableActionsList)
+        {
+            InputReader.DisableAction(inputAction);
+        }
+    }
+    public void EnableActions()
+    {
+        if(InputReader == null) return;
+        foreach(InputAction inputAction in DisableActionsList)
+        {
+            InputReader.EnableAction(inputAction);
+        }        
+    }
 
     public void BlockCell(GridCell cellToBlock)
     {
