@@ -30,6 +30,14 @@ public class EnableVirus : MonoBehaviour
         SoundFXManager.Instance.PlaySoundFXClip(_audioSet,transform,1f);
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (!_virus.activeInHierarchy)
+        {
+            _virus.SetActive(true);
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(!collision.CompareTag("Player")) return;
