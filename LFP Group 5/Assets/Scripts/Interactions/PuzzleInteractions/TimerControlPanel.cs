@@ -16,6 +16,7 @@ public class TimerControlPanel : Interaction
     [SerializeField] private ItemPositionReset _itemPositionReset;
     [SerializeField] private InventoryScanner _inventoryScanner;
     [SerializeField] private Transform _playerResetPosition = null;
+    [SerializeField] private BatteryInteraction _batteryInteraction = null;
 
     [Header("Virus Enable")]
     [SerializeField] private GameObject _virus;
@@ -36,6 +37,7 @@ public class TimerControlPanel : Interaction
     public override void Interact(GameObject interactingObject)
     {
         if (!_canInteract) return;
+        
 
         Player player = interactingObject.GetComponent<Player>();
 
@@ -44,6 +46,13 @@ public class TimerControlPanel : Interaction
             Debug.LogWarning("Timer Control Panel could not find Player.");
             return;
         }
+
+        if(player.GetCurrentMode() == GameMode.SafeMode)
+        {
+            InvokeFailedInteraction();
+            return;
+        }
+        
 
         // Save the player's current grid cell
         _player = player;
@@ -60,7 +69,7 @@ public class TimerControlPanel : Interaction
 
         StartTimer();
 
-        base.Interact(interactingObject);
+        PlayRandomInteractionSound();
     }
 
     private void Update()
@@ -96,6 +105,11 @@ public class TimerControlPanel : Interaction
             if (_inventoryScanner != null)
             {
                 _inventoryScanner.ResetScannerDoor();
+            }
+
+            if(_batteryInteraction != null)
+            {
+                _batteryInteraction.ResetLight();
             }
         }
 

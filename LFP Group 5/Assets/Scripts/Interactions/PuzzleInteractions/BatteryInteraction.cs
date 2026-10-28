@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BatteryInteraction : Interaction
@@ -6,6 +7,8 @@ public class BatteryInteraction : Interaction
     [SerializeField] private GameObject _shadow, _revealKey, _otherBattery;
     [SerializeField] private TimerControlPanel _panel;
 
+    [SerializeField] private GameObject _disableObject = null;
+
     public override void Interact(GameObject interactingObject, Item selectedItem)
     {
         if (!_canInteract) return;
@@ -13,12 +16,14 @@ public class BatteryInteraction : Interaction
         if (selectedItem == null)
         {
             Debug.Log("No item selected.");
+            InvokeFailedInteraction();
             return;
         }
 
         if (selectedItem.GetItemSO() != _requiredItem)
         {
             Debug.Log("This item cannot used.");
+            InvokeFailedInteraction();
             return;
         }
 
@@ -29,6 +34,7 @@ public class BatteryInteraction : Interaction
         if (player == null)
         {
             Debug.LogWarning("Interaction could not find Player.");
+            InvokeFailedInteraction();
             return;
         }
 
@@ -37,19 +43,22 @@ public class BatteryInteraction : Interaction
         if (inventory == null)
         {
             Debug.LogWarning("Player has no Inventory.");
+            InvokeFailedInteraction();
             return;
         }
 
         inventory.RemoveItemFromInventory(selectedItem.gameObject);
 
         LightUp();
+        DisableObjects();
 
         if(_panel != null)
         {
             _panel.StopTimer();
         }
 
-        base.Interact(interactingObject,selectedItem);
+
+        PlayRandomInteractionSound();
     }
 
     private void LightUp()
@@ -63,5 +72,22 @@ public class BatteryInteraction : Interaction
         }
 
         SetCanInteract(false);
+    }
+    public void ResetLight()
+    {
+        _shadow.SetActive(true);
+        _revealKey.SetActive(false);
+
+        if (_otherBattery != null)
+        {
+            _otherBattery.SetActive(false);
+        }
+
+        SetCanInteract(true);       
+    }
+    private void DisableObjects()
+    {
+        if(_disableObject == null) return;
+        _disableObject.SetActive(false);
     }
 }

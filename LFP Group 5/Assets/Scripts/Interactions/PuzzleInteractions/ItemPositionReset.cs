@@ -6,6 +6,7 @@ public class ItemPositionReset : MonoBehaviour
     [SerializeField] private List<Item> _itemsToTrack = new();
 
     private Dictionary<Item, Vector3> _originalPositions = new();
+    private Dictionary<Item, bool> _originallyActive = new();
 
     private void Awake()
     {
@@ -14,6 +15,7 @@ public class ItemPositionReset : MonoBehaviour
             if (item == null) continue;
 
             _originalPositions[item] = item.transform.position;
+            _originallyActive[item] = item.gameObject.activeSelf;
         }
     }
 
@@ -31,6 +33,7 @@ public class ItemPositionReset : MonoBehaviour
 
             // Restore original position
             item.transform.position = _originalPositions[item];
+            item.gameObject.SetActive(_originallyActive[item]);
 
             // Make item visible again
             item.gameObject.SetActive(true);

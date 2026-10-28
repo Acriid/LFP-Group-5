@@ -15,15 +15,9 @@ public class Interaction : MonoBehaviour
     [SerializeField] protected float _audioVolume = 1f;
 
     public event Action<string> OnFailedInteraction;
-    public virtual void Interact(GameObject interactingObject)
-    {
-        PlayRandomInteractionSound();
-    }
+    public virtual void Interact(GameObject interactingObject){}
+    public virtual void Interact(GameObject interactingObject, Item selectedItem){}
 
-    public virtual void Interact(GameObject interactingObject, Item selectedItem)
-    {
-        PlayRandomInteractionSound();
-    }
     public virtual void SetCanInteract(bool newValue) => _canInteract = newValue;
 
     public string GetInteractionString()

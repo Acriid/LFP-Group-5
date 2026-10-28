@@ -27,7 +27,7 @@ public class Item : Interaction
         PickUpItem(interactingObject);
 
         
-        base.Interact(interactingObject);
+        PlayRandomInteractionSound();
     }
     private void PickUpItem(GameObject interactingObject)
     {
