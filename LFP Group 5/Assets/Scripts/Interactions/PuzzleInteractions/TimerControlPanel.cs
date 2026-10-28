@@ -73,6 +73,7 @@ public class TimerControlPanel : Interaction
         {
             _remainingTime = 0f;
             _timerRunning = false;
+            SetCanInteract(true);
 
             // Hide timer UI
             if (_timeLeft != null)
@@ -107,6 +108,8 @@ public class TimerControlPanel : Interaction
         {
             _virus.SetActive(true);
         }
+
+        SetCanInteract(false);
 
         _remainingTime = _timeLimit;
         _timerRunning = true;

@@ -771,6 +771,7 @@ MonoBehaviour:
   _virus: {fileID: 1296156656}
   _nextVirus: {fileID: 897553205}
   _player: {fileID: 1388884533}
+  isChain: 0
   _pixelationTime: 0.5
   _audioSet: {fileID: 0}
 --- !u!61 &74322777
@@ -1460,7 +1461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &130313327
 Transform:
   m_ObjectHideFlags: 0
@@ -13873,7 +13874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &459522266
 Transform:
   m_ObjectHideFlags: 0
@@ -14309,6 +14310,7 @@ MonoBehaviour:
   _virus: {fileID: 2061457685}
   _nextVirus: {fileID: 0}
   _player: {fileID: 0}
+  isChain: 0
   _pixelationTime: 0.5
   _audioSet: {fileID: 0}
 --- !u!61 &493458949
@@ -18769,7 +18771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &652073394
 Transform:
   m_ObjectHideFlags: 0
@@ -20141,6 +20143,7 @@ MonoBehaviour:
   _virus: {fileID: 1629009384}
   _nextVirus: {fileID: 652073393}
   _player: {fileID: 1388884533}
+  isChain: 1
   _pixelationTime: 0.5
   _audioSet: {fileID: 0}
 --- !u!61 &692123694
@@ -20177,7 +20180,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.31049037, y: 0.66217434}
+  m_Offset: {x: 0.3181583, y: 0.8968966}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -20187,7 +20190,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.10465324, y: 1.186907}
+  m_Size: {x: 0.08931738, y: 0.71746254}
   m_EdgeRadius: 0
 --- !u!1 &698227517
 GameObject:
@@ -21489,6 +21492,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 12, y: -8, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 4, y: -7, z: 0}
     second:
       serializedVersion: 2
@@ -22522,18 +22535,18 @@ Tilemap:
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - serializedVersion: 2
-    m_RefCount: 95
+    m_RefCount: 96
     m_Data: {fileID: 11400000, guid: f9fdb0b3b1b20f442b36a4afce0577ca, type: 2}
   - serializedVersion: 2
     m_RefCount: 12
     m_Data: {fileID: 11400000, guid: cd5ee19e6ec9f2b418540a3ef5062c95, type: 2}
   m_TileSpriteArray:
   - serializedVersion: 2
-    m_RefCount: 107
+    m_RefCount: 108
     m_Data: {fileID: 7482667652216324306, guid: 4f2564406b2d3bf438c91dcbd68b5c9e, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
-    m_RefCount: 107
+    m_RefCount: 108
     m_Data:
       e00: 1
       e01: 0
@@ -22553,7 +22566,7 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - serializedVersion: 2
-    m_RefCount: 95
+    m_RefCount: 96
     m_Data: {r: 0, g: 0, b: 0, a: 1}
   - serializedVersion: 2
     m_RefCount: 12
@@ -23271,7 +23284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &897553206
 Transform:
   m_ObjectHideFlags: 0
@@ -23456,6 +23469,10 @@ PrefabInstance:
     - target: {fileID: 8120756569503338206, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: m_Name
       value: Scanner_H
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120756569503338206, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8807994872042877157, guid: dc92ae4346bc1574f826486c521ea68d, type: 3}
       propertyPath: m_LocalScale.x
@@ -29910,6 +29927,7 @@ MonoBehaviour:
   _virus: {fileID: 588443062}
   _nextVirus: {fileID: 0}
   _player: {fileID: 1388884533}
+  isChain: 0
   _pixelationTime: 0.5
   _audioSet: {fileID: 0}
 --- !u!61 &1396213144
@@ -30007,6 +30025,7 @@ MonoBehaviour:
   _virus: {fileID: 525392173}
   _nextVirus: {fileID: 897553205}
   _player: {fileID: 1388884533}
+  isChain: 1
   _pixelationTime: 0.5
   _audioSet: {fileID: 0}
 --- !u!61 &1397130973
@@ -30043,7 +30062,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.07112827, y: 0.18092483}
+  m_Offset: {x: 0.06742057, y: -0.17165828}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -30053,7 +30072,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.36102122, y: 1.774748}
+  m_Size: {x: 0.3536058, y: 1.0695817}
   m_EdgeRadius: 0
 --- !u!1 &1402676948
 GameObject:
@@ -30346,6 +30365,7 @@ MonoBehaviour:
   _virus: {fileID: 194360599}
   _nextVirus: {fileID: 0}
   _player: {fileID: 1388884533}
+  isChain: 0
   _pixelationTime: 0.5
   _audioSet: {fileID: 0}
 --- !u!61 &1417130459
@@ -30443,6 +30463,7 @@ MonoBehaviour:
   _virus: {fileID: 1907517473}
   _nextVirus: {fileID: 130313326}
   _player: {fileID: 1388884533}
+  isChain: 1
   _pixelationTime: 0.5
   _audioSet: {fileID: 0}
 --- !u!61 &1429327208
@@ -30479,7 +30500,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.5118096, y: 0.20582342}
+  m_Offset: {x: 0.576565, y: 0.20582342}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -30489,7 +30510,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.4914081, y: 1.1379204}
+  m_Size: {x: 0.3618973, y: 1.1379204}
   m_EdgeRadius: 0
 --- !u!1 &1432612563
 GameObject:
@@ -32894,6 +32915,7 @@ MonoBehaviour:
   _virus: {fileID: 88911535}
   _nextVirus: {fileID: 970642185}
   _player: {fileID: 1388884533}
+  isChain: 0
   _pixelationTime: 0.5
   _audioSet: {fileID: 0}
 --- !u!61 &1623527739
@@ -35566,6 +35588,7 @@ MonoBehaviour:
   _virus: {fileID: 1786287685}
   _nextVirus: {fileID: 459522265}
   _player: {fileID: 1388884533}
+  isChain: 1
   _pixelationTime: 0.5
   _audioSet: {fileID: 0}
 --- !u!61 &1863907038
@@ -35602,7 +35625,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.45667267, y: 0.19484085}
+  m_Offset: {x: 0.51982236, y: 0.19484085}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -35612,7 +35635,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.49231339, y: 1.1764294}
+  m_Size: {x: 0.36601397, y: 1.1764294}
   m_EdgeRadius: 0
 --- !u!1 &1872927860
 GameObject:

@@ -6,6 +6,7 @@ public class EnableVirus : MonoBehaviour
 {
     [SerializeField] private GameObject _blockedCells, _virus, _nextVirus;
     [SerializeField] private Player _player;
+    [SerializeField] private bool isChain = false; 
 
     [SerializeField] private float _pixelationTime = 0.5f;
     [SerializeField] private AudioSetScriptableObject _audioSet = null;
@@ -32,6 +33,9 @@ public class EnableVirus : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (!collision.CompareTag("Player")) return;
+        if (_player.GetCurrentMode() != GameMode.NormalMode) return;
+        
         if (!_virus.activeInHierarchy)
         {
             _virus.SetActive(true);
@@ -46,6 +50,11 @@ public class EnableVirus : MonoBehaviour
         if (_nextVirus != null)
         {
             _nextVirus.SetActive(true);
+        }
+
+        if (isChain)
+        {
+            return; 
         }
 
         gameObject.SetActive(false);
