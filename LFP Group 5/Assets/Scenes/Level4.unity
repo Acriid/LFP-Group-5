@@ -11212,7 +11212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimerControlPanel
   _canInteract: 1
   _interactionString: Start Control Timer
-  _failedInteractionString: 
+  _failedInteractionString: Cannot Activate Corrupt Timer
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -40882,7 +40882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
   _interactionString: Open Door
-  _failedInteractionString: 
+  _failedInteractionString: Door is Locked
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -43373,7 +43373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimerControlPanel
   _canInteract: 1
   _interactionString: Start Control Timer
-  _failedInteractionString: 
+  _failedInteractionString: Cannot Activate Corrupt Timer
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -43676,7 +43676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimerControlPanel
   _canInteract: 1
   _interactionString: Start Control Timer
-  _failedInteractionString: 
+  _failedInteractionString: Cannot Activate Corrupt Timer
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -44647,7 +44647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimerControlPanel
   _canInteract: 1
   _interactionString: Start Control Timer
-  _failedInteractionString: 
+  _failedInteractionString: Cannot Activate Corrupt Timer
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -47382,7 +47382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TimerControlPanel
   _canInteract: 1
   _interactionString: Start Control Timer
-  _failedInteractionString: 
+  _failedInteractionString: Cannot Activate Corrupt Timer
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
