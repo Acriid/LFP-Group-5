@@ -36836,6 +36836,18 @@ PrefabInstance:
       propertyPath: _obstacleMask.m_Bits
       value: 272
       objectReference: {fileID: 0}
+    - target: {fileID: 639965756713993825, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 639965756713993825, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 639965756713993825, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1110758083413880316, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: m_Name
       value: Player
