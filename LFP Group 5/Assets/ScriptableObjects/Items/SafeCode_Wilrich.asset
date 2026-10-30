@@ -16,7 +16,7 @@ MonoBehaviour:
   IsSelected: 0
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
-  UISpriteNormal: {fileID: 0}
-  UISpriteSafe: {fileID: 0}
+  UISpriteNormal: {fileID: 3603692953287949165, guid: 9ed6c94331566e640aa6bcc00ad06684, type: 3}
+  UISpriteSafe: {fileID: 7668847017451551851, guid: ca3f276282270ba44b903fffe642c277, type: 3}
   ItemName: Paper
   ItemDescription: '<b>Mr. van Deventer''s</b> Safe Password: 8152'
