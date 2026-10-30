@@ -47808,7 +47808,7 @@ MonoBehaviour:
   _unlockedDoor: {fileID: 1035422973}
   _keypadCanvas: {fileID: 907951764}
   _passcodeDisplay: {fileID: 200446580}
-  _correctPasscode: 8152
+  _correctPasscode: 3951
   _unlockedItem: {fileID: 184797373}
 --- !u!1 &1799701771
 GameObject:
@@ -49454,7 +49454,7 @@ MonoBehaviour:
   _unlockedDoor: {fileID: 1359984730}
   _keypadCanvas: {fileID: 1552650769}
   _passcodeDisplay: {fileID: 875743403}
-  _correctPasscode: 91212
+  _correctPasscode: 8152
   _unlockedItem: {fileID: 642243504}
 --- !u!1 &1882022846
 GameObject:
