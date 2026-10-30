@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: SafeCode_Gemma
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   IsCorrupt: 0
-  IsSelected: 0
+  IsSelected: 1
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
   UISpriteNormal: {fileID: 0}
   UISpriteSafe: {fileID: 0}
   ItemName: Paper
-  ItemDescription: '<b>Ms. Ferguson''s</b> Safe Password: 8152'
+  ItemDescription: '<b>Ms. Ferguson''s</b> Safe Password: 90210'
