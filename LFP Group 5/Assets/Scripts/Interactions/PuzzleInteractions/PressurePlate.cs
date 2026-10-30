@@ -25,7 +25,8 @@ public class PressurePlate : Interaction
     public void CheckPlate()
     {
         // Find the grid cell closest to the pressure plate
-        GridCell plateCell = GetNearestGridCell(transform.position);
+        GridCell plateCell = GridManager.Instance.GetGridCellAtPosition(transform.position);
+        // GridCell plateCell = GetNearestGridCell(transform.position);
 
         if (plateCell == null)
             return;
@@ -36,7 +37,8 @@ public class PressurePlate : Interaction
         foreach (Item item in items)
         {
             // Find the grid cell closest to the item
-            GridCell itemCell = GetNearestGridCell(item.transform.position);
+            GridCell itemCell = GridManager.Instance.GetGridCellAtPosition(item.transform.position);
+            // GridCell itemCell = GetNearestGridCell(item.transform.position);
 
             if (itemCell == null)
                 continue;
