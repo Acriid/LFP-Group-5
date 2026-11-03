@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     [SerializeField] private InteractMechanic _interactMechanic = null;
     [SerializeField] private Inventory _inventory = null;
     [SerializeField] private ModeSwitchMechanic _modeSwitchMechanic = null;
+    [SerializeField] private bool _disableModeSwitch = false;
     // REMOVE LATER
     [Header("REMOVE LATER")]
     public GameObject ModeSwitchPanel;
@@ -184,17 +185,14 @@ public class Player : MonoBehaviour
     }
     private void SwitchMode()
     {
+        if(_disableModeSwitch) return;
         if(_currentMode == GameMode.NormalMode)
         {
             _currentMode = GameMode.SafeMode;
-            //REMOVE LATER
-            ModeSwitchPanel.SetActive(true);
         }
         else
         {
             _currentMode = GameMode.NormalMode;
-            //REMOVE LATER
-            ModeSwitchPanel.SetActive(false);
         }
 
         _modeSwitchMechanic.SwitchMode(_currentMode);

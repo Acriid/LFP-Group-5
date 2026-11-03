@@ -30,6 +30,8 @@ public class Interaction : MonoBehaviour
     }
     protected void InvokeFailedInteraction()
     {
+        PlayRandomFailedInteractionSound();
+
         OnFailedInteraction?.Invoke(_failedInteractionString);
     }
     protected void InvokeFailedInteraction(string interactionString)

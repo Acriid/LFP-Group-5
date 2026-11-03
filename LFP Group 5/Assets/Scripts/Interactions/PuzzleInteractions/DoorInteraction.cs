@@ -56,8 +56,6 @@ public class DoorInteraction : Interaction
         inventory.RemoveItemFromInventory(selectedItem.gameObject);
 
         OpenDoor();
-
-        base.Interact(interactingObject,selectedItem);
     }
 
     private void OpenDoor()
@@ -68,6 +66,7 @@ public class DoorInteraction : Interaction
 
         SetCanInteract(false);
 
+        PlayRandomInteractionSound();
         // hello Gemma here. Need to add this to trigger dialogue.
         OnDoorOpened?.Invoke();
     }
