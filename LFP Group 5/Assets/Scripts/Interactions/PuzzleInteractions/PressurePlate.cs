@@ -10,6 +10,8 @@ public class PressurePlate : Interaction
     [SerializeField] private GameObject _gate;
     [SerializeField] private Transform _cellOverride = null;
 
+    private bool _playedAudio = false;
+
     // Gemma added this. Need it for triggering dialogue :p
     public event Action OnGateOpened;
 
@@ -104,6 +106,12 @@ public class PressurePlate : Interaction
 
         // Gemma added this. Need it for triggering dialogue :p
         OnGateOpened?.Invoke();
+
+        if(!_playedAudio)
+        {
+            PlayRandomInteractionSound();
+            _playedAudio = true;
+        }
     }
 
     private void DeactivatePlate()
@@ -116,5 +124,7 @@ public class PressurePlate : Interaction
         if (_gate == null) return;
         _gate.SetActive(true);
         Debug.Log("PRESSURE PLATE DEACTIVATED!");
+
+        _playedAudio = false;
     }
 }

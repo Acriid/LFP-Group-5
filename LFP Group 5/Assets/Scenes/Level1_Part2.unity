@@ -7673,8 +7673,8 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Open Door
   _failedInteractionString: Door is Locked
-  _interactionAudioSet: {fileID: 0}
-  _failedInteractionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: 233d9c80a7146e84d85c6a81532bc8c2, type: 2}
+  _failedInteractionAudioSet: {fileID: 11400000, guid: aedec9bfcfe2bc3419540505fbc128ad, type: 2}
   _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: bbf63bf7d8b761f439363fd9abc9d13d, type: 2}
   _lockedDoor: {fileID: 1221512439}
@@ -9119,8 +9119,8 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Open Door
   _failedInteractionString: Door is Locked
-  _interactionAudioSet: {fileID: 0}
-  _failedInteractionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: 233d9c80a7146e84d85c6a81532bc8c2, type: 2}
+  _failedInteractionAudioSet: {fileID: 11400000, guid: aedec9bfcfe2bc3419540505fbc128ad, type: 2}
   _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
   _lockedDoor: {fileID: 1544150309}
