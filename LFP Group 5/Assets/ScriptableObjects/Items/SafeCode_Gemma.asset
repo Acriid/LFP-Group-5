@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d5edace08274d43b4b46db19b5b813, type: 3}
+  m_Name: SafeCode_Gemma
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSO
+  IsCorrupt: 0
+  IsSelected: 0
+  NormalModeSprite: {fileID: 0}
+  SafeModeSprite: {fileID: 0}
+  UISpriteNormal: {fileID: 6107667995423345671, guid: ed34c455650f15f40acd19bf801f847b, type: 3}
+  UISpriteSafe: {fileID: -38906776432634744, guid: 99abfb61e0f11ee4db128028e08daa4d, type: 3}
+  ItemName: Paper
+  ItemDescription: '<b>Ms. Ferguson''s</b> Safe Password: 8152'
