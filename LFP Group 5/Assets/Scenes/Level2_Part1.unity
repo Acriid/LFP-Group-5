@@ -8954,7 +8954,7 @@ Transform:
   m_GameObject: {fileID: 483047488}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.206, y: -3.411, z: 0}
+  m_LocalPosition: {x: 1.48386, y: 0.06731987, z: 0}
   m_LocalScale: {x: 0.9300909, y: 0.9300909, z: 0.9300909}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9045,6 +9045,7 @@ MonoBehaviour:
   _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 182902048}
+  _cellOverride: {fileID: 0}
 --- !u!212 &483047493
 SpriteRenderer:
   serializedVersion: 3
@@ -10215,7 +10216,7 @@ Transform:
   m_GameObject: {fileID: 644344370}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.22, y: -5.42, z: 0}
+  m_LocalPosition: {x: -3.5301404, y: -1.9416802, z: 0}
   m_LocalScale: {x: 0.9300909, y: 0.9300909, z: 0.9300909}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10306,6 +10307,7 @@ MonoBehaviour:
   _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 298124964}
+  _cellOverride: {fileID: 0}
 --- !u!212 &644344375
 SpriteRenderer:
   serializedVersion: 3
@@ -11285,7 +11287,7 @@ Transform:
   m_GameObject: {fileID: 737359174}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.2, y: -2.426, z: 0}
+  m_LocalPosition: {x: -0.51013994, y: 1.0523198, z: 0}
   m_LocalScale: {x: 0.9300909, y: 0.9300909, z: 0.9300909}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11376,6 +11378,7 @@ MonoBehaviour:
   _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 28288230}
+  _cellOverride: {fileID: 0}
 --- !u!212 &737359179
 SpriteRenderer:
   serializedVersion: 3
@@ -14308,7 +14311,7 @@ Transform:
   m_GameObject: {fileID: 819146736}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.68986, y: 3.47832, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15138,12 +15141,13 @@ Transform:
   m_GameObject: {fileID: 891534575}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.196, y: -3.496, z: 0}
+  m_LocalPosition: {x: 7.49386, y: -0.017680168, z: 0}
   m_LocalScale: {x: 1.1106216, y: 1.1106216, z: 1.1106216}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 148673849}
   - {fileID: 1952362623}
+  - {fileID: 1686941892}
   m_Father: {fileID: 819146737}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &891534577
@@ -15229,6 +15233,7 @@ MonoBehaviour:
   _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 526640832}
+  _cellOverride: {fileID: 1686941892}
 --- !u!212 &891534580
 SpriteRenderer:
   serializedVersion: 3
@@ -15906,7 +15911,7 @@ MonoBehaviour:
   - {fileID: 483047492}
   _moveItemPositions:
   - {x: 1.5, y: 0.5}
-  - {x: -3.5, y: 1.5}
+  - {x: -3.5, y: 2.1}
   _corruptItems: []
 --- !u!1 &1053459032
 GameObject:
@@ -16137,7 +16142,7 @@ Transform:
   m_GameObject: {fileID: 1094749840}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.15, y: -1.46, z: 0}
+  m_LocalPosition: {x: -5.4601398, y: 2.0183198, z: 0}
   m_LocalScale: {x: 0.9300909, y: 0.9300909, z: 0.9300909}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16228,6 +16233,7 @@ MonoBehaviour:
   _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 970464349}
+  _cellOverride: {fileID: 0}
 --- !u!212 &1094749845
 SpriteRenderer:
   serializedVersion: 3
@@ -18007,6 +18013,7 @@ MonoBehaviour:
   _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 668423956}
+  _cellOverride: {fileID: 0}
 --- !u!212 &1409813919
 SpriteRenderer:
   serializedVersion: 3
@@ -18076,7 +18083,7 @@ Transform:
   m_GameObject: {fileID: 1409813917}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.824, y: 2.53, z: 0}
+  m_LocalPosition: {x: 8.51386, y: 6.00832, z: 0}
   m_LocalScale: {x: 1.1099705, y: 1.0836489, z: 0.9300909}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18268,7 +18275,7 @@ Transform:
   m_GameObject: {fileID: 1419951825}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.181, y: -7.49, z: 0}
+  m_LocalPosition: {x: 5.5088596, y: -4.0116796, z: 0}
   m_LocalScale: {x: 1.0470033, y: 1.0470033, z: 1.0470033}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18359,6 +18366,7 @@ MonoBehaviour:
   _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
   _gate: {fileID: 0}
+  _cellOverride: {fileID: 0}
 --- !u!212 &1419951830
 SpriteRenderer:
   serializedVersion: 3
@@ -19813,6 +19821,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GateDiaogueTrigger
   _pressurePlate: {fileID: 1409813918}
   _dialogue: {fileID: 11400000, guid: 6c5ca1a6f967b244aaf3ef0746045a63, type: 2}
+--- !u!1 &1686941891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1686941892}
+  m_Layer: 7
+  m_Name: CellOverride
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1686941892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686941891}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: 0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 891534576}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1736868968
 GameObject:
   m_ObjectHideFlags: 0
@@ -22927,7 +22966,7 @@ MonoBehaviour:
   - {fileID: 1419951829}
   - {fileID: 1409813918}
   _moveItemPositions:
-  - {x: 6.5, y: -3.5}
+  - {x: 6.5, y: -4}
   - {x: 9.5, y: 0.5}
   - {x: 8.5, y: 5.5}
   _corruptItems: []
