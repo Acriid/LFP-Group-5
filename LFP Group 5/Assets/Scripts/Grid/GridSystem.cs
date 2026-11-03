@@ -316,9 +316,7 @@ namespace GridSystem
 
         public GridCell GetGridCell(Vector2 worldPosition)
         {
-            Debug.Log(worldPosition);
             Vector3Int vector3IntWorldPosition = (Vector3Int)Vector2Int.FloorToInt(worldPosition);
-            Debug.Log(_mapBounds.Contains(vector3IntWorldPosition));
             if (!_mapBounds.Contains(vector3IntWorldPosition))
             {
                 Debug.Log( 0 < 0);
