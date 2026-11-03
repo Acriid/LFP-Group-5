@@ -16,7 +16,7 @@ MonoBehaviour:
   IsSelected: 0
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
-  UISpriteNormal: {fileID: -8536787702624949336, guid: 7c413b529e3ce5e47b25c48be7665d2d, type: 3}
-  UISpriteSafe: {fileID: 5021191168463938009, guid: dd83cdae73f3c8d4993346b784b5afe8, type: 3}
+  UISpriteNormal: {fileID: -9121560813237964901, guid: 50009ef1470c58340ae8d6930571baac, type: 3}
+  UISpriteSafe: {fileID: -8692378536355825528, guid: e9a6e42d2c4dd424c8988e6b121155c1, type: 3}
   ItemName: Statue
-  ItemDescription: A Misplaced Statue
+  ItemDescription: A glitched statue
