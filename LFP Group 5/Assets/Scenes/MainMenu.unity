@@ -173,6 +173,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 310057680969367395, guid: 5b133e8e0783ffa4d9749e3d41037559, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -257,6 +258,8 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of be4bb0a (idk what this is but it was on here)
     - target: {fileID: 7384831995158477265, guid: 5b133e8e0783ffa4d9749e3d41037559, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1002.8739
@@ -295,10 +298,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7384831995158477265, guid: 5b133e8e0783ffa4d9749e3d41037559, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8162231673641218839, guid: 5b133e8e0783ffa4d9749e3d41037559, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8960921702880246756, guid: 5b133e8e0783ffa4d9749e3d41037559, type: 3}
