@@ -8,12 +8,12 @@ public class MapModeSwitchManager : MonoBehaviour
     [SerializeField] private GameObject _safeMap = null;
     void OnEnable()
     {
-        if(_normalMap == null && _safeMap == null)
+        if(_normalMap != null && _safeMap != null)
         _modeSwitchMechanic.OnModeSwitch += ManageInputMode;
     }
     void OnDisable()
     {
-        if(_normalMap == null && _safeMap == null)
+        if(_normalMap != null && _safeMap != null)
         _modeSwitchMechanic.OnModeSwitch -= ManageInputMode;
     }
     private void ManageInputMode(GameMode newMode)
