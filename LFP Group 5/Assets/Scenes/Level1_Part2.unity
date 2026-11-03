@@ -7865,6 +7865,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 621595623073137999, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
+      propertyPath: _disableModeSwitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 621595623073137999, guid: a58b2d6d528ac954bab6cf42064293e1, type: 3}
       propertyPath: _obstacleMask.m_Bits
       value: 272
       objectReference: {fileID: 0}
