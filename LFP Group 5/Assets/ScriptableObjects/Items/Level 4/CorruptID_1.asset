@@ -16,7 +16,7 @@ MonoBehaviour:
   IsSelected: 0
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
-  UISpriteNormal: {fileID: 9074841878663346481, guid: 50009ef1470c58340ae8d6930571baac, type: 3}
-  UISpriteSafe: {fileID: 7146504834488971393, guid: 4c7fa96d80068d54685e91722305ab5a, type: 3}
+  UISpriteNormal: {fileID: -5292099433326304729, guid: 486656f3493f9924ead8f9b63fe24193, type: 3}
+  UISpriteSafe: {fileID: -1206177014612017407, guid: 08f56cd2fd787db44a8817a83a619319, type: 3}
   ItemName: 
   ItemDescription: 
