@@ -17,6 +17,6 @@ MonoBehaviour:
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
   UISpriteNormal: {fileID: 4374903787280043085, guid: 30911f60f6c89d343b3093ac2e7f9e96, type: 3}
-  UISpriteSafe: {fileID: 3473880159651866967, guid: 229ea326e2f0fcc45ba4b6a67e1416ac, type: 3}
+  UISpriteSafe: {fileID: 8892170903295116795, guid: 400974d00201d1843b8d7d31d1dcfa5a, type: 3}
   ItemName: 'ID Card LVL4 '
   ItemDescription: <b>Sales</b>
