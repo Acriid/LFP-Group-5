@@ -17,6 +17,6 @@ MonoBehaviour:
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
   UISpriteNormal: {fileID: 6107667995423345671, guid: ed34c455650f15f40acd19bf801f847b, type: 3}
-  UISpriteSafe: {fileID: -38906776432634744, guid: 99abfb61e0f11ee4db128028e08daa4d, type: 3}
+  UISpriteSafe: {fileID: 2431469166239167707, guid: f97534a9b0ecca64f8817fdcd64991a2, type: 3}
   ItemName: Paper
   ItemDescription: '<b>Ms. Ferguson''s</b> Safe Password: 8152'

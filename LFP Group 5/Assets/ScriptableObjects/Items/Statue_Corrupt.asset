@@ -17,6 +17,6 @@ MonoBehaviour:
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
   UISpriteNormal: {fileID: -9121560813237964901, guid: 50009ef1470c58340ae8d6930571baac, type: 3}
-  UISpriteSafe: {fileID: -8692378536355825528, guid: e9a6e42d2c4dd424c8988e6b121155c1, type: 3}
+  UISpriteSafe: {fileID: 7717825430338989543, guid: 5c919a642f1d3d44a963f4606c166b16, type: 3}
   ItemName: Statue
   ItemDescription: A glitched statue
