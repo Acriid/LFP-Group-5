@@ -38171,8 +38171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BatteryInteraction
   _canInteract: 1
-  _interactionString: Add Something
-  _failedInteractionString: 'Needs Battery '
+  _interactionString: Turn On Light
+  _failedInteractionString: Needs Power Source
   _interactionAudioSet: {fileID: 11400000, guid: a128c291cbb932648b84897403f49f4f, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -45130,8 +45130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BatteryInteraction
   _canInteract: 1
-  _interactionString: Add Something
-  _failedInteractionString: 'Needs Battery '
+  _interactionString: Turn On Light
+  _failedInteractionString: Needs Power Source
   _interactionAudioSet: {fileID: 11400000, guid: a128c291cbb932648b84897403f49f4f, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1

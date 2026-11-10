@@ -9194,9 +9194,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: Pick up Key
+  _interactionString: Pick Up Key
   _failedInteractionString: 
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: 7c6ef330d1c4c484d99a13ae74c36d1d, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
@@ -9314,7 +9314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 0
-  _interactionString: 
+  _interactionString: Interact With Plinth
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 11400000, guid: 7ab2bee7a1ca41a4e835c93a5b6afa0f, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
@@ -10576,7 +10576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 0
-  _interactionString: 
+  _interactionString: Interact With Plinth
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 11400000, guid: 7ab2bee7a1ca41a4e835c93a5b6afa0f, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
@@ -11739,7 +11739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 0
-  _interactionString: 
+  _interactionString: Interact With Plinth
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 11400000, guid: 7ab2bee7a1ca41a4e835c93a5b6afa0f, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
@@ -14792,7 +14792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: Search Desk
-  _failedInteractionString: Desk is empty
+  _failedInteractionString: Desk Is Empty
   _interactionAudioSet: {fileID: 11400000, guid: a60f0116c7d42b24fbc970be012f3799, type: 2}
   _failedInteractionAudioSet: {fileID: 11400000, guid: d0fd44fc773ccb743b25e98206b9eb42, type: 2}
   _audioVolume: 1
@@ -15970,7 +15970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 0
-  _interactionString: 
+  _interactionString: Interact With Plinth
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 11400000, guid: 7ab2bee7a1ca41a4e835c93a5b6afa0f, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
@@ -17191,7 +17191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 0
-  _interactionString: 
+  _interactionString: Interact With Plinth
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 11400000, guid: 7ab2bee7a1ca41a4e835c93a5b6afa0f, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
@@ -17790,9 +17790,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: Pick up Key
+  _interactionString: Pick Up Key
   _failedInteractionString: 
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: 7c6ef330d1c4c484d99a13ae74c36d1d, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 40aa52d61b403554ebd14b42d02d3e2e, type: 2}
@@ -18112,7 +18112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
   _interactionString: Open Door
-  _failedInteractionString: Door is Locked
+  _failedInteractionString: Door Is Locked
   _interactionAudioSet: {fileID: 11400000, guid: 233d9c80a7146e84d85c6a81532bc8c2, type: 2}
   _failedInteractionAudioSet: {fileID: 11400000, guid: aedec9bfcfe2bc3419540505fbc128ad, type: 2}
   _audioVolume: 1
@@ -18971,8 +18971,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 0
-  _interactionString: 
-  _failedInteractionString: Drop item
+  _interactionString: Interact With Plinth
+  _failedInteractionString: 
   _interactionAudioSet: {fileID: 11400000, guid: 7ab2bee7a1ca41a4e835c93a5b6afa0f, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
@@ -19324,7 +19324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 0
-  _interactionString: 
+  _interactionString: Interact With Plinth
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 11400000, guid: 7ab2bee7a1ca41a4e835c93a5b6afa0f, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
@@ -20293,7 +20293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
   _canInteract: 1
   _interactionString: Open Door
-  _failedInteractionString: Door is Locked
+  _failedInteractionString: Door Is Locked
   _interactionAudioSet: {fileID: 11400000, guid: 233d9c80a7146e84d85c6a81532bc8c2, type: 2}
   _failedInteractionAudioSet: {fileID: 11400000, guid: aedec9bfcfe2bc3419540505fbc128ad, type: 2}
   _audioVolume: 1

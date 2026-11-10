@@ -3072,7 +3072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TableInteraction
   _canInteract: 1
   _interactionString: Search Desk
-  _failedInteractionString: Desk is empty
+  _failedInteractionString: Desk Is Empty
   _interactionAudioSet: {fileID: 11400000, guid: a60f0116c7d42b24fbc970be012f3799, type: 2}
   _failedInteractionAudioSet: {fileID: 11400000, guid: d0fd44fc773ccb743b25e98206b9eb42, type: 2}
   _audioVolume: 1
@@ -4353,9 +4353,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: Pick up paper
+  _interactionString: Pick Up Paper
   _failedInteractionString: 
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: 7c6ef330d1c4c484d99a13ae74c36d1d, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 8a19215ff04430e4f80f52eaeb5da3b9, type: 2}
@@ -7856,9 +7856,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Item
   _canInteract: 1
-  _interactionString: Pick up paper
+  _interactionString: Pick Up Paper
   _failedInteractionString: 
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: 7c6ef330d1c4c484d99a13ae74c36d1d, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 4b91395097bd39b4e8c1876c72060545, type: 2}
@@ -12188,10 +12188,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PasscodeInteraction
   _canInteract: 1
-  _interactionString: Unlock Door
-  _failedInteractionString: You need a passcode
-  _interactionAudioSet: {fileID: 0}
-  _failedInteractionAudioSet: {fileID: 0}
+  _interactionString: Open Door
+  _failedInteractionString: Door Is Locked
+  _interactionAudioSet: {fileID: 11400000, guid: 233d9c80a7146e84d85c6a81532bc8c2, type: 2}
+  _failedInteractionAudioSet: {fileID: 11400000, guid: aedec9bfcfe2bc3419540505fbc128ad, type: 2}
   _audioVolume: 1
   _requiredItem: {fileID: 11400000, guid: 4b91395097bd39b4e8c1876c72060545, type: 2}
   _lockedDoor: {fileID: 1544150309}
