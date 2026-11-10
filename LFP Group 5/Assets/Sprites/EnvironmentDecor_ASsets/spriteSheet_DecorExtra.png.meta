@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: ef6fc485078c2024e82d9887642af307
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5183958729314459443
+    second: spriteSheet_DecorExtra_0
+  - first:
+      213: -9121560813237964901
+    second: spriteSheet_DecorExtra_1
+  - first:
+      213: -7084974093432002489
+    second: spriteSheet_DecorExtra_2
+  - first:
+      213: -2854700142876485182
+    second: spriteSheet_DecorExtra_3
+  - first:
+      213: 9074841878663346481
+    second: spriteSheet_DecorExtra_4
+  - first:
+      213: 5734790864209256284
+    second: spriteSheet_DecorExtra_5
+  - first:
+      213: -5886860024693832685
+    second: spriteSheet_DecorExtra_6
+  - first:
+      213: -3583984965606524737
+    second: spriteSheet_DecorExtra_7
+  - first:
+      213: -8218263022681621123
+    second: spriteSheet_DecorExtra_8
+  - first:
+      213: -5624483935684823015
+    second: spriteSheet_DecorExtra_9
+  - first:
+      213: -2550861990431403368
+    second: spriteSheet_DecorExtra_10
+  - first:
+      213: -7471018971989630467
+    second: spriteSheet_DecorExtra_11
+  - first:
+      213: -180097843054557153
+    second: spriteSheet_DecorExtra_12
+  - first:
+      213: 940454735040594425
+    second: spriteSheet_DecorExtra_13
+  - first:
+      213: -6609566804222523449
+    second: spriteSheet_DecorExtra_14
+  - first:
+      213: 3289037770460060690
+    second: spriteSheet_DecorExtra_15
+  - first:
+      213: -679139008111327565
+    second: spriteSheet_DecorExtra_16
+  - first:
+      213: -7239824432728454794
+    second: spriteSheet_DecorExtra_17
+  - first:
+      213: 2274430613430970
+    second: spriteSheet_DecorExtra_18
+  - first:
+      213: -700062395312831506
+    second: spriteSheet_DecorExtra_19
+  - first:
+      213: -3183859967391761085
+    second: spriteSheet_DecorExtra_20
+  - first:
+      213: 3340970768984452352
+    second: spriteSheet_DecorExtra_21
+  - first:
+      213: -5942529407211045982
+    second: spriteSheet_DecorExtra_22
+  - first:
+      213: -8635870010300187791
+    second: spriteSheet_DecorExtra_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WhiteboardDecor_Normal
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 380
+        width: 478
+        height: 451
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 139319aab9050fd70800000000000000
+      internalID: 9074841878663346481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedBattery_Normal
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 583
+        width: 178
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3144da95ffbad4ea0800000000000000
+      internalID: -5886860024693832685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorruptedKey_Normal
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 547
+        width: 288
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df1aa5004db915890800000000000000
+      internalID: -7471018971989630467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeskLampDecor_Normal
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 381
+        width: 147
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c74a13b20a1644a0800000000000000
+      internalID: -6609566804222523449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeskPlantDecor_Normal
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 336
+        width: 136
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6c96c9ba63396f0800000000000000
+      internalID: -679139008111327565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoolerDecor_Normal
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 170
+        width: 122
+        height: 305
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2a7c42594180000800000000000000
+      internalID: 2274430613430970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PencilDecor_Normal
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 323
+        width: 81
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee305c6e5f0e846f0800000000000000
+      internalID: -700062395312831506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CalendarDecor_Normal
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 252
+        width: 176
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34df60d7a38a0d3d0800000000000000
+      internalID: -3183859967391761085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RugDecor_Normal
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 60
+        width: 513
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00d284296338d5e20800000000000000
+      internalID: 3340970768984452352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mountain2Decor_Normal
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 57
+        width: 233
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab7fdf2df4e78da0800000000000000
+      internalID: -5942529407211045982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mountain1Decor_Normal
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 59
+        width: 234
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17bbb9dfaf9372880800000000000000
+      internalID: -8635870010300187791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c13482cbda91d6d4195022901c57194e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CalendarDecor_Normal: -3183859967391761085
+      CoolerDecor_Normal: 2274430613430970
+      CorruptedBattery_Normal: -5886860024693832685
+      CorruptedKey_Normal: -7471018971989630467
+      DeskLampDecor_Normal: -6609566804222523449
+      DeskPlantDecor_Normal: -679139008111327565
+      Mountain1Decor_Normal: -8635870010300187791
+      Mountain2Decor_Normal: -5942529407211045982
+      PencilDecor_Normal: -700062395312831506
+      RugDecor_Normal: 3340970768984452352
+      WhiteboardDecor_Normal: 9074841878663346481
+      spriteSheet_DecorExtra_0: 5183958729314459443
+      spriteSheet_DecorExtra_1: -9121560813237964901
+      spriteSheet_DecorExtra_10: -2550861990431403368
+      spriteSheet_DecorExtra_12: -180097843054557153
+      spriteSheet_DecorExtra_13: 940454735040594425
+      spriteSheet_DecorExtra_15: 3289037770460060690
+      spriteSheet_DecorExtra_17: -7239824432728454794
+      spriteSheet_DecorExtra_2: -7084974093432002489
+      spriteSheet_DecorExtra_3: -2854700142876485182
+      spriteSheet_DecorExtra_5: 5734790864209256284
+      spriteSheet_DecorExtra_7: -3583984965606524737
+      spriteSheet_DecorExtra_8: -8218263022681621123
+      spriteSheet_DecorExtra_9: -5624483935684823015
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
