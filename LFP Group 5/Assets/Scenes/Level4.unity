@@ -35653,7 +35653,7 @@ GameObject:
   - component: {fileID: 1013603873}
   - component: {fileID: 1013603875}
   - component: {fileID: 1013603874}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpriteSheet_asset_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51222,7 +51222,7 @@ GameObject:
   - component: {fileID: 2042493436}
   - component: {fileID: 2042493438}
   - component: {fileID: 2042493437}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpriteSheet_asset_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
