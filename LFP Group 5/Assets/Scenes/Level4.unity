@@ -933,7 +933,7 @@ MonoBehaviour:
   _player: {fileID: 1388884533}
   isChain: 0
   _pixelationTime: 0.5
-  _audioSet: {fileID: 0}
+  _audioSet: {fileID: 11400000, guid: 62c7c92421949824eb3b555a394bd7ff, type: 2}
 --- !u!61 &74322777
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15107,7 +15107,7 @@ MonoBehaviour:
   _player: {fileID: 0}
   isChain: 0
   _pixelationTime: 0.5
-  _audioSet: {fileID: 0}
+  _audioSet: {fileID: 11400000, guid: 62c7c92421949824eb3b555a394bd7ff, type: 2}
 --- !u!61 &493458949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28127,7 +28127,7 @@ MonoBehaviour:
   _player: {fileID: 1388884533}
   isChain: 1
   _pixelationTime: 0.5
-  _audioSet: {fileID: 0}
+  _audioSet: {fileID: 11400000, guid: 62c7c92421949824eb3b555a394bd7ff, type: 2}
 --- !u!61 &692123694
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33323,7 +33323,7 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Pick Up Statue
   _failedInteractionString: 
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: 7c6ef330d1c4c484d99a13ae74c36d1d, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
@@ -36758,7 +36758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 1
-  _interactionString: Interact With Plate
+  _interactionString: Interact With Plinth
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 11400000, guid: 7ab2bee7a1ca41a4e835c93a5b6afa0f, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
@@ -41943,7 +41943,7 @@ MonoBehaviour:
   _canInteract: 1
   _interactionString: Pick Up Statue
   _failedInteractionString: 
-  _interactionAudioSet: {fileID: 0}
+  _interactionAudioSet: {fileID: 11400000, guid: 7c6ef330d1c4c484d99a13ae74c36d1d, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
   _itemSO: {fileID: 11400000, guid: 22eaad3e39f7d544caeb524ce6de8f78, type: 2}
@@ -42513,7 +42513,7 @@ MonoBehaviour:
   _player: {fileID: 1388884533}
   isChain: 0
   _pixelationTime: 0.5
-  _audioSet: {fileID: 0}
+  _audioSet: {fileID: 11400000, guid: 62c7c92421949824eb3b555a394bd7ff, type: 2}
 --- !u!61 &1396213144
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42611,7 +42611,7 @@ MonoBehaviour:
   _player: {fileID: 1388884533}
   isChain: 1
   _pixelationTime: 0.5
-  _audioSet: {fileID: 0}
+  _audioSet: {fileID: 11400000, guid: 62c7c92421949824eb3b555a394bd7ff, type: 2}
 --- !u!61 &1397130973
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -42845,7 +42845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 1
-  _interactionString: Interact With Plate
+  _interactionString: Interact With Plinth
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 11400000, guid: 7ab2bee7a1ca41a4e835c93a5b6afa0f, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
@@ -43044,7 +43044,7 @@ MonoBehaviour:
   _player: {fileID: 1388884533}
   isChain: 0
   _pixelationTime: 0.5
-  _audioSet: {fileID: 0}
+  _audioSet: {fileID: 11400000, guid: 62c7c92421949824eb3b555a394bd7ff, type: 2}
 --- !u!61 &1417130459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -43142,7 +43142,7 @@ MonoBehaviour:
   _player: {fileID: 1388884533}
   isChain: 1
   _pixelationTime: 0.5
-  _audioSet: {fileID: 0}
+  _audioSet: {fileID: 11400000, guid: 62c7c92421949824eb3b555a394bd7ff, type: 2}
 --- !u!61 &1429327208
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44026,7 +44026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   _canInteract: 1
-  _interactionString: 'Interact with Plate '
+  _interactionString: 'Interact with Plinth '
   _failedInteractionString: 
   _interactionAudioSet: {fileID: 11400000, guid: 7ab2bee7a1ca41a4e835c93a5b6afa0f, type: 2}
   _failedInteractionAudioSet: {fileID: 0}
@@ -46108,7 +46108,7 @@ MonoBehaviour:
   _player: {fileID: 1388884533}
   isChain: 0
   _pixelationTime: 0.5
-  _audioSet: {fileID: 0}
+  _audioSet: {fileID: 11400000, guid: 62c7c92421949824eb3b555a394bd7ff, type: 2}
 --- !u!61 &1623527739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -48906,7 +48906,7 @@ MonoBehaviour:
   _player: {fileID: 1388884533}
   isChain: 1
   _pixelationTime: 0.5
-  _audioSet: {fileID: 0}
+  _audioSet: {fileID: 11400000, guid: 62c7c92421949824eb3b555a394bd7ff, type: 2}
 --- !u!61 &1863907038
 BoxCollider2D:
   m_ObjectHideFlags: 0
