@@ -16,7 +16,7 @@ MonoBehaviour:
   IsSelected: 0
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
-  UISpriteNormal: {fileID: -4093145455614793586, guid: d6b3c6e2b63d1d24c8077611a36a775e, type: 3}
-  UISpriteSafe: {fileID: 6759633921709996654, guid: f25c22e77e5fade40b484d5c652bb670, type: 3}
+  UISpriteNormal: {fileID: -5886860024693832685, guid: ef6fc485078c2024e82d9887642af307, type: 3}
+  UISpriteSafe: {fileID: 7405867973672292806, guid: 7da25be38612f0442bad1e6e6a79245f, type: 3}
   ItemName: Battery
   ItemDescription: Battery used to turn on lights

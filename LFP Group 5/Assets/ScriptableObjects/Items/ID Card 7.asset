@@ -18,5 +18,5 @@ MonoBehaviour:
   SafeModeSprite: {fileID: 0}
   UISpriteNormal: {fileID: 9074841878663346481, guid: 50009ef1470c58340ae8d6930571baac, type: 3}
   UISpriteSafe: {fileID: 9074841878663346481, guid: 50009ef1470c58340ae8d6930571baac, type: 3}
-  ItemName: ID Card LVL7
-  ItemDescription: <b>Research</b>
+  ItemName: Corrupted Card
+  ItemDescription: <b>Research</b> Card that grants access to specific rooms
