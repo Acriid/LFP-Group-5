@@ -151,7 +151,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpriteSheet_asset_0
+      name: WindowDecor_Normal
       rect:
         serializedVersion: 2
         x: 863
@@ -159,7 +159,7 @@ TextureImporter:
         width: 354
         height: 412
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -181,7 +181,7 @@ TextureImporter:
         width: 233
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,7 +203,7 @@ TextureImporter:
         width: 233
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -217,7 +217,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet_asset_3
+      name: LampAsset_Normal
       rect:
         serializedVersion: 2
         x: 141
@@ -225,7 +225,7 @@ TextureImporter:
         width: 172
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -239,7 +239,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet_asset_4
+      name: Plinth_Normal
       rect:
         serializedVersion: 2
         x: 512
@@ -247,7 +247,7 @@ TextureImporter:
         width: 188
         height: 313
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -269,7 +269,7 @@ TextureImporter:
         width: 233
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -291,7 +291,7 @@ TextureImporter:
         width: 233
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -313,7 +313,7 @@ TextureImporter:
         width: 233
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -327,7 +327,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet_asset_8
+      name: ComputerDecor_Normal
       rect:
         serializedVersion: 2
         x: 770
@@ -335,7 +335,7 @@ TextureImporter:
         width: 233
         height: 148
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -349,7 +349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet_asset_9
+      name: PlantDecor_Normal
       rect:
         serializedVersion: 2
         x: 1059
@@ -357,7 +357,7 @@ TextureImporter:
         width: 202
         height: 392
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -379,7 +379,7 @@ TextureImporter:
         width: 233
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -401,7 +401,7 @@ TextureImporter:
         width: 233
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -423,7 +423,7 @@ TextureImporter:
         width: 233
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -437,7 +437,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet_asset_13
+      name: Desk_Normal
       rect:
         serializedVersion: 2
         x: 192
@@ -445,7 +445,7 @@ TextureImporter:
         width: 490
         height: 249
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -459,7 +459,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSheet_asset_14
+      name: KeypadAsset_Normal
       rect:
         serializedVersion: 2
         x: 814
@@ -467,7 +467,7 @@ TextureImporter:
         width: 208
         height: 134
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -489,7 +489,7 @@ TextureImporter:
         width: 233
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -511,7 +511,7 @@ TextureImporter:
         width: 233
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -533,7 +533,7 @@ TextureImporter:
         width: 233
         height: 233
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -550,7 +550,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 640c71496032d3846a856156c4d7635c
     internalID: 0
     vertices: []
     indices: 
@@ -560,24 +560,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SpriteSheet_asset_0: 5688360318632993825
+      ComputerDecor_Normal: -1954842104851303194
+      Desk_Normal: -5687899927920334522
+      KeypadAsset_Normal: 8297628974852858112
+      LampAsset_Normal: -2009397186390921555
+      PlantDecor_Normal: 7889449747850260651
+      Plinth_Normal: 2006458106165135766
       SpriteSheet_asset_1: -3172139080288481960
       SpriteSheet_asset_10: -6596518391952204593
       SpriteSheet_asset_11: -1077655226394458940
       SpriteSheet_asset_12: 1445636154040387257
-      SpriteSheet_asset_13: -5687899927920334522
-      SpriteSheet_asset_14: 8297628974852858112
       SpriteSheet_asset_15: -1483224706017296574
       SpriteSheet_asset_16: 2486496514461133969
       SpriteSheet_asset_17: -2119953403580479007
       SpriteSheet_asset_2: 6982632437915674952
-      SpriteSheet_asset_3: -2009397186390921555
-      SpriteSheet_asset_4: 2006458106165135766
       SpriteSheet_asset_5: 2151747377969450496
       SpriteSheet_asset_6: -2109077268669971885
       SpriteSheet_asset_7: -7417050623132189399
-      SpriteSheet_asset_8: -1954842104851303194
-      SpriteSheet_asset_9: 7889449747850260651
+      WindowDecor_Normal: 5688360318632993825
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

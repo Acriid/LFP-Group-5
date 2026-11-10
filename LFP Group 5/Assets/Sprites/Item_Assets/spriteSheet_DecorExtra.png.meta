@@ -115,11 +115,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spriteSheet_DecorExtra_0
+      name: CorruptedPlint_Normal
       rect:
         serializedVersion: 2
-        x: 1167
-        y: 753
+        x: 1166
+        y: 754
         width: 215
         height: 317
       alignment: 0
@@ -137,7 +137,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spriteSheet_DecorExtra_1
+      name: CorruptedStatue_Normal
       rect:
         serializedVersion: 2
         x: 1416
@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spriteSheet_DecorExtra_2
+      name: Key_Normal
       rect:
         serializedVersion: 2
         x: 1706
@@ -181,7 +181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spriteSheet_DecorExtra_3
+      name: Safe_Normal
       rect:
         serializedVersion: 2
         x: 2016
@@ -203,7 +203,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spriteSheet_DecorExtra_4
+      name: CorruptedCard_Normal
       rect:
         serializedVersion: 2
         x: 1441
@@ -238,11 +238,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spriteSheet_DecorExtra_0: 5183958729314459443
-      spriteSheet_DecorExtra_1: -9121560813237964901
-      spriteSheet_DecorExtra_2: -7084974093432002489
-      spriteSheet_DecorExtra_3: -2854700142876485182
-      spriteSheet_DecorExtra_4: 9074841878663346481
+      CorruptedCard_Normal: 9074841878663346481
+      CorruptedPlint_Normal: 5183958729314459443
+      CorruptedStatue_Normal: -9121560813237964901
+      Key_Normal: -7084974093432002489
+      Safe_Normal: -2854700142876485182
       spriteSheet_DecorExtra_5: 5734790864209256284
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
