@@ -17,6 +17,6 @@ MonoBehaviour:
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
   UISpriteNormal: {fileID: -7084974093432002489, guid: 50009ef1470c58340ae8d6930571baac, type: 3}
-  UISpriteSafe: {fileID: -7681555754168499655, guid: ced3c2299a229fb4598137014491e60a, type: 3}
+  UISpriteSafe: {fileID: -2137563697458653187, guid: 3d8adf90af2349e4fac18e62eac12174, type: 3}
   ItemName: Key
   ItemDescription: A Golden Key
