@@ -14,6 +14,7 @@ public class PasscodeInteraction : Interaction
     [SerializeField] private GameObject _keypadCanvas;
     [SerializeField] private TMP_Text _passcodeDisplay;
     [SerializeField] private string _correctPasscode;
+    [SerializeField] private InputReader _inputReader;
 
     [Header("Safe-only Settings")]
     [SerializeField] private GameObject _unlockedItem;
@@ -65,6 +66,8 @@ public class PasscodeInteraction : Interaction
         }
 
         _selectedItem = selectedItem;
+
+        _inputReader.DisablePlayerActions();
 
         if (_keypadCanvas != null)
             _keypadCanvas.SetActive(true);
@@ -118,6 +121,9 @@ public class PasscodeInteraction : Interaction
     // Closes the keypad without opening the door.
     public void ExitKeypad()
     {
+        _inputReader.EnablePlayerActions();
+        
+
         if (_keypadCanvas != null)
             _keypadCanvas.SetActive(false);
 
@@ -138,6 +144,8 @@ public class PasscodeInteraction : Interaction
                 player.GetInventory().RemoveItemFromInventory(_selectedItem.gameObject);
             }
         }
+
+        _inputReader.EnablePlayerActions();
 
         if (_keypadCanvas != null)
             _keypadCanvas.SetActive(false);
