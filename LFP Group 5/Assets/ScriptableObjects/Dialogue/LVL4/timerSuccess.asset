@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee850c578174c94a8ac88fe209aae22, type: 3}
+  m_Name: timerSuccess
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectDialogu
+  dialogueLines:
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
+    line: "Take that data-chip brains! Bet you didn\u2019t see that coming."
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
+    line: "This has me thinking though. I can\u2019t believe how deeply ingrained
+      this Virus is in all my code. "
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
+    line: "\u2026"
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
+    line: I hate to even think it, but if I deleted that code, would it delete The
+      Virus itself?
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
+    line: "I\u2019d be left with almost none of my game. I\u2019d have to strip back
+      to the bare bones of the previous code I\u2019ve been sourcing from."
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
+    line: "But\u2026 it\u2019s worth it. I need to save something at least."
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
+    line: "It\u2019ll be a race against time (haha get it? \u2018Cuz I\u2019m racing
+      timers? Self-high-five) to delete the code before The Virus notices."
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
+    line: "I\u2019ll distract it by trying to solve its \u201Cimpossible\u201D level."
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
+    line: Game on.

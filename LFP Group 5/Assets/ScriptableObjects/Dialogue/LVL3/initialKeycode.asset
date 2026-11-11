@@ -22,6 +22,9 @@ MonoBehaviour:
     line: "I just need to make sure I have the correct card for each room in my inventory
       and scan it by pressing \u2018E\u2019. "
   - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
+    line: I can move the cards around my inventory by dragging each items to an open
+      slot.
+  - _characterIcon: {fileID: -3607883123437360786, guid: 3ac0368c78cff2048958d9e1d88a407b, type: 3}
     line: "At work, management insists on locking individual sections behind specific
       keycards. It\u2019s so annoying, I keep losing these things in my pockets!
       I think I\u2019ve sent 3 through the wash already."
