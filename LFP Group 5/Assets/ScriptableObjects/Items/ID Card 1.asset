@@ -19,4 +19,4 @@ MonoBehaviour:
   UISpriteNormal: {fileID: 9074841878663346481, guid: 50009ef1470c58340ae8d6930571baac, type: 3}
   UISpriteSafe: {fileID: -1885457850607742084, guid: d498593bf2b64d647bd64bd7c44ff635, type: 3}
   ItemName: Corrupted Card
-  ItemDescription: '<b>Marketing</b> Card that grants access to specific rooms '
+  ItemDescription: 'Card that grants access to specific rooms '

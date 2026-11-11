@@ -19,4 +19,4 @@ MonoBehaviour:
   UISpriteNormal: {fileID: -8098075127040627006, guid: febd3e50502888a46b0b3e025f254c40, type: 3}
   UISpriteSafe: {fileID: -1885457850607742084, guid: d498593bf2b64d647bd64bd7c44ff635, type: 3}
   ItemName: ID Card - Marketing
-  ItemDescription: <b>Marketing</b> Card that grants access to specific rooms
+  ItemDescription: Card that grants access to specific rooms
