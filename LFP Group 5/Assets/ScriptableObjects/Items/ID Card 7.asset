@@ -17,6 +17,6 @@ MonoBehaviour:
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
   UISpriteNormal: {fileID: 9074841878663346481, guid: 50009ef1470c58340ae8d6930571baac, type: 3}
-  UISpriteSafe: {fileID: 9074841878663346481, guid: 50009ef1470c58340ae8d6930571baac, type: 3}
+  UISpriteSafe: {fileID: -822955824278301221, guid: fb5ca9756f3bdeb479facade67b26ee2, type: 3}
   ItemName: Corrupted Card
-  ItemDescription: Card that grants access to specific rooms
+  ItemDescription: ERROR

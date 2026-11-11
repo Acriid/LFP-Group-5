@@ -19,4 +19,4 @@ MonoBehaviour:
   UISpriteNormal: {fileID: -5886860024693832685, guid: ef6fc485078c2024e82d9887642af307, type: 3}
   UISpriteSafe: {fileID: 7405867973672292806, guid: 7da25be38612f0442bad1e6e6a79245f, type: 3}
   ItemName: Battery
-  ItemDescription: Battery used to turn on lights
+  ItemDescription: ERROR
