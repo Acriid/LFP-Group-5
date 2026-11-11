@@ -123,6 +123,7 @@ MonoBehaviour:
   _interactMechanic: {fileID: 4060883554002583379}
   _inventory: {fileID: 6104217305466799480}
   _modeSwitchMechanic: {fileID: 11400000, guid: a2596f9b4addd7b4b974cd244a036f78, type: 2}
+  _disableModeSwitch: 0
   ModeSwitchPanel: {fileID: 6751703595176473019}
   movementDialogueDelay: 0.8
 --- !u!114 &6104217305466799480
@@ -742,14 +743,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5320754, g: 0.25198284, b: 0.25198284, a: 1}
+  m_Color: {r: 0.6754716, g: 0.6754716, b: 0.6754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3146224164386214910, guid: c6417204f9c497c40a6f593385228de0, type: 3}
+  m_Sprite: {fileID: -3705053384517123337, guid: 2de44635c73c55b4ebed8763731cdb36, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
