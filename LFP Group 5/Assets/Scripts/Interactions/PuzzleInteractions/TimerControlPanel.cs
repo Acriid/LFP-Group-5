@@ -5,6 +5,10 @@ using System.Collections;
 
 public class TimerControlPanel : Interaction
 {
+    // Gemma put this here
+    [Header("Reset Dialogue")]
+    [SerializeField] private TimerFailedTrigger _playerResetDialogue;
+    
     [Header("Timer Settings")]
     [SerializeField] private float _timeLimit = 2.5f;
 
@@ -153,6 +157,12 @@ public class TimerControlPanel : Interaction
         }
 
         _player.TeleportToCell(_savedCell);
+
+        // Gemma put this here
+        if (_playerResetDialogue != null)
+        {
+            _playerResetDialogue.PlayerHasReset();
+        }
     }
 
     private void UpdateTimerUI()
