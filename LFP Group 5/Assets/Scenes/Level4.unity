@@ -52012,7 +52012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemPositionReset
   _itemsToTrack:
   - {fileID: 1340258979}
-  - {fileID: 0}
+  - {fileID: 137079088}
 --- !u!1 &1881504310
 GameObject:
   m_ObjectHideFlags: 0
@@ -55010,7 +55010,7 @@ MonoBehaviour:
   _itemsToTrack:
   - {fileID: 1617967045}
   - {fileID: 964116538}
-  - {fileID: 0}
+  - {fileID: 16452994}
 --- !u!1 &2069406601
 GameObject:
   m_ObjectHideFlags: 0
