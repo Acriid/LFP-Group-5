@@ -20347,7 +20347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1432612564
 Transform:
   m_ObjectHideFlags: 0
@@ -21195,8 +21195,8 @@ Transform:
   m_GameObject: {fileID: 1544150309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.8448, y: -1.3001, z: 0}
-  m_LocalScale: {x: 1.1005946, y: 1.7999259, z: 0.7424478}
+  m_LocalPosition: {x: -9.727, y: -1.3001, z: 0}
+  m_LocalScale: {x: 0.8259963, y: 1.7999259, z: 0.7424478}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1988188878}
@@ -26275,7 +26275,7 @@ MonoBehaviour:
   - {fileID: 1409813918}
   _moveItemPositions:
   - {x: 6.5, y: -4}
-  - {x: 9.5, y: 0.5}
+  - {x: 9.5, y: 0}
   - {x: 8.5, y: 5.5}
   _corruptItems: []
 --- !u!1 &2064074996
