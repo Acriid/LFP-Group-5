@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d5edace08274d43b4b46db19b5b813, type: 3}
+  m_Name: FINAL ID CARD
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSO
+  IsCorrupt: 0
+  IsSelected: 0
+  NormalModeSprite: {fileID: 0}
+  SafeModeSprite: {fileID: 0}
+  UISpriteNormal: {fileID: -4224929496079276770, guid: 119ccb84babf2b246902356ba4a424cd, type: 3}
+  UISpriteSafe: {fileID: -4224929496079276770, guid: 119ccb84babf2b246902356ba4a424cd, type: 3}
+  ItemName: ID Card - Security
+  ItemDescription: Card that grants access to specific rooms

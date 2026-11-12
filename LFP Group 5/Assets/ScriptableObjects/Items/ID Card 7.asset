@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d5edace08274d43b4b46db19b5b813, type: 3}
   m_Name: ID Card 7
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  IsCorrupt: 1
+  IsCorrupt: 0
   IsSelected: 0
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
-  UISpriteNormal: {fileID: 9074841878663346481, guid: 50009ef1470c58340ae8d6930571baac, type: 3}
-  UISpriteSafe: {fileID: -822955824278301221, guid: fb5ca9756f3bdeb479facade67b26ee2, type: 3}
+  UISpriteNormal: {fileID: 4374903787280043085, guid: 30911f60f6c89d343b3093ac2e7f9e96, type: 3}
+  UISpriteSafe: {fileID: 8892170903295116795, guid: 400974d00201d1843b8d7d31d1dcfa5a, type: 3}
   ItemName: Corrupted Card
   ItemDescription: ERROR
