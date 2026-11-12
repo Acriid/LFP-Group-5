@@ -45561,7 +45561,7 @@ MonoBehaviour:
   _interactionAudioSet: {fileID: 0}
   _failedInteractionAudioSet: {fileID: 0}
   _audioVolume: 1
-  _nextLevel: 0
+  _nextLevel: 6
 --- !u!1 &1443816621
 GameObject:
   m_ObjectHideFlags: 0
