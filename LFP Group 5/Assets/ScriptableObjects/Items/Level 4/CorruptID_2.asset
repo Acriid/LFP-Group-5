@@ -16,7 +16,7 @@ MonoBehaviour:
   IsSelected: 0
   NormalModeSprite: {fileID: 0}
   SafeModeSprite: {fileID: 0}
-  UISpriteNormal: {fileID: 0}
+  UISpriteNormal: {fileID: 2668642382031546174, guid: 90f118cf67b0b8f488521bf61810b86b, type: 3}
   UISpriteSafe: {fileID: 2668642382031546174, guid: 90f118cf67b0b8f488521bf61810b86b, type: 3}
   ItemName: '#@$%%%'
   ItemDescription: ERROR
